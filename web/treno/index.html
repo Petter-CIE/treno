@@ -42,6 +42,15 @@
     </div>
   </header>
 
+  <section id="thanks" hidden style="border-color:var(--accent)">
+    <h2 data-l="en">Thank you! 💪</h2>
+    <h2 data-l="nb">Tusen takk! 💪</h2>
+    <h2 data-l="cs">Děkujeme! 💪</h2>
+    <p data-l="en">Your gift helps keep Treno free for everyone.</p>
+    <p data-l="nb">Gaven din hjelper oss å holde Treno gratis for alle.</p>
+    <p data-l="cs">Tvůj dar pomáhá udržet Treno zdarma pro všechny.</p>
+  </section>
+
   <!-- ───────── Support ───────── -->
   <section id="support">
     <h1 data-l="en">Support Treno ❤️</h1>
@@ -52,9 +61,8 @@
     <p data-l="cs">Treno je zdarma, bez reklam, předplatného i sledování. Pokud ti pomáhá trénovat, můžeš poslat malý dar. Je zcela dobrovolný a nic neodemyká – appka je pro všechny stejná.</p>
     <div class="pay">
       <!-- TODO: replace VIPPS_LINK with the Vipps payment link / number -->
-      <a class="vipps" href="VIPPS_LINK">Vipps <small>NO · DK · FI</small></a>
-      <!-- TODO: replace PAYPAL_LINK with https://paypal.me/... -->
-      <a class="paypal" href="PAYPAL_LINK">PayPal <small data-l="en">worldwide</small><small data-l="nb">hele verden</small><small data-l="cs">celý svět</small></a>
+      <!-- <a class="vipps" href="VIPPS_LINK">Vipps <small>NO · DK · FI</small></a> -->
+      <a class="paypal" href="https://www.paypal.com/ncp/payment/EF22LBRYCCBKE" target="_blank" rel="noopener">PayPal <small data-l="en">worldwide</small><small data-l="nb">hele verden</small><small data-l="cs">celý svět</small></a>
     </div>
   </section>
 
@@ -120,6 +128,7 @@
     }
     document.querySelectorAll('.langs button').forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.set); }); });
     set(pick);
+    if (new URLSearchParams(location.search).has('thanks')) document.getElementById('thanks').hidden = false;
   })();
 </script>
 </body>
