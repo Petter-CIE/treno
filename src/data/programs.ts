@@ -1,3 +1,4 @@
+import { EXTRA_LANGS, LOCALES } from '@/locales';
 import type { Block, Program, Workout } from '@/lib/types';
 
 const W = (w: Workout) => w;
@@ -264,6 +265,18 @@ export const WORKOUTS: Workout[] = [
   }),
 ];
 
+for (const l of EXTRA_LANGS) {
+  const pack = LOCALES[l];
+  if (!pack) continue;
+  for (const w of WORKOUTS) {
+    const tr = pack.wo[w.id];
+    if (tr) {
+      w.name[l] = tr.name;
+      w.focus[l] = tr.focus;
+    }
+  }
+}
+
 export const WORKOUT_BY_ID: Record<string, Workout> = Object.fromEntries(WORKOUTS.map((w) => [w.id, w]));
 
 export const PROGRAMS: Program[] = [
@@ -369,6 +382,18 @@ export const PROGRAMS: Program[] = [
     sessions: ['mob_morning'],
   },
 ];
+
+for (const l of EXTRA_LANGS) {
+  const pack = LOCALES[l];
+  if (!pack) continue;
+  for (const p of PROGRAMS) {
+    const tr = pack.pr[p.id];
+    if (tr) {
+      p.name[l] = tr.name;
+      p.description[l] = tr.description;
+    }
+  }
+}
 
 export const PROGRAM_BY_ID: Record<string, Program> = Object.fromEntries(PROGRAMS.map((p) => [p.id, p]));
 

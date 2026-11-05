@@ -1,4 +1,5 @@
-import type { L10n, Lang } from './types';
+import { LOCALES } from '@/locales';
+import type { BaseLang, ExtraLang, L10n, Lang } from './types';
 
 const en = {
   'tab.today': 'Today',
@@ -626,12 +627,53 @@ const nb: Record<Key, string> = {
   'notif.body': 'Økten din venter.',
 };
 
-export const DICTS: Record<Lang, Record<Key, string>> = { en, cs, nb };
+const extra = (l: ExtraLang): Record<Key, string> => ({ ...en, ...(LOCALES[l]?.ui ?? {}) });
 
-export const LANG_NAMES: Record<Lang, string> = { cs: 'Čeština', nb: 'Norsk', en: 'English' };
+export const DICTS: Record<Lang, Record<Key, string>> = {
+  en,
+  cs,
+  nb,
+  de: extra('de'),
+  es: extra('es'),
+  fr: extra('fr'),
+  pt: extra('pt'),
+  it: extra('it'),
+  pl: extra('pl'),
+  sv: extra('sv'),
+  da: extra('da'),
+  fi: extra('fi'),
+};
+
+export const LANG_NAMES: Record<Lang, string> = {
+  en: 'English',
+  cs: 'Čeština',
+  nb: 'Norsk',
+  da: 'Dansk',
+  de: 'Deutsch',
+  es: 'Español',
+  fi: 'Suomi',
+  fr: 'Français',
+  it: 'Italiano',
+  pl: 'Polski',
+  pt: 'Português (BR)',
+  sv: 'Svenska',
+};
 
 /** BCP-47 tags for speech and date formatting */
-export const LANG_TAG: Record<Lang, string> = { cs: 'cs-CZ', nb: 'nb-NO', en: 'en-US' };
+export const LANG_TAG: Record<Lang, string> = {
+  cs: 'cs-CZ',
+  nb: 'nb-NO',
+  en: 'en-US',
+  de: 'de-DE',
+  es: 'es-ES',
+  fr: 'fr-FR',
+  pt: 'pt-BR',
+  it: 'it-IT',
+  pl: 'pl-PL',
+  sv: 'sv-SE',
+  da: 'da-DK',
+  fi: 'fi-FI',
+};
 
 export function translate(lang: Lang, key: Key, vars?: Record<string, string | number>): string {
   let s = DICTS[lang][key] ?? en[key];
@@ -640,3 +682,5 @@ export function translate(lang: Lang, key: Key, vars?: Record<string, string | n
 }
 
 export const pick = (l10n: L10n, lang: Lang) => l10n[lang] ?? l10n.en;
+
+export const pickList = (l10n: Record<BaseLang, string[]> & Partial<Record<ExtraLang, string[]>>, lang: Lang) => l10n[lang] ?? l10n.en;

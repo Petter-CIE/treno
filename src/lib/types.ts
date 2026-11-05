@@ -1,5 +1,8 @@
-export type Lang = 'cs' | 'nb' | 'en';
-export type L10n = Record<Lang, string>;
+export type BaseLang = 'cs' | 'nb' | 'en';
+export type ExtraLang = 'de' | 'es' | 'fr' | 'pt' | 'it' | 'pl' | 'sv' | 'da' | 'fi';
+export type Lang = BaseLang | ExtraLang;
+/** Built-in texts always have cs/nb/en; other languages come from src/locales and fall back to English. */
+export type L10n = Record<BaseLang, string> & Partial<Record<ExtraLang, string>>;
 
 export type Discipline = 'kettlebell' | 'gym' | 'bodyweight' | 'calisthenics' | 'cardio' | 'running' | 'mobility';
 export type Muscle = 'legs' | 'chest' | 'back' | 'shoulders' | 'arms' | 'core' | 'fullbody' | 'cardio';
@@ -19,7 +22,7 @@ export interface Exercise {
   weighted: boolean;
   unilateral?: boolean;
   muscles: L10n;
-  cues: Record<Lang, string[]>;
+  cues: Record<BaseLang, string[]> & Partial<Record<ExtraLang, string[]>>;
 }
 
 export interface BlockItem {

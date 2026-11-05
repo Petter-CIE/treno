@@ -179,7 +179,7 @@ function WorkoutPicker({ date, onClose, onPick }: { date: string | null; onClose
             <Icon name="close" size={26} />
           </Pressable>
         </Row>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} style={{ flexGrow: 0 }}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} style={{ flexGrow: 0, flexShrink: 0 }}>
           <Chip label={t('all')} active={!disc} onPress={() => setDisc(null)} />
           {DISCIPLINES.map((d) => (
             <Chip key={d} label={t(`disc.${d}` as 'disc.gym')} active={disc === d} onPress={() => setDisc(d)} />

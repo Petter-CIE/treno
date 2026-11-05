@@ -1,4 +1,5 @@
-import type { Discipline, Equipment, Exercise, Lang, Level, Metric, Muscle } from '@/lib/types';
+import { EXTRA_LANGS, LOCALES } from '@/locales';
+import type { BaseLang, Discipline, Equipment, Exercise, Level, Metric, Muscle } from '@/lib/types';
 
 type T3 = [cs: string, nb: string, en: string];
 const l3 = ([cs, nb, en]: T3) => ({ cs, nb, en });
@@ -16,7 +17,7 @@ function E(
   cues: [string[], string[], string[]],
   unilateral = false,
 ): Exercise {
-  const c: Record<Lang, string[]> = { cs: cues[0], nb: cues[1], en: cues[2] };
+  const c: Record<BaseLang, string[]> = { cs: cues[0], nb: cues[1], en: cues[2] };
   return { id, discipline, muscle, equipment, level, metric, weighted, name: l3(name), muscles: l3(muscles), cues: c, unilateral };
 }
 
@@ -226,6 +227,19 @@ export const EXERCISES: Exercise[] = [
     ['Kroužení rameny a pažemi', 'Skuldersirkler', 'Shoulder circles'], ['Ramena', 'Skuldre', 'Shoulders'],
     [['Velké pomalé kruhy', 'Oběma směry'], ['Store, rolige sirkler', 'Begge veier'], ['Big, slow circles', 'Both directions']]),
 ];
+
+// merge translated texts for the extra languages
+for (const l of EXTRA_LANGS) {
+  const pack = LOCALES[l];
+  if (!pack) continue;
+  for (const e of EXERCISES) {
+    const tr = pack.ex[e.id];
+    if (!tr) continue;
+    e.name[l] = tr.name;
+    e.muscles[l] = tr.muscles;
+    if (tr.cues?.length) e.cues[l] = tr.cues;
+  }
+}
 
 export const EXERCISE_BY_ID: Record<string, Exercise> = Object.fromEntries(EXERCISES.map((e) => [e.id, e]));
 

@@ -4,7 +4,7 @@ import { ExerciseAnimation } from '@/components/ExerciseAnimation';
 import { Card, DiscBadge, Icon, Row, Screen, Section, T, Wrap } from '@/components/ui';
 import { ProgressChart } from '@/components/ProgressChart';
 import { EXERCISE_BY_ID } from '@/data/exercises';
-import { pick } from '@/lib/i18n';
+import { pick, pickList } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
 import { fmtWeight } from '@/lib/units';
@@ -53,7 +53,7 @@ export default function ExerciseDetail() {
 
       <Section title={t('ex.technique')}>
         <Card>
-          {e.cues[lang].map((c, i) => (
+          {pickList(e.cues, lang).map((c, i) => (
             <Row key={i} style={{ alignItems: 'flex-start' }} gap={12}>
               <View style={{ width: 24, height: 24, borderRadius: 12, backgroundColor: C.accentDim, alignItems: 'center', justifyContent: 'center' }}>
                 <T style={{ color: C.accent, fontWeight: '800', fontSize: 13 }}>{i + 1}</T>
