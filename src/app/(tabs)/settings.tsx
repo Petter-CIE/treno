@@ -9,7 +9,7 @@ import { C } from '@/lib/theme';
 import type { Lang } from '@/lib/types';
 
 export default function SettingsScreen() {
-  const { t, settings, updateSettings, resetAll } = useStore();
+  const { t, lang, settings, updateSettings, resetAll } = useStore();
   const r = settings.reminder;
 
   const toggleReminder = async (on: boolean) => {
@@ -81,7 +81,7 @@ export default function SettingsScreen() {
         <Card style={{ borderColor: C.accent }}>
           <T variant="h3">{t('set.support')}</T>
           <T variant="muted">{t('set.supportHint')}</T>
-          <Button label={t('set.support')} icon="heart" onPress={() => Linking.openURL(SUPPORT_URL).catch(() => {})} style={{ alignSelf: 'flex-start', marginTop: 4 }} />
+          <Button label={t('set.support')} icon="heart" onPress={() => Linking.openURL(`${SUPPORT_URL}?lang=${lang === 'cs' || lang === 'nb' ? lang : 'en'}`).catch(() => {})} style={{ alignSelf: 'flex-start', marginTop: 4 }} />
         </Card>
       ) : null}
 

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Treno – support, privacy, contact</title>
+<style>
+  :root { --bg:#121110; --card:#1c1a18; --line:#34302c; --text:#f4efea; --muted:#a39a90; --accent:#ff6a2b; --vipps:#ff5b24; --paypal:#0070e0; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:28px; }
+  .logo { font-weight:800; font-size:28px; letter-spacing:-0.5px; }
+  .logo span { color:var(--accent); }
+  .langs button { background:none; border:1px solid var(--line); color:var(--muted); border-radius:99px; padding:6px 12px; font:inherit; font-size:14px; cursor:pointer; }
+  .langs button.on { background:var(--accent); border-color:var(--accent); color:#1a0e07; font-weight:700; }
+  h1 { font-size:30px; line-height:1.2; margin:0 0 10px; letter-spacing:-0.5px; }
+  h2 { font-size:20px; margin:0 0 8px; }
+  p { margin:0 0 12px; color:var(--muted); }
+  section { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px; margin:16px 0; }
+  .pay { display:flex; flex-direction:column; gap:10px; margin-top:14px; }
+  .pay a { display:flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; color:#fff; font-weight:700; border-radius:99px; padding:14px 18px; }
+  .pay small { font-weight:500; opacity:.85; }
+  .vipps { background:var(--vipps); }
+  .paypal { background:var(--paypal); }
+  ul { margin:0 0 12px; padding-left:20px; color:var(--muted); }
+  a.mail { color:var(--accent); }
+  footer { color:var(--muted); font-size:13px; text-align:center; margin-top:28px; }
+  [data-l] { display:none; }
+  html[lang="en"] [data-l="en"], html[lang="nb"] [data-l="nb"], html[lang="cs"] [data-l="cs"] { display:revert; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo">Treno<span>.</span></div>
+    <div class="langs">
+      <button data-set="en">EN</button>
+      <button data-set="nb">NO</button>
+      <button data-set="cs">CZ</button>
+    </div>
+  </header>
+
+  <!-- ───────── Support ───────── -->
+  <section id="support">
+    <h1 data-l="en">Support Treno ❤️</h1>
+    <h1 data-l="nb">Støtt Treno ❤️</h1>
+    <h1 data-l="cs">Podpoř Treno ❤️</h1>
+    <p data-l="en">Treno is free, with no ads, no subscription and no tracking. If it helps you train, you can send a small gift. It is completely voluntary and does not unlock anything – the app is the same for everyone.</p>
+    <p data-l="nb">Treno er gratis, uten reklame, abonnement eller sporing. Hvis appen hjelper deg å trene, kan du sende en liten gave. Det er helt frivillig og låser ikke opp noe – appen er lik for alle.</p>
+    <p data-l="cs">Treno je zdarma, bez reklam, předplatného i sledování. Pokud ti pomáhá trénovat, můžeš poslat malý dar. Je zcela dobrovolný a nic neodemyká – appka je pro všechny stejná.</p>
+    <div class="pay">
+      <!-- TODO: replace VIPPS_LINK with the Vipps payment link / number -->
+      <a class="vipps" href="VIPPS_LINK">Vipps <small>NO · DK · FI</small></a>
+      <!-- TODO: replace PAYPAL_LINK with https://paypal.me/... -->
+      <a class="paypal" href="PAYPAL_LINK">PayPal <small data-l="en">worldwide</small><small data-l="nb">hele verden</small><small data-l="cs">celý svět</small></a>
+    </div>
+  </section>
+
+  <!-- ───────── Privacy ───────── -->
+  <section id="privacy">
+    <h2 data-l="en">Privacy</h2>
+    <h2 data-l="nb">Personvern</h2>
+    <h2 data-l="cs">Ochrana soukromí</h2>
+    <div data-l="en">
+      <p>Treno does not collect any personal data.</p>
+      <ul>
+        <li>There is no account. Your plan, log and settings are stored only on your phone.</li>
+        <li>The app sends nothing to our servers and contains no analytics, ads or tracking.</li>
+        <li>Workout reminders are local notifications created on your phone.</li>
+        <li>Deleting the app, or "Delete all data" in Settings, removes everything.</li>
+        <li>Gifts via Vipps or PayPal are handled by those services under their own privacy policies.</li>
+      </ul>
+    </div>
+    <div data-l="nb">
+      <p>Treno samler ikke inn personopplysninger.</p>
+      <ul>
+        <li>Det finnes ingen konto. Plan, logg og innstillinger lagres bare på telefonen din.</li>
+        <li>Appen sender ingenting til våre servere og har ingen analyse, reklame eller sporing.</li>
+        <li>Påminnelser er lokale varsler som lages på telefonen.</li>
+        <li>Sletter du appen, eller velger «Slett alle data» i Innstillinger, forsvinner alt.</li>
+        <li>Gaver via Vipps eller PayPal behandles av disse tjenestene etter deres egne personvernregler.</li>
+      </ul>
+    </div>
+    <div data-l="cs">
+      <p>Treno nesbírá žádné osobní údaje.</p>
+      <ul>
+        <li>Nemá žádný účet. Plán, deník a nastavení jsou uložené jen v tvém telefonu.</li>
+        <li>Appka nic neposílá na naše servery a neobsahuje analytiku, reklamy ani sledování.</li>
+        <li>Připomínky jsou místní notifikace vytvořené v telefonu.</li>
+        <li>Smazáním appky nebo volbou „Smazat všechna data“ v Nastavení zmizí vše.</li>
+        <li>Dary přes Vipps nebo PayPal zpracovávají tyto služby podle svých pravidel ochrany soukromí.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────── Contact ───────── -->
+  <section id="contact">
+    <h2 data-l="en">Contact</h2>
+    <h2 data-l="nb">Kontakt</h2>
+    <h2 data-l="cs">Kontakt</h2>
+    <p>CIE AS · Øygarden, Norway · <a class="mail" href="mailto:post@cieas.no">post@cieas.no</a></p>
+    <p data-l="en">Treno is not medical advice. Check with a doctor before starting a new training program.</p>
+    <p data-l="nb">Treno er ikke medisinsk rådgivning. Snakk med lege før du starter et nytt treningsprogram.</p>
+    <p data-l="cs">Treno nenahrazuje lékařskou radu. Před začátkem nového tréninkového programu se poraď s lékařem.</p>
+  </section>
+
+  <footer>© CIE AS</footer>
+</main>
+<script>
+  (function () {
+    var langs = ['en', 'nb', 'cs'];
+    var q = new URLSearchParams(location.search).get('lang');
+    var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    var pick = langs.indexOf(q) >= 0 ? q : nav === 'cs' || nav === 'sk' ? 'cs' : nav === 'nb' || nav === 'nn' || nav === 'no' ? 'nb' : 'en';
+    function set(l) {
+      document.documentElement.lang = l;
+      document.querySelectorAll('.langs button').forEach(function (b) { b.classList.toggle('on', b.dataset.set === l); });
+    }
+    document.querySelectorAll('.langs button').forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.set); }); });
+    set(pick);
+  })();
+</script>
+</body>
+</html>
