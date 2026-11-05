@@ -1,5 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Alert, Pressable, View } from 'react-native';
+import { ExerciseAnimation } from '@/components/ExerciseAnimation';
 import { Button, Card, DiscBadge, Icon, Row, Screen, T, Wrap } from '@/components/ui';
 import { WORKOUT_BY_ID } from '@/data/programs';
 import { fmtDate, today } from '@/lib/dates';
@@ -49,7 +50,10 @@ export default function WorkoutDetail() {
           {b.kind === 'emom' && b.items.length > 1 ? <T variant="small">{t('block.alternating')}</T> : null}
           {b.items.map((it, j) => (
             <Pressable key={j} onPress={() => router.push({ pathname: '/exercise/[id]', params: { id: it.ex } })}>
-              <Row style={{ justifyContent: 'space-between', paddingVertical: 4 }}>
+              <Row style={{ justifyContent: 'space-between', paddingVertical: 2 }} gap={10}>
+                <View style={{ width: 44, height: 44, borderRadius: 10, backgroundColor: C.bg, overflow: 'hidden' }}>
+                  <ExerciseAnimation id={it.ex} size={44} playing={false} />
+                </View>
                 <T style={{ fontWeight: '600', flex: 1 }}>{itemText(it, lang, t, b.kind === 'interval' || b.kind === 'steady')}</T>
                 <Icon name="information-outline" color={C.faint} size={18} />
               </Row>

@@ -6,6 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle } from 'react-native-svg';
+import { ExerciseAnimation, hasAnimation } from '@/components/ExerciseAnimation';
 import { Icon, Row, T } from '@/components/ui';
 import { WORKOUT_BY_ID } from '@/data/programs';
 import { fmtDuration } from '@/lib/dates';
@@ -15,7 +16,7 @@ import { useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
 import { buildSteps, type Step } from '@/lib/workout';
 
-const RING = 260;
+const RING = 236;
 const STROKE = 14;
 
 export default function TimerScreen() {
@@ -142,6 +143,7 @@ export default function TimerScreen() {
       <StepView
         key={idx}
         step={step}
+        animEx={step.ex ?? next?.ex}
         first={idx === 0}
         paused={paused}
         rounds={rounds}
@@ -187,6 +189,7 @@ export default function TimerScreen() {
 
 function StepView({
   step,
+  animEx,
   first,
   paused,
   rounds,
@@ -196,6 +199,7 @@ function StepView({
   buzz,
 }: {
   step: Step;
+  animEx?: string;
   first: boolean;
   paused: boolean;
   rounds: number;
@@ -264,7 +268,7 @@ function StepView({
     step.kind === 'rest' ? (step.walk ? t('timer.walk') : t('timer.rest')) : step.kind === 'prep' ? t('timer.ready') : step.kind === 'amrap' ? 'AMRAP' : t('timer.work');
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 18, paddingHorizontal: 20 }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 12, paddingHorizontal: 20 }}>
       <Text style={[st.kind, { color }]}>{kindLabel.toUpperCase()}</Text>
       <Text style={st.title} numberOfLines={3} adjustsFontSizeToFit>
         {step.title}
@@ -293,9 +297,20 @@ function StepView({
             />
           ) : null}
         </Svg>
-        <Text style={st.time}>{fmtDuration(step.seconds ? remaining : up)}</Text>
-        {paused ? <T variant="label">{t('timer.pause')}</T> : null}
+        {animEx && hasAnimation(animEx) ? (
+          <ExerciseAnimation id={animEx} size={RING - 64} playing={!paused} dim={step.kind === 'rest' || step.kind === 'prep'} />
+        ) : (
+          <Text style={st.time}>{fmtDuration(step.seconds ? remaining : up)}</Text>
+        )}
       </View>
+      {animEx && hasAnimation(animEx) ? (
+        <Row gap={10}>
+          <Text style={[st.timeSmall, { color: step.seconds ? C.text : C.good }]}>{fmtDuration(step.seconds ? remaining : up)}</Text>
+          {paused ? <T variant="label">{t('timer.pause')}</T> : null}
+        </Row>
+      ) : paused ? (
+        <T variant="label">{t('timer.pause')}</T>
+      ) : null}
 
       {step.kind === 'amrap' ? (
         <View style={{ alignItems: 'center', gap: 10, width: '100%' }}>
@@ -323,7 +338,8 @@ const st = StyleSheet.create({
   track: { height: 4, backgroundColor: C.surface2, marginHorizontal: 16, marginTop: 12, borderRadius: 2, overflow: 'hidden' },
   trackFill: { height: 4, backgroundColor: C.accent },
   kind: { fontSize: 14, fontWeight: '800', letterSpacing: 3 },
-  title: { color: C.text, fontSize: 34, fontWeight: '800', textAlign: 'center', letterSpacing: -0.5 },
+  title: { color: C.text, fontSize: 30, fontWeight: '800', textAlign: 'center', letterSpacing: -0.5 },
+  timeSmall: { fontSize: 56, fontWeight: '800', fontVariant: ['tabular-nums'], letterSpacing: -1.5 },
   time: { color: C.text, fontSize: 72, fontWeight: '800', fontVariant: ['tabular-nums'], letterSpacing: -2 },
   next: { marginHorizontal: 16, padding: 14, borderRadius: 16, backgroundColor: C.surface, gap: 2 },
   doneBtn: { marginHorizontal: 16, marginTop: 12, flexDirection: 'row', gap: 10, alignItems: 'center', justifyContent: 'center', backgroundColor: C.good, paddingVertical: 18, borderRadius: 99 },

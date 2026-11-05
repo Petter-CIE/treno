@@ -1,6 +1,7 @@
 // Sanity check for built-in content: run with `npx tsx scripts/check-data.ts`
 import { EXERCISES, EXERCISE_BY_ID } from '../src/data/exercises';
 import { PROGRAMS, WORKOUTS, WORKOUT_BY_ID } from '../src/data/programs';
+import { ANIMATIONS } from '../src/data/animations';
 
 let errors = 0;
 const fail = (m: string) => { errors++; console.error('✗', m); };
@@ -24,6 +25,8 @@ for (const p of PROGRAMS) {
   for (const s of all) if (!WORKOUT_BY_ID[s]) fail(`program ${p.id} → unknown workout ${s}`);
   if (p.weekly && p.weekly.length !== p.weeks) fail(`program ${p.id} weekly length`);
 }
+for (const e of EXERCISES) if (!ANIMATIONS[e.id]) fail(`exercise ${e.id} has no animation`);
+for (const id of Object.keys(ANIMATIONS)) if (!EXERCISE_BY_ID[id]) fail(`animation ${id} has no exercise`);
 console.log(`${EXERCISES.length} exercises, ${WORKOUTS.length} workouts, ${PROGRAMS.length} programs`);
 if (errors) process.exit(1);
 console.log('✓ content OK');

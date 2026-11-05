@@ -2,7 +2,8 @@ import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { FlatList, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Chip, DiscIcon, Icon, Row, T } from '@/components/ui';
+import { ExerciseAnimation } from '@/components/ExerciseAnimation';
+import { Chip, Icon, Row, T } from '@/components/ui';
 import { DISCIPLINES, EXERCISES } from '@/data/exercises';
 import { pick } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
@@ -43,7 +44,7 @@ export default function ExercisesScreen() {
           ) : null}
         </View>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ flexGrow: 0, marginVertical: 12 }} contentContainerStyle={{ gap: 8, paddingHorizontal: 16 }}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ flexGrow: 0, flexShrink: 0, marginVertical: 12 }} contentContainerStyle={{ gap: 8, paddingHorizontal: 16 }}>
         <Chip label={t('all')} active={!disc} onPress={() => setDisc(null)} />
         {order.map((d) => (
           <Chip key={d} label={t(`disc.${d}` as 'disc.gym')} active={disc === d} color={DISC_COLOR[d]} onPress={() => setDisc(disc === d ? null : d)} />
@@ -56,7 +57,9 @@ export default function ExercisesScreen() {
         keyboardShouldPersistTaps="handled"
         renderItem={({ item: e }) => (
           <Pressable style={st.row} onPress={() => router.push({ pathname: '/exercise/[id]', params: { id: e.id } })}>
-            <DiscIcon d={e.discipline} size={38} />
+            <View style={st.thumb}>
+              <ExerciseAnimation id={e.id} size={52} playing={false} />
+            </View>
             <View style={{ flex: 1 }}>
               <T style={{ fontWeight: '700' }} numberOfLines={1}>
                 {pick(e.name, lang)}
@@ -80,6 +83,7 @@ export default function ExercisesScreen() {
 const st = StyleSheet.create({
   search: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: C.surface, borderRadius: 14, paddingHorizontal: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: C.border },
   input: { flex: 1, color: C.text, fontSize: 16, paddingVertical: 12 },
-  row: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 12, borderRadius: 16, backgroundColor: C.surface },
+  thumb: { width: 52, height: 52, borderRadius: 12, backgroundColor: C.bg, overflow: 'hidden' },
+  row: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 10, borderRadius: 16, backgroundColor: C.surface },
   lvl: { width: 6, height: 14, borderRadius: 2, backgroundColor: C.surface2 },
 });

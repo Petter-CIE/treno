@@ -1,5 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Pressable, View } from 'react-native';
+import { ExerciseAnimation } from '@/components/ExerciseAnimation';
 import { Card, DiscBadge, Icon, Row, Screen, Section, T, Wrap } from '@/components/ui';
 import { ProgressChart } from '@/components/ProgressChart';
 import { EXERCISE_BY_ID } from '@/data/exercises';
@@ -25,6 +26,10 @@ export default function ExerciseDetail() {
         </Pressable>
       }
     >
+      <Card style={{ alignItems: 'center', paddingVertical: 8 }}>
+        <ExerciseAnimation id={e.id} size={240} />
+      </Card>
+
       <Wrap>
         <DiscBadge d={e.discipline} label={t(`disc.${e.discipline}` as 'disc.gym')} />
         <View style={{ paddingVertical: 3, paddingHorizontal: 8, borderRadius: 99, backgroundColor: C.surface2 }}>
