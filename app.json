@@ -34,7 +34,8 @@
         {
           "color": "#FF6A2B"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "scheme": "treno",
     "backgroundColor": "#121110",
