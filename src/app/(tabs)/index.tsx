@@ -8,7 +8,7 @@ import { addDays, fmtDate, fmtDuration, startOfWeek, today, ymd } from '@/lib/da
 import { LANG_TAG, pick } from '@/lib/i18n';
 import { useStore, weeklyStreak, workoutsThisWeek } from '@/lib/store';
 import { C, DISC_COLOR } from '@/lib/theme';
-import { workoutsFor } from '@/lib/workout';
+import { logTitle, workoutsFor } from '@/lib/workout';
 
 export default function TodayScreen() {
   const { t, lang, settings, plan, log, program } = useStore();
@@ -97,7 +97,7 @@ export default function TodayScreen() {
               <Icon name="check" color={C.good} />
               <T variant="h3">{t('today.done')}</T>
             </Row>
-            <T variant="muted">{doneToday.map((l) => l.title).join(', ')}</T>
+            <T variant="muted">{doneToday.map((l) => logTitle(l, lang)).join(', ')}</T>
           </Card>
         ) : (
           <Card>
@@ -151,7 +151,7 @@ export default function TodayScreen() {
           <Card onPress={() => router.push('/log')}>
             <Row style={{ justifyContent: 'space-between' }}>
               <T variant="h3" numberOfLines={1} style={{ flex: 1 }}>
-                {last.title}
+                {logTitle(last, lang)}
               </T>
               <T variant="muted">{fmtDate(last.date, LANG_TAG[lang])}</T>
             </Row>

@@ -1,5 +1,5 @@
 import { EXERCISE_BY_ID } from '@/data/exercises';
-import { WORKOUTS } from '@/data/programs';
+import { WORKOUTS, WORKOUT_BY_ID } from '@/data/programs';
 import { pick, type Key } from './i18n';
 import type { Block, BlockItem, Discipline, Lang, Settings, Workout } from './types';
 
@@ -197,4 +197,10 @@ export function customWorkout(mode: CustomMode, opts: { minutes: number; rounds:
     minutes: 0,
     blocks: [block],
   };
+}
+
+/** Log title in the current language (stored title is only a fallback for custom timers). */
+export function logTitle(l: { workout?: string; title: string }, lang: Lang) {
+  const w = l.workout ? WORKOUT_BY_ID[l.workout] : undefined;
+  return w ? pick(w.name, lang) : l.title;
 }

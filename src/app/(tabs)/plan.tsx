@@ -8,6 +8,7 @@ import { PROGRAMS, PROGRAM_BY_ID, WORKOUTS, WORKOUT_BY_ID } from '@/data/program
 import { addDays, fmtDate, isoWeek, parseYmd, startOfWeek, today, ymd } from '@/lib/dates';
 import { LANG_TAG, pick } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
+import { logTitle } from '@/lib/workout';
 import { C } from '@/lib/theme';
 import type { Discipline, Program } from '@/lib/types';
 
@@ -87,7 +88,7 @@ export default function PlanScreen() {
                     <View key={l.id} style={st.entry}>
                       <Icon name="check" color={C.good} />
                       <T numberOfLines={1} style={{ flex: 1, color: C.muted }}>
-                        {l.title}
+                        {logTitle(l, lang)}
                       </T>
                     </View>
                   ))}

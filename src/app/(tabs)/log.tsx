@@ -8,7 +8,7 @@ import { LANG_TAG } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
 import { fmtDistance, fmtPace, fmtVolume, fmtWeight } from '@/lib/units';
-import { exName } from '@/lib/workout';
+import { exName, logTitle } from '@/lib/workout';
 
 export default function LogScreen() {
   const { t, lang, log, settings, deleteLog } = useStore();
@@ -82,7 +82,7 @@ export default function LogScreen() {
           <Card
             key={l.id}
             onPress={() =>
-              Alert.alert(l.title, t('log.deleteConfirm'), [
+              Alert.alert(logTitle(l, lang), t('log.deleteConfirm'), [
                 { text: t('common.cancel'), style: 'cancel' },
                 { text: t('log.delete'), style: 'destructive', onPress: () => deleteLog(l.id) },
               ])
@@ -92,7 +92,7 @@ export default function LogScreen() {
               <DiscIcon d={l.discipline} size={36} />
               <View style={{ flex: 1 }}>
                 <T style={{ fontWeight: '700' }} numberOfLines={1}>
-                  {l.title}
+                  {logTitle(l, lang)}
                 </T>
                 <T variant="small">
                   {fmtDate(l.date, LANG_TAG[lang])} · {fmtDuration(l.durationSec)}
