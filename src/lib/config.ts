@@ -4,3 +4,6 @@
  * (App Store / Google Play rules for gifts outside in-app purchase).
  */
 export const SUPPORT_URL = 'https://cieas.no/treno/';
+
+/** Brand shown as a quiet "Powered by" line in Settings → About (not an ad: no banners, no tracking). */
+export const POWERED_BY = { name: 'Norgain', url: 'https://norgain.no' };

@@ -1,8 +1,8 @@
 import Constants from 'expo-constants';
-import { Alert, Linking, Switch, View } from 'react-native';
+import { Alert, Linking, Pressable, Switch, View } from 'react-native';
 import { BellPicker, DayPicker, DisciplinePicker, EquipmentPicker } from '@/components/Pickers';
 import { Button, Card, Chip, Divider, Row, Screen, Section, Stepper, T, Wrap } from '@/components/ui';
-import { SUPPORT_URL } from '@/lib/config';
+import { POWERED_BY, SUPPORT_URL } from '@/lib/config';
 import { LANG_NAMES } from '@/lib/i18n';
 import { ensureNotificationPermission, useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
@@ -88,6 +88,11 @@ export default function SettingsScreen() {
       <Section title={t('set.about')}>
         <T variant="small">{t('set.disclaimer')}</T>
         <T variant="small">Treno {Constants.expoConfig?.version ?? ''} · CIE AS</T>
+        <Pressable onPress={() => Linking.openURL(POWERED_BY.url).catch(() => {})} accessibilityRole="link" hitSlop={8}>
+          <T variant="small">
+            Powered by <T variant="small" style={{ color: C.accent, fontWeight: '700' }}>{POWERED_BY.name}</T>
+          </T>
+        </Pressable>
       </Section>
 
       <Button
