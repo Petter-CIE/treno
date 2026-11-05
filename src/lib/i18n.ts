@@ -175,6 +175,8 @@ const en = {
   'set.reset': 'Delete all data',
   'set.resetConfirm': 'This deletes your plan, log and settings. It cannot be undone.',
   'set.about': 'About',
+  'set.support': "Support Treno ❤️",
+  'set.supportHint': "Treno is free with no ads. If it helps you, you can send a small gift.",
   'set.disclaimer': 'Treno is not medical advice. Check with a doctor before starting a new training program.',
 
   'custom.title': 'Custom timer',
@@ -385,6 +387,8 @@ const cs: Record<Key, string> = {
   'set.reset': 'Smazat všechna data',
   'set.resetConfirm': 'Smaže plán, deník i nastavení. Nejde to vrátit.',
   'set.about': 'O aplikaci',
+  'set.support': "Podpoř Treno ❤️",
+  'set.supportHint': "Treno je zdarma a bez reklam. Pokud ti pomáhá, můžeš poslat malý dar.",
   'set.disclaimer': 'Treno nenahrazuje lékařskou radu. Před začátkem nového tréninkového programu se poraď s lékařem.',
 
   'custom.title': 'Vlastní časovač',
@@ -593,6 +597,8 @@ const nb: Record<Key, string> = {
   'set.reset': 'Slett alle data',
   'set.resetConfirm': 'Dette sletter plan, logg og innstillinger. Det kan ikke angres.',
   'set.about': 'Om appen',
+  'set.support': "Støtt Treno ❤️",
+  'set.supportHint': "Treno er gratis og uten reklame. Hvis appen hjelper deg, kan du sende en liten gave.",
   'set.disclaimer': 'Treno er ikke medisinsk rådgivning. Snakk med lege før du starter et nytt treningsprogram.',
 
   'custom.title': 'Egen tidtaker',

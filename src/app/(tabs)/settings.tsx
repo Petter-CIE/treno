@@ -1,7 +1,8 @@
 import Constants from 'expo-constants';
-import { Alert, Switch, View } from 'react-native';
+import { Alert, Linking, Switch, View } from 'react-native';
 import { BellPicker, DayPicker, DisciplinePicker, EquipmentPicker } from '@/components/Pickers';
 import { Button, Card, Chip, Divider, Row, Screen, Section, Stepper, T, Wrap } from '@/components/ui';
+import { SUPPORT_URL } from '@/lib/config';
 import { LANG_NAMES } from '@/lib/i18n';
 import { ensureNotificationPermission, useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
@@ -75,6 +76,14 @@ export default function SettingsScreen() {
           </>
         ) : null}
       </Card>
+
+      {SUPPORT_URL ? (
+        <Card style={{ borderColor: C.accent }}>
+          <T variant="h3">{t('set.support')}</T>
+          <T variant="muted">{t('set.supportHint')}</T>
+          <Button label={t('set.support')} icon="heart" onPress={() => Linking.openURL(SUPPORT_URL).catch(() => {})} style={{ alignSelf: 'flex-start', marginTop: 4 }} />
+        </Card>
+      ) : null}
 
       <Section title={t('set.about')}>
         <T variant="small">{t('set.disclaimer')}</T>
