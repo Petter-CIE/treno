@@ -1,14 +1,12 @@
 # Store listing – App Store & Google Play
 
-> Název „Treno“ je v App Store už obsazený (viz `store/release-checklist.md`, bod 1). Texty níže používají `{APP}` – po výběru nového názvu ho stačí nahradit.
->
 > Limity: App Store – název 30, podtitul 30, propagační text 170, klíčová slova 100 znaků (čárkami, bez mezer), popis 4 000. Google Play – název 30, krátký popis 80, celý popis 4 000.
 
 ---
 
 ## English (en-US, en-GB)
 
-**App Store name:** `{APP}: Workout Planner`
+**App Store name:** `Varde Fitness: Workout Planner`
 **Subtitle:** `Free. No ads. No tracking.`
 **Promotional text:**
 Gym, kettlebell, bodyweight, running and mobility in one plan – with a voice coach and animated exercises. Free, with no ads, account or tracking.
@@ -19,7 +17,7 @@ Gym, kettlebell, bodyweight, running and mobility in one plan – with a voice c
 Workout planner & timer for gym, kettlebell and running – free, no ads.
 
 **Description:**
-{APP} is a training partner that does everything in one place – and asks for nothing in return. No subscription, no ads, no account and no tracking. Your data stays on your phone.
+Varde Fitness is a training partner that does everything in one place – and asks for nothing in return. No subscription, no ads, no account and no tracking. Your data stays on your phone.
 
 ONE PLAN FOR EVERYTHING YOU TRAIN
 Gym on Monday, a run on Wednesday, kettlebells at home on Friday and ten minutes of mobility in the morning – all in one weekly plan and one log.
@@ -45,9 +43,9 @@ Log weights, distance and pace, rate how hard it felt, and follow your progress 
 English, Norwegian, Czech, German, Spanish, French, Portuguese, Italian, Polish, Swedish, Danish and Finnish – including the voice coach.
 
 PRIVATE BY DESIGN
-{APP} collects no personal data. Everything is stored only on your device, and deleting the app deletes everything.
+Varde Fitness collects no personal data. Everything is stored only on your device, and deleting the app deletes everything.
 
-{APP} is not medical advice. Check with a doctor before starting a new training program.
+Varde Fitness is not medical advice. Check with a doctor before starting a new training program.
 
 **What's new (1.0):** First release.
 
@@ -55,7 +53,7 @@ PRIVATE BY DESIGN
 
 ## Norsk (nb)
 
-**App Store-navn:** `{APP}: Treningsplanlegger`
+**App Store-navn:** `Varde Fitness: Treningsplan`
 **Undertittel:** `Gratis og uten reklame`
 **Kampanjetekst:**
 Treningssenter, kettlebell, kroppsvekt, løping og mobilitet i én plan – med stemmetrener og animerte øvelser. Gratis, uten reklame, konto eller sporing.
@@ -66,7 +64,7 @@ Treningssenter, kettlebell, kroppsvekt, løping og mobilitet i én plan – med 
 Treningsplan og tidtaker for styrke, kettlebell og løping – gratis, uten reklame
 
 **Beskrivelse:**
-{APP} er en treningspartner som samler alt på ett sted – og ikke krever noe tilbake. Ingen abonnement, ingen reklame, ingen konto og ingen sporing. Dataene dine blir på telefonen.
+Varde Fitness er en treningspartner som samler alt på ett sted – og ikke krever noe tilbake. Ingen abonnement, ingen reklame, ingen konto og ingen sporing. Dataene dine blir på telefonen.
 
 ÉN PLAN FOR ALT DU TRENER
 Treningssenter på mandag, løpetur på onsdag, kettlebell hjemme på fredag og ti minutter mobilitet om morgenen – i én ukeplan og én logg.
@@ -92,9 +90,9 @@ Logg vekt, distanse og tempo, gi økten en score og følg fremgangen i grafer. N
 Norsk, engelsk, tsjekkisk, tysk, spansk, fransk, portugisisk, italiensk, polsk, svensk, dansk og finsk – også stemmetreneren.
 
 PERSONVERN FRA BUNNEN AV
-{APP} samler ikke inn personopplysninger. Alt lagres bare på enheten din, og sletter du appen, forsvinner alt.
+Varde Fitness samler ikke inn personopplysninger. Alt lagres bare på enheten din, og sletter du appen, forsvinner alt.
 
-{APP} er ikke medisinsk rådgivning. Snakk med lege før du starter et nytt treningsprogram.
+Varde Fitness er ikke medisinsk rådgivning. Snakk med lege før du starter et nytt treningsprogram.
 
 **Nyheter (1.0):** Første versjon.
 
@@ -102,7 +100,7 @@ PERSONVERN FRA BUNNEN AV
 
 ## Čeština (cs)
 
-**Název v App Store:** `{APP}: Tréninkový plán`
+**Název v App Store:** `Varde Fitness: Tréninkový plán`
 **Podtitul:** `Zdarma, bez reklam a sledování`
 **Propagační text:**
 Posilovna, kettlebell, vlastní váha, běh a mobilita v jednom plánu – s hlasovým trenérem a animovanými cviky. Zdarma, bez reklam, účtu i sledování.
@@ -113,7 +111,7 @@ Posilovna, kettlebell, vlastní váha, běh a mobilita v jednom plánu – s hla
 Tréninkový plán a časovač pro posilovnu, kettlebell i běh – zdarma a bez reklam.
 
 **Popis:**
-{APP} je tréninkový parťák, který má všechno na jednom místě – a nic za to nechce. Žádné předplatné, žádné reklamy, žádný účet a žádné sledování. Tvoje data zůstávají v telefonu.
+Varde Fitness je tréninkový parťák, který má všechno na jednom místě – a nic za to nechce. Žádné předplatné, žádné reklamy, žádný účet a žádné sledování. Tvoje data zůstávají v telefonu.
 
 JEDEN PLÁN PRO VŠECHNO, CO TRÉNUJEŠ
 V pondělí posilovna, ve středu běh, v pátek kettlebell doma a ráno deset minut mobility – v jednom týdenním plánu a jednom deníku.
@@ -139,9 +137,9 @@ Zapisuj váhy, vzdálenost a tempo, hodnoť náročnost a sleduj pokrok v grafec
 Čeština, norština, angličtina, němčina, španělština, francouzština, portugalština, italština, polština, švédština, dánština a finština – včetně hlasového trenéra.
 
 SOUKROMÍ OD ZÁKLADU
-{APP} nesbírá žádné osobní údaje. Vše je uložené jen v tvém zařízení a smazáním appky zmizí i data.
+Varde Fitness nesbírá žádné osobní údaje. Vše je uložené jen v tvém zařízení a smazáním appky zmizí i data.
 
-{APP} nenahrazuje lékařskou radu. Před začátkem nového tréninkového programu se poraď s lékařem.
+Varde Fitness nenahrazuje lékařskou radu. Před začátkem nového tréninkového programu se poraď s lékařem.
 
 **Co je nového (1.0):** První verze.
 
@@ -155,9 +153,9 @@ SOUKROMÍ OD ZÁKLADU
 | Věková kategorie | 4+ (Apple) / PEGI 3, Everyone (Google) – žádný citlivý obsah |
 | Cena | Zdarma, bez nákupů v aplikaci |
 | Reklamy | Ne |
-| Support URL | https://cieas.no/treno/ |
-| Privacy Policy URL | https://cieas.no/treno/#privacy |
-| Marketing URL | (volitelné) https://cieas.no/treno/ |
+| Support URL | https://cieas.no/varde/ |
+| Privacy Policy URL | https://cieas.no/varde/#privacy |
+| Marketing URL | (volitelné) https://cieas.no/varde/ |
 | Kontakt | post@cieas.no |
 | Copyright | © 2026 CIE AS |
 | Vývojář / prodejce | CIE AS |

@@ -35,7 +35,7 @@ export default function WorkoutDetail() {
           </T>
         </View>
         {eq.map((e) => (
-          <View key={e} style={{ paddingVertical: 3, paddingHorizontal: 8, borderRadius: 99, backgroundColor: missing.includes(e) ? '#3A1A1A' : C.surface2 }}>
+          <View key={e} style={{ paddingVertical: 3, paddingHorizontal: 8, borderRadius: 99, backgroundColor: missing.includes(e) ? C.dangerDim : C.surface2 }}>
             <T variant="small" style={missing.includes(e) ? { color: C.danger } : undefined}>
               {t(`equip.${e}` as 'equip.none')}
             </T>

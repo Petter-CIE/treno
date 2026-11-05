@@ -218,7 +218,7 @@ const st = StyleSheet.create({
   add: { width: 30, height: 30, borderRadius: 15, borderWidth: 1, borderColor: C.border, alignItems: 'center', justifyContent: 'center' },
   bar: { height: 6, borderRadius: 3, backgroundColor: C.surface2, overflow: 'hidden' },
   barFill: { height: 6, backgroundColor: C.accent },
-  backdrop: { flex: 1, backgroundColor: '#0008' },
+  backdrop: { flex: 1, backgroundColor: C.backdrop },
   sheet: { maxHeight: '80%', backgroundColor: C.surface, borderTopLeftRadius: 24, borderTopRightRadius: 24, padding: 16, gap: 14 },
   pickRow: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 12, borderRadius: 14, backgroundColor: C.surface2 },
 });

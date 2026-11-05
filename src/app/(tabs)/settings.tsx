@@ -87,7 +87,7 @@ export default function SettingsScreen() {
 
       <Section title={t('set.about')}>
         <T variant="small">{t('set.disclaimer')}</T>
-        <T variant="small">Treno {Constants.expoConfig?.version ?? ''} · CIE AS</T>
+        <T variant="small">Varde Fitness {Constants.expoConfig?.version ?? ''} · CIE AS</T>
         <Pressable onPress={() => Linking.openURL(POWERED_BY.url).catch(() => {})} accessibilityRole="link" hitSlop={8}>
           <T variant="small">
             Powered by <T variant="small" style={{ color: C.accent, fontWeight: '700' }}>{POWERED_BY.name}</T>

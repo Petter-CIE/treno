@@ -76,7 +76,7 @@ export function WeeklyBars({ height = 130 }: { height?: number }) {
           const h = ((height - 40) * w.min) / max;
           const isCurrent = i === weeks.length - 1;
           return (
-            <Rect key={i} x={pad + i * bw + bw * 0.18} y={height - 22 - h} width={bw * 0.64} height={Math.max(h, 2)} rx={4} fill={isCurrent ? C.accent : '#5A4A3E'} />
+            <Rect key={i} x={pad + i * bw + bw * 0.18} y={height - 22 - h} width={bw * 0.64} height={Math.max(h, 2)} rx={4} fill={isCurrent ? C.accent : C.chartBar} />
           );
         })}
         {weeks.map((w, i) =>

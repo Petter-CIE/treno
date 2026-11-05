@@ -167,7 +167,7 @@ export default function TimerScreen() {
 
       {step.kind === 'manual' ? (
         <Pressable style={st.doneBtn} onPress={goNext} accessibilityRole="button">
-          <Icon name="check" size={28} color="#0D1F14" />
+          <Icon name="check" size={28} color={C.onGood} />
           <Text style={st.doneText}>{t('timer.setDone')}</Text>
         </Pressable>
       ) : null}
@@ -177,7 +177,7 @@ export default function TimerScreen() {
           <Icon name="skip-previous" size={28} color={idx > 0 ? C.text : C.faint} />
         </Pressable>
         <Pressable style={[st.ctrl, st.ctrlMain]} onPress={togglePause} accessibilityLabel={paused ? t('timer.resume') : t('timer.pause')}>
-          <Icon name={paused ? 'play' : 'pause'} size={36} color="#1A0E07" />
+          <Icon name={paused ? 'play' : 'pause'} size={36} color={C.onAccent} />
         </Pressable>
         <Pressable style={st.ctrl} onPress={goNext} accessibilityLabel={t('timer.skip')}>
           <Icon name="skip-next" size={28} />
@@ -343,9 +343,9 @@ const st = StyleSheet.create({
   time: { color: C.text, fontSize: 72, fontWeight: '800', fontVariant: ['tabular-nums'], letterSpacing: -2 },
   next: { marginHorizontal: 16, padding: 14, borderRadius: 16, backgroundColor: C.surface, gap: 2 },
   doneBtn: { marginHorizontal: 16, marginTop: 12, flexDirection: 'row', gap: 10, alignItems: 'center', justifyContent: 'center', backgroundColor: C.good, paddingVertical: 18, borderRadius: 99 },
-  doneText: { color: '#0D1F14', fontSize: 18, fontWeight: '800' },
+  doneText: { color: C.onGood, fontSize: 18, fontWeight: '800' },
   ctrl: { width: 60, height: 60, borderRadius: 30, backgroundColor: C.surface2, alignItems: 'center', justifyContent: 'center' },
   ctrlMain: { width: 76, height: 76, borderRadius: 38, backgroundColor: C.accent },
   roundBtn: { backgroundColor: C.accent, paddingVertical: 12, paddingHorizontal: 20, borderRadius: 99 },
-  roundBtnText: { color: '#1A0E07', fontWeight: '800', fontSize: 16 },
+  roundBtnText: { color: C.onAccent, fontWeight: '800', fontSize: 16 },
 });

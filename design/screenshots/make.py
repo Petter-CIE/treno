@@ -22,10 +22,10 @@ OUT = Path(sys.argv[2])
 OUT.mkdir(parents=True, exist_ok=True)
 PORT = 8790
 W, H = 1320, 2868
-BG = (18, 17, 16)
-ORANGE = (255, 106, 43)
-TEXT = (244, 239, 234)
-MUTED = (163, 154, 144)
+BG = (13, 23, 30)
+ACCENT = (63, 214, 176)
+TEXT = (238, 244, 246)
+MUTED = (148, 169, 180)
 FONT_BOLD = '/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf'
 FONT_MED = '/usr/share/fonts/opentype/inter/InterDisplay-Medium.otf'
 
@@ -131,7 +131,7 @@ async def shoot(lang: str):
         b = await p.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--no-sandbox'])
         ctx = await b.new_context(viewport={'width': 430, 'height': 932}, device_scale_factor=3)
         state = json.dumps(demo_state(lang))
-        await ctx.add_init_script(f"localStorage.setItem('treno:v1', {json.dumps(state)});")
+        await ctx.add_init_script(f"localStorage.setItem('varde:v1', {json.dumps(state)});")
         pg = await ctx.new_page()
         base = f'http://localhost:{PORT}'
 
@@ -155,10 +155,10 @@ async def shoot(lang: str):
 def frame(shot: Path, title: str, sub: str, out: Path):
     canvas = Image.new('RGB', (W, H), BG)
     d = ImageDraw.Draw(canvas)
-    # soft orange glow
+    # soft aurora glow
     glow = Image.new('RGB', (W, H), BG)
     gd = ImageDraw.Draw(glow)
-    gd.ellipse((W * 0.15, -380, W * 0.85, 520), fill=(90, 38, 16))
+    gd.ellipse((W * 0.1, -420, W * 0.9, 480), fill=(14, 84, 72))
     glow = glow.filter(ImageFilter.GaussianBlur(160))
     canvas = Image.blend(canvas, glow, 0.9)
     d = ImageDraw.Draw(canvas)
@@ -185,7 +185,7 @@ def frame(shot: Path, title: str, sub: str, out: Path):
     mask = Image.new('L', im.size, 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, im.width - 1, im.height + 200), radius=70, fill=255)
     x = (W - im.width) // 2
-    border = Image.new('RGB', (im.width + 16, im.height + 16), (60, 54, 48))
+    border = Image.new('RGB', (im.width + 16, im.height + 16), (42, 62, 74))
     bmask = Image.new('L', border.size, 0)
     ImageDraw.Draw(bmask).rounded_rectangle((0, 0, border.width - 1, border.height + 200), radius=78, fill=255)
     canvas.paste(border, (x - 8, top - 8), bmask)

@@ -1,27 +1,27 @@
 {
   "expo": {
-    "name": "Treno",
-    "slug": "treno",
+    "name": "Varde Fitness",
+    "slug": "varde-fitness",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "no.cie.treno",
+      "bundleIdentifier": "no.cie.varde",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#121110",
+        "backgroundColor": "#0D171E",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "no.cie.treno"
+      "package": "no.cie.varde"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,7 +32,7 @@
       [
         "expo-notifications",
         {
-          "color": "#FF6A2B"
+          "color": "#3FD6B0"
         }
       ],
       "expo-font",
@@ -42,12 +42,12 @@
           "image": "./assets/splash-icon.png",
           "imageWidth": 180,
           "resizeMode": "contain",
-          "backgroundColor": "#121110"
+          "backgroundColor": "#0D171E"
         }
       ]
     ],
-    "scheme": "treno",
-    "backgroundColor": "#121110",
+    "scheme": "varde",
+    "backgroundColor": "#0D171E",
     "experiments": {
       "typedRoutes": true
     }

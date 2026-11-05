@@ -5,8 +5,8 @@ import { GROUND, LEN, VIEW, cycleLength, place, placeFirst, poseAt, solve, trans
 import { C } from '@/lib/theme';
 
 const NEAR = C.text;
-const FAR = '#7F766D';
-const PROP = '#5C544C';
+const FAR = C.figureFar;
+const PROP = C.prop;
 const EQ = C.accent;
 const LIMB = 9;
 

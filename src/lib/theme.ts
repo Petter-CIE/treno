@@ -1,30 +1,41 @@
 import type { Discipline } from './types';
 
+/**
+ * Nordic palette: fjord night background, snow text, aurora accent,
+ * muted nature tones for the disciplines.
+ */
 export const C = {
-  bg: '#121110',
-  surface: '#1C1A18',
-  surface2: '#262320',
-  border: '#34302C',
-  text: '#F4EFEA',
-  muted: '#A39A90',
-  faint: '#6E665E',
-  accent: '#FF6A2B',
-  accentDim: '#3A2216',
-  good: '#4ADE80',
-  goodDim: '#16301F',
-  rest: '#5AA9FF',
-  restDim: '#14263A',
-  danger: '#FF5A5A',
+  bg: '#0D171E',
+  surface: '#14222B',
+  surface2: '#1D2F3A',
+  border: '#2A3E4A',
+  text: '#EEF4F6',
+  muted: '#94A9B4',
+  faint: '#5E7582',
+  accent: '#3FD6B0', // nordlys / aurora
+  accentDim: '#12342D',
+  onAccent: '#04211A',
+  good: '#A6E37A', // birch leaf
+  goodDim: '#20331A',
+  onGood: '#132208',
+  rest: '#7DB8F0', // glacier
+  restDim: '#16293A',
+  danger: '#FF6B78',
+  dangerDim: '#3A1820',
+  chartBar: '#2C4554',
+  figureFar: '#6D8794',
+  prop: '#3B5361',
+  backdrop: '#000000AA',
 };
 
 export const DISC_COLOR: Record<Discipline, string> = {
-  kettlebell: '#FF6A2B',
-  gym: '#F5B83D',
-  bodyweight: '#4ADE80',
-  calisthenics: '#2DD4BF',
-  cardio: '#FF5A8A',
-  running: '#5AA9FF',
-  mobility: '#B18CFF',
+  kettlebell: '#E8955E', // copper
+  gym: '#E5C46A', // birch gold
+  bodyweight: '#A6E37A', // moss
+  calisthenics: '#5FC8D9', // glacier water
+  cardio: '#F2788C', // lingonberry
+  running: '#7DB8F0', // fjord blue
+  mobility: '#B7A4F0', // heather
 };
 
 export const DISC_ICON: Record<Discipline, string> = {

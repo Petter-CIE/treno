@@ -2,23 +2,17 @@
 
 Stav k 5. 11. 2026. ✅ hotovo · ⬜ zbývá (kdo)
 
-## 1. Název appky ⬜ (Petter – rozhodnout)
-„Treno“ je v App Store **obsazené**:
-- **Treno: AI Workout Tracker** – fitness appka, stejná kategorie (Health & Fitness).
-- **Treno** (BlueBitLine) – správa fitness studií, kategorie Lifestyle.
-
-Stejný název ve stejné kategorii = riziko záměny, odmítnutí a potíží se značkou. Doporučuju nový název ještě před založením appky v obchodech. Návrhy, u kterých jsem při rychlém hledání nenašel fitness appku stejného jména (ověřit v App Store Connect při rezervaci názvu):
-- **Varde** – norsky „mohyla, která ukazuje cestu“ (průvodce na cestě)
-- **Tind** – norsky „vrchol hory“
-- **Fjellform** – „horská forma“ (víc severské, hůř se vyslovuje v cizině)
-
-Po výběru: nahradit `Treno`/`treno` v `app.json` (name, slug, scheme, bundleIdentifier, package), v `src/lib/i18n.ts` a `src/locales/*.ts` (texty „Treno“), v `web/treno/index.html` a `{APP}` v `store/listing.md`. Ikona je na názvu nezávislá. Udělám to já, stačí říct název.
+## 1. Název appky ✅
+**Varde Fitness** (norsky *varde* = kamenná mohyla, která ukazuje cestu). „Treno“ bylo v App Store obsazené.
+- iOS bundle ID / Android package: `no.cie.varde`, Expo slug `varde-fitness`.
+- ⬜ Při zakládání v App Store Connect ověřit, že je název volný (rezervuje se se založením appky).
+- GitHub repo se pořád jmenuje `treno` – lze přejmenovat v nastavení repa na GitHubu (odkazy se samy přesměrují).
 
 ## 2. Obsah appky ✅
 - ✅ 63 cviků s animacemi, 29 tréninků, 10 programů, 12 jazyků
-- ✅ Ikona, adaptivní ikona Android, splash screen (`design/icon/make-icons.py`)
+- ✅ Severský vzhled (fjord / polární záře), ikona s vardem, adaptivní ikona Android, splash screen (`design/icon/make-icons.py`)
 - ✅ `expo-doctor` 20/20, typecheck, lint, kontrola obsahu i překladů
-- ✅ Podpůrná stránka + zásady soukromí: https://cieas.no/treno/ (PayPal hotový, ⬜ Vipps zítra)
+- ✅ Podpůrná stránka + zásady soukromí: https://cieas.no/varde/ (PayPal hotový, ⬜ Vipps zítra) – ⬜ nahrát `web/varde/index.html` do nové složky `varde` na cieas.no
 
 ## 3. Test na telefonu ⬜ (Petter)
 Nic z toho zatím neběželo na skutečném zařízení.
@@ -31,7 +25,7 @@ Nic z toho zatím neběželo na skutečném zařízení.
    - [ ] uložení do deníku, graf progresu
    - [ ] **připomínky**: zapnout v Nastavení, povolit notifikace, ověřit, že přijde (např. nastavit čas za 2 minuty)
    - [ ] změna jazyka a jednotek
-   - [ ] tlačítko „Podpoř Treno“ otevře cieas.no/treno ve správném jazyce
+   - [ ] tlačítko „Podpoř Varde Fitness“ otevře cieas.no/varde ve správném jazyce
    - [ ] appku zavřít a znovu otevřít – data zůstanou
 
 ## 4. Expo / EAS ⬜ (Petter – vyžaduje přihlášení)
@@ -43,7 +37,7 @@ npx eas-cli@latest build --platform all --profile production
 `eas.json` je připravený (profily `preview` = APK pro testování, `production` = obchody, verze se zvyšuje automaticky).
 
 ## 5. App Store Connect ⬜ (Petter)
-1. My Apps → **+ New App**: platforma iOS, název (viz bod 1), jazyk English (U.S.), bundle ID `no.cie.treno`, SKU např. `treno-ios`.
+1. My Apps → **+ New App**: platforma iOS, název (viz bod 1), jazyk English (U.S.), bundle ID `no.cie.varde`, SKU např. `varde-ios`.
 2. Texty a údaje: `store/listing.md` (EN, NO, CZ – ostatní jazyky lze doplnit).
 3. Screenshoty 6.9″: `store/screenshots/{en,nb,cs}_1–6.png` (1320 × 2868).
 4. App Privacy: **Data Not Collected**.
@@ -53,8 +47,8 @@ npx eas-cli@latest build --platform all --profile production
 
 ## 6. Google Play Console ⬜ (Petter)
 1. **Create app**: název, výchozí jazyk English, App, Free.
-2. Store listing: krátký a celý popis z `store/listing.md`, ikona 512 × 512 (`assets/icon.png` zmenšit), feature graphic 1024 × 500 (⬜ udělám, až bude název), screenshoty telefonu (`store/screenshots`).
-3. App content: Privacy policy `https://cieas.no/treno/#privacy`, Ads: No, Data safety: no data collected, Target audience 18+, Health: fitness, není zdravotnický prostředek.
+2. Store listing: krátký a celý popis z `store/listing.md`, ikona 512 × 512 (`assets/icon.png` zmenšit), feature graphic 1024 × 500 (⬜ udělám), screenshoty telefonu (`store/screenshots`).
+3. App content: Privacy policy `https://cieas.no/varde/#privacy`, Ads: No, Data safety: no data collected, Target audience 18+, Health: fitness, není zdravotnický prostředek.
 4. `npx eas-cli@latest submit --platform android` → Internal testing → Production.
 
 ## 7. Po vydání

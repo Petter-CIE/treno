@@ -1,8 +1,8 @@
-# Treno – tréninkový parťák
+# Varde Fitness – tréninkový parťák
 
 Mobilní aplikace pro Android a iOS (Expo / React Native) pro plánování a vedení tréninku: kettlebell, posilovna, vlastní váha, kalistenika, kardio, běh a mobilita. Jazyky: čeština, norština (bokmål), angličtina, němčina, španělština, francouzština, portugalština (BR), italština, polština, švédština, dánština a finština.
 
-> „Treno“ je pracovní název. Mění se v `app.json` (`name`, `slug`, `scheme`, `bundleIdentifier`, `package`) a v textech v `src/lib/i18n.ts`.
+> Název: **Varde Fitness** (norsky *varde* – kamenná mohyla, která ukazuje cestu). Powered by Norgain.
 
 ## Co appka umí (verze 1.0)
 
@@ -36,7 +36,7 @@ npx eas-cli@latest submit --platform ios
 npx eas-cli@latest submit --platform android
 ```
 
-Potřebuješ Apple Developer účet (99 USD/rok) a Google Play Console (jednorázově 25 USD). Bundle ID: `no.cie.treno`.
+Potřebuješ Apple Developer účet (99 USD/rok) a Google Play Console (jednorázově 25 USD). Bundle ID: `no.cie.varde`.
 
 ## Struktura
 

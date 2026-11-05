@@ -1,7 +1,7 @@
 """Renders the app icon set from one SVG design (needs Google Chrome + playwright).
 
 Run from the repo root:  python3 design/icon/make-icons.py
-The mark is name-independent: an orange timer ring with a figure in a 'victory' pose.
+The mark: an aurora-green timer ring around a varde (cairn) of stacked stones.
 """
 import asyncio
 import math
@@ -14,10 +14,10 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'assets'
 SRC = Path(__file__).resolve().parent
 
-BG = '#121110'
-BG2 = '#24201C'
-ORANGE = '#FF6A2B'
-WHITE = '#F4EFEA'
+BG = '#0D171E'
+BG2 = '#1E3442'
+ORANGE = '#3FD6B0'  # aurora accent (name kept for the call sites)
+WHITE = '#EEF4F6'
 
 
 def mark(cx, cy, scale, color_ring=ORANGE, color_fig=WHITE):
@@ -31,16 +31,20 @@ def mark(cx, cy, scale, color_ring=ORANGE, color_fig=WHITE):
     xs, ys = cx + r * math.sin(a_start), cy - r * math.cos(a_start)
     xe, ye = cx + r * math.sin(a_end), cy - r * math.cos(a_end)
     ring = f'<path d="M{xs:.1f} {ys:.1f} A{r:.1f} {r:.1f} 0 1 1 {xe:.1f} {ye:.1f}" fill="none" stroke="{color_ring}" stroke-width="{sw:.1f}" stroke-linecap="round"/>'
-    # figure (victory pose), coordinates relative to centre in 1024-space
-    def p(x, y):
-        return f'{cx + x * s:.1f} {cy + y * s:.1f}'
-    lw = 62 * s
-    fig = f'''
-      <circle cx="{cx + 0 * s:.1f}" cy="{cy - 168 * s:.1f}" r="{50 * s:.1f}" fill="{color_fig}"/>
-      <path d="M{p(0, -92)} L{p(0, 58)}" stroke="{color_fig}" stroke-width="{lw + 10 * s:.1f}" stroke-linecap="round"/>
-      <path d="M{p(-112, -196)} L{p(-58, -112)} L{p(0, -80)} L{p(58, -112)} L{p(112, -196)}" fill="none" stroke="{color_fig}" stroke-width="{lw:.1f}" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M{p(-92, 214)} L{p(-54, 132)} L{p(0, 58)} L{p(54, 132)} L{p(92, 214)}" fill="none" stroke="{color_fig}" stroke-width="{lw:.1f}" stroke-linecap="round" stroke-linejoin="round"/>
-    '''
+    # varde (cairn): four stacked stones
+    k = s * 1.18  # cairn a bit larger than the original figure so it reads at small sizes
+    def stone(x, y, rx, ry, fill):
+        return f'<ellipse cx="{cx + x * k:.1f}" cy="{cy + (y - 20) * k:.1f}" rx="{rx * k:.1f}" ry="{ry * k:.1f}" fill="{fill}"/>'
+    if color_fig == WHITE:
+        shades = ['#B7C8D1', '#EEF4F6', '#9DB2BD', '#EEF4F6']
+    else:
+        shades = [color_fig] * 4
+    fig = (
+        stone(0, 162, 158, 56, shades[0])
+        + stone(-12, 58, 122, 44, shades[1])
+        + stone(14, -26, 88, 36, shades[2])
+        + stone(-4, -100, 56, 30, shades[3])
+    )
     return ring + fig
 
 

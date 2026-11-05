@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { useMemo } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Mountains } from '@/components/Mountains';
 import { WorkoutCard } from '@/components/WorkoutCard';
 import { Button, Card, Icon, Row, Screen, Section, T, type IconName } from '@/components/ui';
 import { PROGRAM_BY_ID, WORKOUT_BY_ID } from '@/data/programs';
@@ -52,7 +53,8 @@ export default function TodayScreen() {
 
   return (
     <Screen>
-      <View style={{ gap: 2 }}>
+      <View style={{ gap: 2, paddingBottom: 40, marginHorizontal: -16, paddingHorizontal: 16 }}>
+        <Mountains height={96} />
         <T variant="muted">{fmtDate(td, LANG_TAG[lang], { weekday: 'long', day: 'numeric', month: 'long' })}</T>
         <T variant="h1">{greeting}</T>
       </View>
@@ -80,7 +82,7 @@ export default function TodayScreen() {
                 {t(`wd.${d.i}` as 'wd.0')}
               </T>
               <View style={[st.dot, d.done ? st.dotDone : d.planned ? st.dotPlanned : null, d.isToday && !d.done ? { borderColor: C.text } : null]}>
-                {d.done ? <Icon name="check" size={16} color="#0D1F14" /> : null}
+                {d.done ? <Icon name="check" size={16} color={C.onGood} /> : null}
               </View>
             </View>
           ))}

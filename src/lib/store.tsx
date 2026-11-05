@@ -8,7 +8,7 @@ import { translate, type Key } from './i18n';
 import { deviceLang } from './locale';
 import type { Lang, LogEntry, PlanEntry, Settings } from './types';
 
-const KEY = 'treno:v1';
+const KEY = 'varde:v1';
 
 export interface ActiveProgram {
   id: string;

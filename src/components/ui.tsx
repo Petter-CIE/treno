@@ -70,7 +70,7 @@ export function Button({
   big?: boolean;
 }) {
   const bg = { primary: C.accent, secondary: C.surface2, ghost: 'transparent', danger: C.surface2 }[variant];
-  const fg = { primary: '#1A0E07', secondary: C.text, ghost: C.muted, danger: C.danger }[variant];
+  const fg = { primary: C.onAccent, secondary: C.text, ghost: C.muted, danger: C.danger }[variant];
   return (
     <Pressable
       accessibilityRole="button"
@@ -92,8 +92,8 @@ export function Chip({ label, active, onPress, color = C.accent, icon }: { label
       accessibilityRole="button"
       accessibilityState={{ selected: !!active }}
     >
-      {icon ? <Icon name={icon} size={16} color={active ? '#111' : C.muted} /> : null}
-      <Text style={[s.chipText, active ? { color: '#111' } : null]}>{label}</Text>
+      {icon ? <Icon name={icon} size={16} color={active ? C.onAccent : C.muted} /> : null}
+      <Text style={[s.chipText, active ? { color: C.onAccent } : null]}>{label}</Text>
     </Pressable>
   );
 }

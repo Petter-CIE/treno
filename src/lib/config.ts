@@ -1,9 +1,9 @@
 /**
  * Link for voluntary donations (Vipps / PayPal page on our website).
- * Page source: web/treno/index.html (unlisted, noindex). Leave empty to hide the "Support Treno" button. Donations never unlock anything in the app
+ * Page source: web/varde/index.html (unlisted, noindex). Leave empty to hide the "Support Varde Fitness" button. Donations never unlock anything in the app
  * (App Store / Google Play rules for gifts outside in-app purchase).
  */
-export const SUPPORT_URL = 'https://cieas.no/treno/';
+export const SUPPORT_URL = 'https://cieas.no/varde/';
 
 /** Brand shown as a quiet "Powered by" line in Settings → About (not an ad: no banners, no tracking). */
 export const POWERED_BY = { name: 'Norgain', url: 'https://norgain.no' };
