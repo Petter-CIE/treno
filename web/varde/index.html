@@ -25,7 +25,7 @@
   .vipps { background:var(--vipps); }
   .paypal { background:var(--paypal); }
   ul { margin:0 0 12px; padding-left:20px; color:var(--muted); }
-  a.mail { color:var(--accent); }
+  a.mail, section li a { color:var(--accent); }
   footer { color:var(--muted); font-size:13px; text-align:center; margin-top:28px; }
   [data-l] { display:none; }
   html[lang="en"] [data-l="en"], html[lang="nb"] [data-l="nb"], html[lang="cs"] [data-l="cs"] { display:revert; }
@@ -72,33 +72,64 @@
     <h2 data-l="nb">Personvern</h2>
     <h2 data-l="cs">Ochrana soukromí</h2>
     <div data-l="en">
-      <p>Varde Fitness does not collect any personal data.</p>
+      <p>Varde Fitness works without an account. Unless you choose to sign in, nothing leaves your phone.</p>
       <ul>
-        <li>There is no account. Your plan, log and settings are stored only on your phone.</li>
-        <li>The app sends nothing to our servers and contains no analytics, ads or tracking.</li>
+        <li><b>Without an account</b>, your plan, log and settings are stored only on your phone.</li>
+        <li><b>Optional account:</b> if you sign in with your email (Settings → Account &amp; backup), we store your email address and a backup of your plan, training log and app settings, so you can get them back on a new phone. Nothing else.</li>
+        <li>The backup is used only to make this feature work. We never sell or share it, and the app contains no analytics, ads or tracking.</li>
+        <li>The backup is stored with our provider Supabase in the EU (Frankfurt), encrypted in transit. Only you can read it.</li>
         <li>Workout reminders are local notifications created on your phone.</li>
-        <li>Deleting the app, or "Delete all data" in Settings, removes everything.</li>
         <li>Gifts via Vipps or PayPal are handled by those services under their own privacy policies.</li>
       </ul>
     </div>
     <div data-l="nb">
-      <p>Varde Fitness samler ikke inn personopplysninger.</p>
+      <p>Varde Fitness fungerer uten konto. Med mindre du velger å logge inn, forlater ingenting telefonen.</p>
       <ul>
-        <li>Det finnes ingen konto. Plan, logg og innstillinger lagres bare på telefonen din.</li>
-        <li>Appen sender ingenting til våre servere og har ingen analyse, reklame eller sporing.</li>
+        <li><b>Uten konto</b> lagres plan, logg og innstillinger bare på telefonen din.</li>
+        <li><b>Valgfri konto:</b> logger du inn med e-post (Innstillinger → Konto og sikkerhetskopi), lagrer vi e-postadressen din og en sikkerhetskopi av plan, treningslogg og innstillinger, slik at du får dem tilbake på en ny telefon. Ikke noe annet.</li>
+        <li>Sikkerhetskopien brukes bare til denne funksjonen. Vi selger eller deler den aldri, og appen har ingen analyse, reklame eller sporing.</li>
+        <li>Sikkerhetskopien lagres hos leverandøren vår Supabase i EU (Frankfurt), kryptert under overføring. Bare du kan lese den.</li>
         <li>Påminnelser er lokale varsler som lages på telefonen.</li>
-        <li>Sletter du appen, eller velger «Slett alle data» i Innstillinger, forsvinner alt.</li>
         <li>Gaver via Vipps eller PayPal behandles av disse tjenestene etter deres egne personvernregler.</li>
       </ul>
     </div>
     <div data-l="cs">
-      <p>Varde Fitness nesbírá žádné osobní údaje.</p>
+      <p>Varde Fitness funguje bez účtu. Pokud se sám nepřihlásíš, nic neopustí tvůj telefon.</p>
       <ul>
-        <li>Nemá žádný účet. Plán, deník a nastavení jsou uložené jen v tvém telefonu.</li>
-        <li>Appka nic neposílá na naše servery a neobsahuje analytiku, reklamy ani sledování.</li>
+        <li><b>Bez účtu</b> jsou plán, deník a nastavení uložené jen v tvém telefonu.</li>
+        <li><b>Nepovinný účet:</b> když se přihlásíš e-mailem (Nastavení → Účet a záloha), uložíme tvou e-mailovou adresu a zálohu plánu, tréninkového deníku a nastavení appky, abys je dostal(a) zpět na novém telefonu. Nic dalšího.</li>
+        <li>Záloha slouží jen k této funkci. Nikdy ji neprodáváme ani nesdílíme a appka neobsahuje analytiku, reklamy ani sledování.</li>
+        <li>Záloha je uložená u našeho poskytovatele Supabase v EU (Frankfurt), při přenosu šifrovaná. Číst ji můžeš jen ty.</li>
         <li>Připomínky jsou místní notifikace vytvořené v telefonu.</li>
-        <li>Smazáním appky nebo volbou „Smazat všechna data“ v Nastavení zmizí vše.</li>
         <li>Dary přes Vipps nebo PayPal zpracovávají tyto služby podle svých pravidel ochrany soukromí.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────── Delete account ───────── -->
+  <section id="delete-account">
+    <h2 data-l="en">Delete your account and data</h2>
+    <h2 data-l="nb">Slett konto og data</h2>
+    <h2 data-l="cs">Smazání účtu a dat</h2>
+    <div data-l="en">
+      <ul>
+        <li><b>In the app:</b> Settings → Account &amp; backup → <i>Delete account</i>. Your account and backup are deleted from our server immediately.</li>
+        <li><b>Without the app:</b> email <a href="mailto:post@cieas.no?subject=Varde%20Fitness%20%E2%80%93%20delete%20account">post@cieas.no</a> from the address you signed in with. We delete the account and backup within 30 days.</li>
+        <li>Data on your phone: Settings → <i>Delete all data</i>, or uninstall the app.</li>
+      </ul>
+    </div>
+    <div data-l="nb">
+      <ul>
+        <li><b>I appen:</b> Innstillinger → Konto og sikkerhetskopi → <i>Slett konto</i>. Kontoen og sikkerhetskopien slettes fra serveren vår med en gang.</li>
+        <li><b>Uten appen:</b> send e-post til <a href="mailto:post@cieas.no?subject=Varde%20Fitness%20%E2%80%93%20slett%20konto">post@cieas.no</a> fra adressen du logget inn med. Vi sletter kontoen og sikkerhetskopien innen 30 dager.</li>
+        <li>Data på telefonen: Innstillinger → <i>Slett alle data</i>, eller avinstaller appen.</li>
+      </ul>
+    </div>
+    <div data-l="cs">
+      <ul>
+        <li><b>V appce:</b> Nastavení → Účet a záloha → <i>Smazat účet</i>. Účet i záloha se z našeho serveru smažou okamžitě.</li>
+        <li><b>Bez appky:</b> napiš na <a href="mailto:post@cieas.no?subject=Varde%20Fitness%20%E2%80%93%20smazat%20%C3%BA%C4%8Det">post@cieas.no</a> z adresy, kterou ses přihlásil(a). Účet i zálohu smažeme do 30 dnů.</li>
+        <li>Data v telefonu: Nastavení → <i>Smazat všechna data</i>, nebo odinstaluj appku.</li>
       </ul>
     </div>
   </section>

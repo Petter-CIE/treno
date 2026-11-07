@@ -1,5 +1,6 @@
 import Constants from 'expo-constants';
 import { Alert, Linking, Pressable, Switch, View } from 'react-native';
+import { AccountCard } from '@/components/AccountCard';
 import { BellPicker, DayPicker, DisciplinePicker, EquipmentPicker } from '@/components/Pickers';
 import { Button, Card, Chip, Divider, Row, Screen, Section, Stepper, T, Wrap } from '@/components/ui';
 import { POWERED_BY, SUPPORT_URL } from '@/lib/config';
@@ -9,7 +10,7 @@ import { C } from '@/lib/theme';
 import type { Lang } from '@/lib/types';
 
 export default function SettingsScreen() {
-  const { t, lang, settings, updateSettings, resetAll } = useStore();
+  const { t, lang, settings, updateSettings, resetAll, account } = useStore();
   const r = settings.reminder;
 
   const toggleReminder = async (on: boolean) => {
@@ -77,6 +78,10 @@ export default function SettingsScreen() {
         ) : null}
       </Card>
 
+      <Section title={t('acc.title')}>
+        <AccountCard />
+      </Section>
+
       {SUPPORT_URL ? (
         <Card style={{ borderColor: C.accent }}>
           <T variant="h3">{t('set.support')}</T>
@@ -100,7 +105,7 @@ export default function SettingsScreen() {
         variant="danger"
         icon="trash-can-outline"
         onPress={() =>
-          Alert.alert(t('set.reset'), t('set.resetConfirm'), [
+          Alert.alert(t('set.reset'), account.email ? t('set.resetSignedIn') : t('set.resetConfirm'), [
             { text: t('common.cancel'), style: 'cancel' },
             { text: t('set.reset'), style: 'destructive', onPress: resetAll },
           ])

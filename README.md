@@ -13,7 +13,7 @@ Mobilní aplikace pro Android a iOS (Expo / React Native) pro plánování a ved
 - **Knihovna cviků** – 63 cviků s vlastními animacemi a popisem techniky, filtr a vyhledávání.
 - **Deník** – zápis vah, vzdálenosti a tempa, RPE, poznámky, týdenní minuty, graf progresu u každého cviku.
 - **Připomínky** – lokální notifikace v tréninkové dny.
-- Data jsou jen v telefonu (AsyncStorage). Žádný účet, žádný server.
+- Data jsou v telefonu (AsyncStorage). **Nepovinný účet** (Nastavení → Účet a záloha): přihlášení e-mailem jednorázovým kódem, záloha a synchronizace plánu, deníku a nastavení přes Supabase, smazání účtu v appce.
 - **Dobrovolná podpora** – tlačítko v Nastavení otevře web s Vipps / PayPal. Zobrazí se, jakmile je vyplněné `SUPPORT_URL` v `src/lib/config.ts`. Dar nic neodemyká (pravidla App Store / Google Play).
 
 ## Spuštění
@@ -48,7 +48,7 @@ src/app/            obrazovky (Expo Router)
   custom.tsx        vlastní časovač
   onboarding.tsx    úvodní nastavení
 src/data/           cviky, tréninky, programy
-src/lib/            store (stav + persistence), i18n, logika tréninku, jednotky, data
+src/lib/            store (stav + persistence + záloha), sync (slučování dat), supabase, i18n, logika tréninku, jednotky, data
 src/components/     UI komponenty, grafy
 ```
 
@@ -61,6 +61,13 @@ Nový cvik nebo program se přidává jen v `src/data/` – appka ho automaticky
 3. **Apple Health / Health Connect** – zápis tréninků.
 4. Druhá vlna jazyků (ja, ko, tr, nl, uk, hi, id); překlady nechat zkontrolovat rodilými mluvčími.
 5. Ikona, splash screen a texty pro App Store / Google Play.
+
+## Účet a záloha (Supabase)
+
+- Projekt `varde-fitness` (ref `bcfhjofvcnzljpcoooab`, EU Frankfurt). URL a publishable klíč jsou v `src/lib/config.ts` – klíč je veřejný, data chrání row-level security.
+- Tabulka `public.user_data` (jeden řádek na uživatele, `data` jsonb). Uživatel čte a zapisuje jen svůj řádek. Funkce `delete_my_account()` smaže uživatele i zálohu.
+- Slučování (`src/lib/sync.ts`): deník a plán se sjednotí podle id, smazané položky si appka pamatuje 180 dní (aby se nevracely), u nastavení a programu vyhrává novější změna. Záloha běží po přihlášení, při otevření appky a 4 s po každé změně.
+- Přihlášení: `signInWithOtp` → kód z e-mailu → `verifyOtp`. V šabloně e-mailu musí být `{{ .Token }}` (viz checklist).
 
 ## Jazyky
 
