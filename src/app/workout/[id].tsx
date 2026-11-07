@@ -1,7 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Alert, Pressable, View } from 'react-native';
 import { ExerciseAnimation } from '@/components/ExerciseAnimation';
-import { Button, Card, DiscBadge, Icon, Row, Screen, T, Wrap } from '@/components/ui';
+import { Button, Card, CloseButton, DiscBadge, Icon, Row, Screen, T, Wrap } from '@/components/ui';
 import { WORKOUT_BY_ID } from '@/data/programs';
 import { fmtDate, today } from '@/lib/dates';
 import { LANG_TAG, pick } from '@/lib/i18n';
@@ -22,9 +22,7 @@ export default function WorkoutDetail() {
     <Screen
       title={pick(w.name, lang)}
       right={
-        <Pressable onPress={() => router.back()} hitSlop={12} accessibilityLabel={t('common.back')}>
-          <Icon name="close" size={26} />
-        </Pressable>
+        <CloseButton label={t('common.back')} onPress={() => router.back()} />
       }
     >
       <Wrap>

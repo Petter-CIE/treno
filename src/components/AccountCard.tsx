@@ -4,7 +4,7 @@ import { Button, Card, Divider, Icon, Row, T } from '@/components/ui';
 import { SUPPORT_URL } from '@/lib/config';
 import { LANG_TAG } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
-import { C } from '@/lib/theme';
+import { C, FONT } from '@/lib/theme';
 
 /** Settings → optional account: email + one-time code, backup status, sign out, delete account. */
 export function AccountCard() {
@@ -145,6 +145,6 @@ export function AccountCard() {
 }
 
 const st = StyleSheet.create({
-  input: { backgroundColor: C.surface2, color: C.text, borderRadius: 12, paddingHorizontal: 14, paddingVertical: 12, fontSize: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: C.border },
+  input: { fontFamily: FONT[500], backgroundColor: C.surface2, color: C.text, borderRadius: 12, paddingHorizontal: 14, paddingVertical: 12, fontSize: 16 },
   code: { fontSize: 24, letterSpacing: 6, fontWeight: '700' },
 });

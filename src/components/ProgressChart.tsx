@@ -4,7 +4,7 @@ import Svg, { Circle, Line, Polyline, Rect, Text as SvgText } from 'react-native
 import { addDays, fmtDate, startOfWeek, ymd } from '@/lib/dates';
 import { LANG_TAG } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
-import { C } from '@/lib/theme';
+import { C, FONT } from '@/lib/theme';
 import { fromKg } from '@/lib/units';
 
 function useWidth(initial = 300) {
@@ -40,13 +40,13 @@ export function ProgressChart({ exId, height = 140 }: { exId: string; height?: n
         {vals.map((v, i) => (
           <Circle key={i} cx={x(i)} cy={y(v)} r={3.5} fill={C.accent} />
         ))}
-        <SvgText x={pad} y={12} fill={C.muted} fontSize={11}>
+        <SvgText fontFamily={FONT[600]} x={pad} y={12} fill={C.muted} fontSize={11}>
           {`${Math.round(max)} ${settings.unit === 'imperial' ? 'lb' : 'kg'}`}
         </SvgText>
-        <SvgText x={pad} y={height - 6} fill={C.faint} fontSize={10}>
+        <SvgText fontFamily={FONT[600]} x={pad} y={height - 6} fill={C.faint} fontSize={10}>
           {fmtDate(pts[0].date, tag, { day: 'numeric', month: 'short' })}
         </SvgText>
-        <SvgText x={width - pad} y={height - 6} fill={C.faint} fontSize={10} textAnchor="end">
+        <SvgText fontFamily={FONT[600]} x={width - pad} y={height - 6} fill={C.faint} fontSize={10} textAnchor="end">
           {fmtDate(pts[pts.length - 1].date, tag, { day: 'numeric', month: 'short' })}
         </SvgText>
       </Svg>
@@ -81,13 +81,13 @@ export function WeeklyBars({ height = 130 }: { height?: number }) {
         })}
         {weeks.map((w, i) =>
           w.min ? (
-            <SvgText key={`v${i}`} x={pad + i * bw + bw / 2} y={height - 26 - ((height - 40) * w.min) / max} fill={C.muted} fontSize={10} textAnchor="middle">
+            <SvgText fontFamily={FONT[600]} key={`v${i}`} x={pad + i * bw + bw / 2} y={height - 26 - ((height - 40) * w.min) / max} fill={C.muted} fontSize={10} textAnchor="middle">
               {`${w.min}`}
             </SvgText>
           ) : null,
         )}
         {weeks.map((w, i) => (
-          <SvgText key={`l${i}`} x={pad + i * bw + bw / 2} y={height - 6} fill={C.faint} fontSize={9} textAnchor="middle">
+          <SvgText fontFamily={FONT[600]} key={`l${i}`} x={pad + i * bw + bw / 2} y={height - 6} fill={C.faint} fontSize={9} textAnchor="middle">
             {w.label}
           </SvgText>
         ))}
@@ -102,7 +102,7 @@ export function WeeklyBars({ height = 130 }: { height?: number }) {
 function SvgLabel({ text }: { text: string }) {
   return (
     <Svg width={140} height={14}>
-      <SvgText x={140} y={11} fill={C.faint} fontSize={10} textAnchor="end">
+      <SvgText fontFamily={FONT[600]} x={140} y={11} fill={C.faint} fontSize={10} textAnchor="end">
         {text}
       </SvgText>
     </Svg>

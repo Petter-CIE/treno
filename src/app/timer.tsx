@@ -3,11 +3,11 @@ import { useKeepAwake } from 'expo-keep-awake';
 import { router, useLocalSearchParams } from 'expo-router';
 import * as Speech from 'expo-speech';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle } from 'react-native-svg';
 import { ExerciseAnimation, hasAnimation } from '@/components/ExerciseAnimation';
-import { Icon, Row, T } from '@/components/ui';
+import { Icon, Row, T, Txt } from '@/components/ui';
 import { WORKOUT_BY_ID } from '@/data/programs';
 import { fmtDuration } from '@/lib/dates';
 import { LANG_TAG, pick } from '@/lib/i18n';
@@ -168,7 +168,7 @@ export default function TimerScreen() {
       {step.kind === 'manual' ? (
         <Pressable style={st.doneBtn} onPress={goNext} accessibilityRole="button">
           <Icon name="check" size={28} color={C.onGood} />
-          <Text style={st.doneText}>{t('timer.setDone')}</Text>
+          <Txt style={st.doneText}>{t('timer.setDone')}</Txt>
         </Pressable>
       ) : null}
 
@@ -269,10 +269,10 @@ function StepView({
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 12, paddingHorizontal: 20 }}>
-      <Text style={[st.kind, { color }]}>{kindLabel.toUpperCase()}</Text>
-      <Text style={st.title} numberOfLines={3} adjustsFontSizeToFit>
+      <Txt style={[st.kind, { color }]}>{kindLabel.toUpperCase()}</Txt>
+      <Txt style={st.title} numberOfLines={3} adjustsFontSizeToFit>
         {step.title}
-      </Text>
+      </Txt>
       {step.detail ? (
         <T variant="muted" style={{ textAlign: 'center' }}>
           {step.detail}
@@ -300,12 +300,12 @@ function StepView({
         {animEx && hasAnimation(animEx) ? (
           <ExerciseAnimation id={animEx} size={RING - 64} playing={!paused} dim={step.kind === 'rest' || step.kind === 'prep'} />
         ) : (
-          <Text style={st.time}>{fmtDuration(step.seconds ? remaining : up)}</Text>
+          <Txt style={st.time}>{fmtDuration(step.seconds ? remaining : up)}</Txt>
         )}
       </View>
       {animEx && hasAnimation(animEx) ? (
         <Row gap={10}>
-          <Text style={[st.timeSmall, { color: step.seconds ? C.text : C.good }]}>{fmtDuration(step.seconds ? remaining : up)}</Text>
+          <Txt style={[st.timeSmall, { color: step.seconds ? C.text : C.good }]}>{fmtDuration(step.seconds ? remaining : up)}</Txt>
           {paused ? <T variant="label">{t('timer.pause')}</T> : null}
         </Row>
       ) : paused ? (
@@ -324,7 +324,7 @@ function StepView({
               {t('timer.rounds')}: {rounds}
             </T>
             <Pressable style={st.roundBtn} onPress={onRound}>
-              <Text style={st.roundBtnText}>{t('timer.addRound')}</Text>
+              <Txt style={st.roundBtnText}>{t('timer.addRound')}</Txt>
             </Pressable>
           </Row>
         </View>

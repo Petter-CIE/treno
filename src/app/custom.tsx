@@ -1,8 +1,8 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { Pressable, ScrollView, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Button, Card, Chip, Icon, Row, Section, Stepper, T, Wrap } from '@/components/ui';
+import { Button, Card, Chip, CloseButton, Row, Section, Stepper, T, Wrap } from '@/components/ui';
 import { EXERCISES, EXERCISE_BY_ID } from '@/data/exercises';
 import { pick } from '@/lib/i18n';
 import { session } from '@/lib/session';
@@ -55,9 +55,7 @@ export default function CustomTimer() {
       <ScrollView contentContainerStyle={{ padding: 16, paddingTop: 20, gap: 16, paddingBottom: insets.bottom + 100 }}>
         <Row style={{ justifyContent: 'space-between' }}>
           <T variant="h1">{t('custom.title')}</T>
-          <Pressable onPress={() => router.back()} hitSlop={12}>
-            <Icon name="close" size={26} />
-          </Pressable>
+          <CloseButton label={t('common.back')} onPress={() => router.back()} />
         </Row>
 
         <Section title={t('custom.mode')}>

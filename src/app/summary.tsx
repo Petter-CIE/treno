@@ -8,7 +8,7 @@ import { fmtDuration, today } from '@/lib/dates';
 import { pick } from '@/lib/i18n';
 import { session } from '@/lib/session';
 import { useStore } from '@/lib/store';
-import { C } from '@/lib/theme';
+import { C, FONT } from '@/lib/theme';
 import type { LoggedSet } from '@/lib/types';
 import { distUnit, fmtPace, fmtWeight, fromKg, toKg, toKm, weightUnit } from '@/lib/units';
 import { exName, loggableItems, workoutHasDistance } from '@/lib/workout';
@@ -155,5 +155,5 @@ export default function Summary() {
 
 const st = StyleSheet.create({
   badge: { width: 80, height: 80, borderRadius: 40, backgroundColor: C.accentDim, alignItems: 'center', justifyContent: 'center' },
-  input: { backgroundColor: C.surface, color: C.text, borderRadius: 14, padding: 14, fontSize: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: C.border },
+  input: { fontFamily: FONT[500], backgroundColor: C.surface, color: C.text, borderRadius: 14, padding: 14, fontSize: 16 },
 });

@@ -25,7 +25,7 @@ export function DisciplinePicker() {
   );
 }
 
-const EQUIP_ICON: Record<Equipment, IconName> = {
+export const EQUIP_ICON: Record<Equipment, IconName> = {
   kettlebell: 'kettlebell',
   dumbbell: 'dumbbell',
   barbell: 'weight-lifter',

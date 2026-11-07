@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Button, Card, Chip, DiscIcon, Icon, Row, Screen, Section, T } from '@/components/ui';
+import { Button, Card, Chip, CloseButton, DiscIcon, Icon, Row, Screen, Section, T } from '@/components/ui';
 import { DISCIPLINES } from '@/data/exercises';
 import { PROGRAMS, PROGRAM_BY_ID, WORKOUTS, WORKOUT_BY_ID } from '@/data/programs';
 import { addDays, fmtDate, isoWeek, parseYmd, startOfWeek, today, ymd } from '@/lib/dates';
@@ -176,9 +176,7 @@ function WorkoutPicker({ date, onClose, onPick }: { date: string | null; onClose
             <T variant="h2">{t('plan.choose')}</T>
             {date ? <T variant="muted">{fmtDate(date, LANG_TAG[lang], { weekday: 'long', day: 'numeric', month: 'long' })}</T> : null}
           </View>
-          <Pressable onPress={onClose} hitSlop={12}>
-            <Icon name="close" size={26} />
-          </Pressable>
+          <CloseButton label={t('common.back')} onPress={onClose} />
         </Row>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} style={{ flexGrow: 0, flexShrink: 0 }}>
           <Chip label={t('all')} active={!disc} onPress={() => setDisc(null)} />

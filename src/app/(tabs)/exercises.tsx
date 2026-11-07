@@ -7,7 +7,7 @@ import { Chip, Icon, Row, T } from '@/components/ui';
 import { DISCIPLINES, EXERCISES } from '@/data/exercises';
 import { pick } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
-import { C, DISC_COLOR } from '@/lib/theme';
+import { C, DISC_COLOR, FONT } from '@/lib/theme';
 import type { Discipline } from '@/lib/types';
 
 const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -81,8 +81,8 @@ export default function ExercisesScreen() {
 }
 
 const st = StyleSheet.create({
-  search: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: C.surface, borderRadius: 14, paddingHorizontal: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: C.border },
-  input: { flex: 1, color: C.text, fontSize: 16, paddingVertical: 12 },
+  search: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: C.surface, borderRadius: 14, paddingHorizontal: 12 },
+  input: { fontFamily: FONT[500], flex: 1, color: C.text, fontSize: 16, paddingVertical: 12 },
   thumb: { width: 52, height: 52, borderRadius: 12, backgroundColor: C.bg, overflow: 'hidden' },
   row: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 10, borderRadius: 16, backgroundColor: C.surface },
   lvl: { width: 6, height: 14, borderRadius: 2, backgroundColor: C.surface2 },

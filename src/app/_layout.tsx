@@ -1,3 +1,4 @@
+import { PlusJakartaSans_400Regular, PlusJakartaSans_500Medium, PlusJakartaSans_600SemiBold, PlusJakartaSans_700Bold, PlusJakartaSans_800ExtraBold, useFonts } from '@expo-google-fonts/plus-jakarta-sans';
 import * as Notifications from 'expo-notifications';
 import { Stack } from 'expo-router/stack';
 import { StatusBar } from 'expo-status-bar';
@@ -14,7 +15,8 @@ if (Platform.OS !== 'web') {
 
 function Root() {
   const { ready } = useStore();
-  if (!ready) return <View style={{ flex: 1, backgroundColor: C.bg }} />;
+  const [fonts, fontError] = useFonts({ PlusJakartaSans_400Regular, PlusJakartaSans_500Medium, PlusJakartaSans_600SemiBold, PlusJakartaSans_700Bold, PlusJakartaSans_800ExtraBold });
+  if (!ready || (!fonts && !fontError)) return <View style={{ flex: 1, backgroundColor: C.bg }} />;
   return (
     <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: C.bg }, animation: 'slide_from_right' }}>
       <Stack.Screen name="(tabs)" />
@@ -22,6 +24,7 @@ function Root() {
       <Stack.Screen name="summary" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
       <Stack.Screen name="onboarding" options={{ presentation: 'fullScreenModal' }} />
       <Stack.Screen name="custom" options={{ presentation: 'modal' }} />
+      <Stack.Screen name="account" options={{ presentation: 'modal' }} />
     </Stack>
   );
 }

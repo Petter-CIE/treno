@@ -172,6 +172,6 @@ const st = StyleSheet.create({
   dot: { width: 30, height: 30, borderRadius: 15, borderWidth: 2, borderColor: C.border, alignItems: 'center', justifyContent: 'center' },
   dotDone: { backgroundColor: C.good, borderColor: C.good },
   dotPlanned: { borderColor: C.accent },
-  quick: { flex: 1, backgroundColor: C.surface, borderRadius: 16, paddingVertical: 14, alignItems: 'center', gap: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: C.border },
-  sugg: { width: 160, backgroundColor: C.surface, borderRadius: 16, padding: 14, gap: 6, borderTopWidth: 3, borderWidth: StyleSheet.hairlineWidth, borderColor: C.border },
+  quick: { flex: 1, backgroundColor: C.surface, borderRadius: 16, paddingVertical: 14, alignItems: 'center', gap: 6 },
+  sugg: { width: 160, backgroundColor: C.surface, borderRadius: 16, padding: 14, gap: 6, borderTopWidth: 3 },
 });
