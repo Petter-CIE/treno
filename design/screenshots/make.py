@@ -21,13 +21,17 @@ DIST = Path(sys.argv[1])
 OUT = Path(sys.argv[2])
 OUT.mkdir(parents=True, exist_ok=True)
 PORT = 8790
-W, H = 1320, 2868
-BG = (13, 23, 30)
+# App Store 6.9": 1320x2868. Google Play needs an aspect ratio of at most 2:1 → SIZE=play gives 1080x2160.
+W, H = (1080, 2160) if os.environ.get('SIZE') == 'play' else (1320, 2868)
+K = W / 1320  # scale for type and layout
+SUFFIX = '_play' if os.environ.get('SIZE') == 'play' else ''
+BG = (10, 19, 24)
 ACCENT = (63, 214, 176)
 TEXT = (238, 244, 246)
 MUTED = (148, 169, 180)
-FONT_BOLD = '/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf'
-FONT_MED = '/usr/share/fonts/opentype/inter/InterDisplay-Medium.otf'
+_JK = Path(__file__).resolve().parents[2] / 'node_modules/@expo-google-fonts/plus-jakarta-sans'
+FONT_BOLD = str(_JK / '800ExtraBold/PlusJakartaSans_800ExtraBold.ttf')
+FONT_MED = str(_JK / '500Medium/PlusJakartaSans_500Medium.ttf')
 
 CAPTIONS = {
     'en': [
@@ -158,37 +162,38 @@ def frame(shot: Path, title: str, sub: str, out: Path):
     # soft aurora glow
     glow = Image.new('RGB', (W, H), BG)
     gd = ImageDraw.Draw(glow)
-    gd.ellipse((W * 0.1, -420, W * 0.9, 480), fill=(14, 84, 72))
-    glow = glow.filter(ImageFilter.GaussianBlur(160))
+    gd.ellipse((W * 0.1, -420 * K, W * 0.9, 480 * K), fill=(14, 84, 72))
+    glow = glow.filter(ImageFilter.GaussianBlur(160 * K))
     canvas = Image.blend(canvas, glow, 0.9)
     d = ImageDraw.Draw(canvas)
-    f1 = ImageFont.truetype(FONT_BOLD, 104)
-    f2 = ImageFont.truetype(FONT_MED, 50)
-    y = 170
-    for line in wrap(d, title, f1, W - 160):
+    f1 = ImageFont.truetype(FONT_BOLD, int(98 * K))
+    f2 = ImageFont.truetype(FONT_MED, int(48 * K))
+    y = int(150 * K)
+    for line in wrap(d, title, f1, W - int(160 * K)):
         tw = d.textlength(line, font=f1)
         d.text(((W - tw) / 2, y), line, font=f1, fill=TEXT)
-        y += 122
-    y += 14
-    for line in wrap(d, sub, f2, W - 200):
+        y += int(120 * K)
+    y += int(14 * K)
+    for line in wrap(d, sub, f2, W - int(200 * K)):
         tw = d.textlength(line, font=f2)
         d.text(((W - tw) / 2, y), line, font=f2, fill=MUTED)
-        y += 66
+        y += int(64 * K)
     # phone screenshot with rounded corners and a thin border
     im = Image.open(shot).convert('RGB')
-    target_w = 1080
+    target_w = int(1080 * K)
     im = im.resize((target_w, int(im.height * target_w / im.width)), Image.LANCZOS)
-    top = max(y + 70, 560)
+    top = max(y + int(70 * K), int(540 * K))
     avail = H - top
     if im.height > avail:
-        im = im.crop((0, 0, im.width, avail + 120))
+        im = im.crop((0, 0, im.width, avail + int(120 * K)))
     mask = Image.new('L', im.size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle((0, 0, im.width - 1, im.height + 200), radius=70, fill=255)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, im.width - 1, im.height + 200), radius=int(70 * K), fill=255)
     x = (W - im.width) // 2
-    border = Image.new('RGB', (im.width + 16, im.height + 16), (42, 62, 74))
+    b = max(6, int(8 * K))
+    border = Image.new('RGB', (im.width + 2 * b, im.height + 2 * b), (31, 49, 59))
     bmask = Image.new('L', border.size, 0)
-    ImageDraw.Draw(bmask).rounded_rectangle((0, 0, border.width - 1, border.height + 200), radius=78, fill=255)
-    canvas.paste(border, (x - 8, top - 8), bmask)
+    ImageDraw.Draw(bmask).rounded_rectangle((0, 0, border.width - 1, border.height + 200), radius=int(78 * K), fill=255)
+    canvas.paste(border, (x - b, top - b), bmask)
     canvas.paste(im, (x, top), mask)
     canvas.save(out, optimize=True)
 
@@ -211,7 +216,7 @@ async def main():
     for lang, caps in CAPTIONS.items():
         raw = await shoot(lang)
         for i, (shot, (t, s)) in enumerate(zip(raw, caps), 1):
-            frame(shot, t, s, OUT / f'{lang}_{i}.png')
+            frame(shot, t, s, OUT / f'{lang}_{i}{SUFFIX}.png')
             shot.unlink()
         print(lang, 'done')
 
