@@ -21,8 +21,8 @@ DIST = Path(sys.argv[1])
 OUT = Path(sys.argv[2])
 OUT.mkdir(parents=True, exist_ok=True)
 PORT = 8790
-# App Store 6.9": 1320x2868. Google Play needs an aspect ratio of at most 2:1 → SIZE=play gives 1080x2160.
-W, H = (1080, 2160) if os.environ.get('SIZE') == 'play' else (1320, 2868)
+# App Store 6.9": 1320x2868. Google Play wants 9:16 → SIZE=play gives 1080x1920.
+W, H = (1080, 1920) if os.environ.get('SIZE') == 'play' else (1320, 2868)
 K = W / 1320  # scale for type and layout
 SUFFIX = '_play' if os.environ.get('SIZE') == 'play' else ''
 BG = (10, 19, 24)
