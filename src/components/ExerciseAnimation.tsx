@@ -53,6 +53,7 @@ export const ExerciseAnimation = memo(function ExerciseAnimation({
       <Limb a={body.hip} b={body.kneeF} c={body.ankleF} d={body.toeF} color={FAR} />
       <Limb a={body.shoulder} b={body.elbowF} c={body.handF} color={FAR} />
       {anim.equip === 'db2' ? <Dumbbell p={body.handF} far /> : null}
+      {anim.equip === 'farmers' ? <Farmer p={body.handF} far /> : null}
       {/* torso + head */}
       <Path d={`M${body.hip.x} ${body.hip.y} Q${body.spineCtrl.x} ${body.spineCtrl.y} ${body.shoulder.x} ${body.shoulder.y}`} stroke={near} strokeWidth={LIMB + 3} strokeLinecap="round" fill="none" />
       <Circle cx={body.head.x} cy={body.head.y} r={LEN.headR} fill={near} />
@@ -115,6 +116,17 @@ function Dumbbell({ p, far }: { p: Pt; far?: boolean }) {
   );
 }
 
+/** Strongman farmer handle: a short bar with a plate at each end, hanging from the hand. */
+function Farmer({ p, far }: { p: Pt; far?: boolean }) {
+  return (
+    <G opacity={far ? 0.55 : 1}>
+      <Rect x={p.x - 16} y={p.y - 2} width={32} height={4} rx={2} fill={EQ} />
+      <Rect x={p.x - 19} y={p.y - 11} width={6} height={22} rx={2} fill={EQ} />
+      <Rect x={p.x + 13} y={p.y - 11} width={6} height={22} rx={2} fill={EQ} />
+    </G>
+  );
+}
+
 function Plate({ p }: { p: Pt }) {
   return (
     <G>
@@ -138,6 +150,19 @@ function Equipment({ anim, b }: { anim: Anim; b: Body }) {
       return <Plate p={{ x: b.shoulder.x - 6, y: b.shoulder.y - 2 }} />;
     case 'bbHip':
       return <Plate p={{ x: b.hip.x + 4, y: b.hip.y - 14 }} />;
+    case 'farmers':
+      return <Farmer p={b.handN} />;
+    case 'log':
+      return <Rect x={b.handN.x - 13} y={b.handN.y - 9} width={26} height={18} rx={9} fill={EQ} />;
+    case 'stone': {
+      // held in front of the body between the hands
+      const c = { x: (b.handN.x + b.handF.x) / 2 + 9, y: (b.handN.y + b.handF.y) / 2 - 4 };
+      return <Circle cx={c.x} cy={c.y} r={15} fill={C.accentDim} stroke={EQ} strokeWidth={4} />;
+    }
+    case 'sandbag': {
+      const c = { x: b.handN.x + 6, y: b.handN.y - 6 };
+      return <Rect x={c.x - 15} y={c.y - 10} width={30} height={20} rx={8} fill={EQ} />;
+    }
     default:
       return null;
   }
@@ -250,6 +275,30 @@ function Props({ anim, b, f, ms, back }: { anim: Anim; b: Body; f: Body; ms: num
                 </G>
               );
             return <Line key={i} x1={b.handN.x} y1={b.handN.y} x2={fly.x} y2={fly.y} stroke={PROP} strokeWidth={2} />;
+          }
+          case 'sled': {
+            if (back) return null;
+            const x = b.handN.x + 4;
+            return (
+              <G key={i}>
+                <Line x1={x} y1={b.handN.y} x2={x} y2={GROUND - 4} stroke={PROP} strokeWidth={5} strokeLinecap="round" />
+                <Rect x={x} y={GROUND - 26} width={30} height={22} rx={3} fill={PROP} />
+                <Line x1={x - 4} x2={x + 38} y1={GROUND - 2} y2={GROUND - 2} stroke={PROP} strokeWidth={4} strokeLinecap="round" />
+              </G>
+            );
+          }
+          case 'box': {
+            if (!back) return null;
+            return <Rect key={i} x={f.toeN.x + 12} y={GROUND - 34} width={46} height={34} rx={4} fill={PROP} />;
+          }
+          case 'rings': {
+            if (back) return null;
+            return (
+              <G key={i}>
+                <Line x1={f.handN.x} y1={8} x2={b.handN.x} y2={b.handN.y - 6} stroke={PROP} strokeWidth={2} />
+                <Circle cx={b.handN.x} cy={b.handN.y} r={6} stroke={EQ} strokeWidth={3} fill="none" />
+              </G>
+            );
           }
           case 'step': {
             if (!back) return null;

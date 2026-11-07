@@ -33,6 +33,61 @@ const gaitAnim = (lean: number, arm: number, ms: number, scale = 1): Anim => {
 const QUAD: Pose = { t: 108, aN: [0, 0], aF: [2, 2], lN: [0, -90], lF: [2, -90] };
 
 export const ANIMATIONS: Record<string, Anim> = {
+  // ─────────── Strongman ───────────
+  farmers: (() => {
+    const [a, b, c, d] = gait(0.8, 2, 0);
+    const arms = { aN: [2, 2] as Pair, aF: [0, 0] as Pair };
+    return { anchor: 'lowest', moving: true, equip: 'farmers', frames: [[{ ...a, ...arms }, 420], [{ ...b, ...arms }, 420], [{ ...c, ...arms }, 420], [{ ...d, ...arms }, 420]] } as Anim;
+  })(),
+  logpress: {
+    anchor: 'ankle',
+    equip: 'log',
+    frames: [
+      [{ aN: [22, 160], aF: [20, 160] }, 700, 200],
+      [{ t: 172, lN: [22, -24], lF: [20, -24], aN: [22, 160], aF: [20, 160] }, 300],
+      [{ aN: UP, aF: UP }, 700, 400],
+    ],
+  },
+  atlas: {
+    anchor: 'ankle',
+    equip: 'stone',
+    frames: [
+      [{ ...SQUAT, t: 128, aN: [-40, 40], aF: [-38, 40] }, 900, 200],
+      [{ t: 150, lN: [55, -30], lF: [53, -30], aN: [-10, 70], aF: [-8, 70] }, 700],
+      [{ t: 186, aN: [30, 120], aF: [28, 120] }, 800, 400],
+    ],
+  },
+  sledpush: (() => {
+    const [a, b, c, d] = gait(1.1, 55, 0);
+    const arms = { aN: [85, 85] as Pair, aF: [83, 83] as Pair };
+    return { anchor: 'lowest', moving: true, props: [{ kind: 'sled' }], frames: [[{ ...a, ...arms }, 380], [{ ...b, ...arms }, 380], [{ ...c, ...arms }, 380], [{ ...d, ...arms }, 380]] } as Anim;
+  })(),
+  sbclean: {
+    anchor: 'ankle',
+    equip: 'sandbag',
+    frames: [
+      [{ ...SQUAT, t: 125, aN: [-25, 10], aF: [-23, 10] }, 800, 200],
+      [{ t: 150, lN: [50, -28], lF: [48, -28], aN: [-5, 60], aF: [-3, 60] }, 500],
+      [{ t: 182, aN: [40, 160], aF: [20, 150] }, 800, 400],
+    ],
+  },
+  boxjump: {
+    anchor: 'ankle',
+    props: [{ kind: 'box' }],
+    frames: [
+      [{ aN: [10, 10], aF: [8, 8] }, 500],
+      [{ ...SQUAT, t: 140, lN: [60, -24], lF: [58, -24], aN: [-40, -20], aF: [-38, -20] }, 350],
+      [{ t: 170, lN: [70, -60], lF: [68, -60], aN: [140, 150], aF: [138, 150], dx: 22, dy: -58, fN: 30, fF: 30 }, 350],
+      [{ t: 150, lN: [50, -30], lF: [48, -30], aN: [60, 70], aF: [58, 70], dx: 44, dy: -34 }, 400],
+      [{ aN: [10, 10], aF: [8, 8], dx: 44, dy: -34 }, 600, 300],
+    ],
+  },
+  ringrow: {
+    anchor: 'ankle',
+    props: [{ kind: 'rings' }],
+    frames: [[{ t: 122, aN: [172, 172], aF: [170, 170], lN: [-58, -58], lF: [-58, -58] }, 800, 150], [{ t: 134, aN: [185, 100], aF: [183, 100], lN: [-46, -46], lF: [-46, -46] }, 800, 250]],
+  },
+
   // ─────────── Kettlebell ───────────
   swing2: { anchor: 'ankle', equip: 'kb2', frames: [[swingBottom, 550], [swingTop, 550, 120]] },
   swing1: {

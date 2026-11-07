@@ -10,7 +10,7 @@ Mobilní aplikace pro Android a iOS (Expo / React Native) pro plánování a ved
 - **Dnes** – dnešní trénink, týdenní přehled, série splněných týdnů, rychlý start (Tabata, EMOM, AMRAP, vlastní).
 - **Plán** – týdenní kalendář, ruční přidávání tréninků, 10 hotových programů (posilovna, PPL, doma, první shyb, kalistenika, od nuly na 5 km, kettlebell, HIIT, mobilita).
 - **Časovač** – série s pauzami, EMOM, AMRAP s počítáním kol, intervaly, běh/chůze, souvislé kardio. Hlasový trenér v jazyce appky, vibrace, displej nezhasne.
-- **Knihovna cviků** – 63 cviků s vlastními animacemi a popisem techniky, filtr a vyhledávání.
+- **Knihovna cviků** – 70 cviků s vlastními animacemi a popisem techniky, filtr a vyhledávání.
 - **Deník** – zápis vah, vzdálenosti a tempa, RPE, poznámky, týdenní minuty, graf progresu u každého cviku.
 - **Připomínky** – lokální notifikace v tréninkové dny.
 - Data jsou v telefonu (AsyncStorage). **Nepovinný účet** (Nastavení → Účet a záloha): přihlášení e-mailem jednorázovým kódem, záloha a synchronizace plánu, deníku a nastavení přes Supabase, smazání účtu v appce.

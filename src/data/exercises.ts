@@ -109,6 +109,23 @@ export const EXERCISES: Exercise[] = [
     ['Hip thrust', 'Hip thrust', 'Hip thrust'], ['Hýždě', 'Sete', 'Glutes'],
     [['Lopatky opřené o lavici, brada ke hrudi', 'Nahoře zatni hýždě, nepřeprohýbej bedra'], ['Skulderbladene mot benken, haken mot brystet', 'Stram setet på toppen, ikke svai'], ['Shoulder blades on the bench, chin tucked', 'Squeeze glutes at the top, no arching']]),
 
+  // ───────── Strongman ─────────
+  E('farmers', 'gym', 'fullbody', 'strongman', 2, 'time', true,
+    ['Farmářská chůze', 'Farmer walk', "Farmer's walk"], ['Úchop, trapézy, core, nohy', 'Grep, trapes, kjerne, bein', 'Grip, traps, core, legs'],
+    [['Zvedni jako mrtvý tah, ramena dozadu a dolů', 'Krátké rychlé kroky, trup zpevněný'], ['Løft som et markløft, skuldrene bak og ned', 'Korte, raske steg, stram kropp'], ['Pick up like a deadlift, shoulders back and down', 'Short quick steps, braced torso']]),
+  E('logpress', 'gym', 'shoulders', 'strongman', 3, 'reps', true,
+    ['Tlak klády', 'Stokkpress', 'Log press'], ['Ramena, triceps, nohy', 'Skuldre, triceps, bein', 'Shoulders, triceps, legs'],
+    [['Kládu dostaň na hrudník přes stehna', 'Podřep a vytlač nohama, hlavu protáhni dopředu'], ['Få stokken opp på brystet via lårene', 'Dipp og driv med beina, hodet gjennom på toppen'], ['Get the log to the chest via the thighs', 'Dip and drive with the legs, head through at the top']]),
+  E('atlas', 'gym', 'fullbody', 'strongman', 3, 'reps', true,
+    ['Atlasův kámen', 'Atlasstein', 'Atlas stone'], ['Záda, hýždě, biceps', 'Rygg, sete, biceps', 'Back, glutes, biceps'],
+    [['Obejmi kámen, předloktí pod ním', 'Přetoč do klína, pak vytlač boky nahoru a na hruď'], ['Omfavn steinen, underarmene under', 'Rull den opp i fanget, så hoftene frem til brystet'], ['Hug the stone, forearms underneath', 'Lap it, then drive the hips through to the chest']]),
+  E('sledpush', 'gym', 'legs', 'sled', 2, 'time', true,
+    ['Tlačení saní', 'Sledepush', 'Sled push'], ['Stehna, hýždě, lýtka', 'Lår, sete, legger', 'Quads, glutes, calves'],
+    [['Nízký náklon, ruce natažené', 'Krátké silné kroky přes celé chodidlo'], ['Lav vinkel, strake armer', 'Korte, kraftige steg over hele foten'], ['Low lean, long arms', 'Short powerful steps through the whole foot']]),
+  E('sbclean', 'gym', 'fullbody', 'sandbag', 2, 'reps', true,
+    ['Pytel na rameno', 'Sandsekk til skulder', 'Sandbag to shoulder'], ['Hýždě, záda, ramena', 'Sete, rygg, skuldre', 'Glutes, back, shoulders'],
+    [['Pytel obejmi, zvedni do klína', 'Prudce vytlač boky a hoď si ho na rameno'], ['Omfavn sekken og løft den i fanget', 'Driv hoftene frem og legg den på skulderen'], ['Hug the bag and lap it', 'Explode the hips and pop it onto the shoulder']]),
+
   // ───────── Bodyweight ─────────
   E('pushup', 'bodyweight', 'chest', 'none', 1, 'reps', false,
     ['Klik', 'Armhevning', 'Push-up'], ['Prsa, triceps, core', 'Bryst, triceps, kjerne', 'Chest, triceps, core'],
@@ -141,6 +158,10 @@ export const EXERCISES: Exercise[] = [
     ['Boční prkno', 'Sideplanke', 'Side plank'], ['Šikmé svaly', 'Skrå magemuskler', 'Obliques'],
     [['Loket pod ramenem, boky nahoru', 'Tělo v jedné linii'], ['Albuen under skulderen, hoftene opp', 'Kroppen i én linje'], ['Elbow under shoulder, hips up', 'Body in one line']], true),
 
+  E('boxjump', 'bodyweight', 'legs', 'box', 2, 'reps', false,
+    ['Výskok na bednu', 'Boksehopp', 'Box jump'], ['Stehna, hýždě, lýtka', 'Lår, sete, legger', 'Quads, glutes, calves'],
+    [['Švihni rukama a vyskoč z podřepu', 'Dopadni měkce do podřepu, dolů slez krokem'], ['Sving armene og hopp fra en halv knebøy', 'Land mykt, gå ned igjen i stedet for å hoppe'], ['Swing the arms and jump from a quarter squat', 'Land softly, step down instead of jumping']]),
+
   // ───────── Calisthenics ─────────
   E('pullup', 'calisthenics', 'back', 'pullupbar', 2, 'reps', false,
     ['Shyb nadhmatem', 'Pullup', 'Pull-up'], ['Záda, biceps', 'Rygg, biceps', 'Back, biceps'],
@@ -154,7 +175,7 @@ export const EXERCISES: Exercise[] = [
   E('deadhang', 'calisthenics', 'back', 'pullupbar', 1, 'time', false,
     ['Vis na hrazdě', 'Heng i stang', 'Dead hang'], ['Úchop, ramena', 'Grep, skuldre', 'Grip, shoulders'],
     [['Ramena aktivní, ne „schované“ u uší', 'Dýchej klidně'], ['Aktive skuldre, ikke opp mot ørene', 'Pust rolig'], ['Active shoulders, not shrugged', 'Breathe calmly']]),
-  E('dip', 'calisthenics', 'chest', 'none', 2, 'reps', false,
+  E('dip', 'calisthenics', 'chest', 'dipbars', 2, 'reps', false,
     ['Kliky na bradlech', 'Dips', 'Dip'], ['Prsa, triceps', 'Bryst, triceps', 'Chest, triceps'],
     [['Spouštěj se, dokud nemáš ramena v úrovni loktů', 'Lehký předklon zatíží prsa'], ['Senk til skuldrene er på høyde med albuene', 'Lent litt frem treffer brystet mer'], ['Lower until shoulders are level with elbows', 'Slight lean forward hits the chest']]),
   E('pikepush', 'calisthenics', 'shoulders', 'none', 2, 'reps', false,
@@ -173,8 +194,12 @@ export const EXERCISES: Exercise[] = [
     ['Dřep na jedné noze (pistol)', 'Pistolknebøy', 'Pistol squat'], ['Stehna, hýždě, rovnováha', 'Lår, sete, balanse', 'Quads, glutes, balance'],
     [['Volná noha natažená vpředu', 'Pro začátek dřep na lavičku'], ['Det frie beinet strakt frem', 'Start med knebøy ned til en benk'], ['Free leg straight out in front', 'Start by squatting to a bench']], true),
 
+  E('ringrow', 'calisthenics', 'back', 'rings', 1, 'reps', false,
+    ['Přítahy na kruzích', 'Roing i ringer', 'Ring row'], ['Záda, biceps, core', 'Rygg, biceps, kjerne', 'Back, biceps, core'],
+    [['Tělo rovné jako prkno, paty na zemi', 'Hrudník ke kruhům, lopatky k sobě'], ['Kroppen rett som en planke, hælene i bakken', 'Brystet mot ringene, klem skulderbladene'], ['Body straight as a plank, heels down', 'Chest to the rings, squeeze the shoulder blades']]),
+
   // ───────── Cardio ─────────
-  E('jumprope', 'cardio', 'cardio', 'none', 1, 'time', false,
+  E('jumprope', 'cardio', 'cardio', 'jumprope', 1, 'time', false,
     ['Švihadlo', 'Hoppetau', 'Jump rope'], ['Lýtka, kondice', 'Legger, kondisjon', 'Calves, conditioning'],
     [['Skáčeš nízko, z kotníků', 'Lokty u těla, točí zápěstí'], ['Lave hopp fra anklene', 'Albuene inntil kroppen, snurr med håndleddene'], ['Small jumps from the ankles', 'Elbows in, turn from the wrists']]),
   E('jacks', 'cardio', 'cardio', 'none', 1, 'time', false,
@@ -183,10 +208,10 @@ export const EXERCISES: Exercise[] = [
   E('highknees', 'cardio', 'cardio', 'none', 1, 'time', false,
     ['Skipink', 'Høye kneløft', 'High knees'], ['Kondice, flexory kyčle', 'Kondisjon, hoftebøyere', 'Conditioning, hip flexors'],
     [['Kolena do výšky boků', 'Pracuj i rukama'], ['Knærne til hoftehøyde', 'Bruk armene aktivt'], ['Knees to hip height', 'Drive with the arms']]),
-  E('bike', 'cardio', 'cardio', 'machine', 1, 'time', false,
+  E('bike', 'cardio', 'cardio', 'cardio', 1, 'time', false,
     ['Rotoped / kolo', 'Spinning / sykkel', 'Bike'], ['Nohy, kondice', 'Bein, kondisjon', 'Legs, conditioning'],
     [['Sedlo ve výšce boků', 'Klidné tempo, ať můžeš mluvit; v intervalech naplno'], ['Setet i hoftehøyde', 'Pratetempo; full gass i intervallene'], ['Saddle at hip height', 'Talking pace; all-out in the intervals']]),
-  E('rower', 'cardio', 'cardio', 'machine', 1, 'time', false,
+  E('rower', 'cardio', 'cardio', 'cardio', 1, 'time', false,
     ['Veslovací trenažér', 'Romaskin', 'Rowing machine'], ['Celé tělo, kondice', 'Hele kroppen, kondisjon', 'Full body, conditioning'],
     [['Pořadí: nohy – trup – ruce', 'Zpět obráceně: ruce – trup – nohy'], ['Rekkefølge: bein – overkropp – armer', 'Tilbake omvendt: armer – overkropp – bein'], ['Order: legs – body – arms', 'Return in reverse: arms – body – legs']]),
   E('stairs', 'cardio', 'cardio', 'none', 1, 'time', false,
@@ -244,4 +269,13 @@ for (const l of EXTRA_LANGS) {
 export const EXERCISE_BY_ID: Record<string, Exercise> = Object.fromEntries(EXERCISES.map((e) => [e.id, e]));
 
 export const DISCIPLINES = ['kettlebell', 'gym', 'bodyweight', 'calisthenics', 'cardio', 'running', 'mobility'] as const;
-export const EQUIPMENT = ['kettlebell', 'dumbbell', 'barbell', 'machine', 'pullupbar', 'band'] as const;
+export const EQUIPMENT = ['kettlebell', 'dumbbell', 'barbell', 'machine', 'cardio', 'pullupbar', 'dipbars', 'rings', 'band', 'jumprope', 'box', 'sandbag', 'sled', 'strongman'] as const;
+
+/** One-tap equipment sets for typical places to train. */
+export const EQUIP_PRESETS: { id: 'home' | 'homegym' | 'fullgym' | 'strongman' | 'park'; icon: string; equipment: Equipment[] }[] = [
+  { id: 'home', icon: 'home-outline', equipment: [] },
+  { id: 'homegym', icon: 'home-variant-outline', equipment: ['kettlebell', 'dumbbell', 'band', 'pullupbar', 'jumprope'] },
+  { id: 'fullgym', icon: 'office-building', equipment: ['kettlebell', 'dumbbell', 'barbell', 'machine', 'cardio', 'pullupbar', 'dipbars', 'rings', 'band', 'jumprope', 'box'] },
+  { id: 'strongman', icon: 'weight', equipment: ['kettlebell', 'dumbbell', 'barbell', 'machine', 'cardio', 'pullupbar', 'dipbars', 'band', 'jumprope', 'box', 'sandbag', 'sled', 'strongman'] },
+  { id: 'park', icon: 'pine-tree', equipment: ['pullupbar', 'dipbars', 'rings'] },
+];

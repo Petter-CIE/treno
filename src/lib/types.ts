@@ -6,7 +6,9 @@ export type L10n = Record<BaseLang, string> & Partial<Record<ExtraLang, string>>
 
 export type Discipline = 'kettlebell' | 'gym' | 'bodyweight' | 'calisthenics' | 'cardio' | 'running' | 'mobility';
 export type Muscle = 'legs' | 'chest' | 'back' | 'shoulders' | 'arms' | 'core' | 'fullbody' | 'cardio';
-export type Equipment = 'kettlebell' | 'dumbbell' | 'barbell' | 'machine' | 'pullupbar' | 'band' | 'none';
+export type Equipment =
+  | 'kettlebell' | 'dumbbell' | 'barbell' | 'machine' | 'cardio' | 'pullupbar' | 'dipbars' | 'rings' | 'band' | 'jumprope' | 'box'
+  | 'sandbag' | 'sled' | 'strongman' | 'none';
 export type Metric = 'reps' | 'time' | 'distance';
 export type Level = 1 | 2 | 3;
 
@@ -103,4 +105,6 @@ export interface Settings {
   reminder: { enabled: boolean; hour: number; minute: number };
   trainingDays: number[]; // 0 = Monday
   onboarded: boolean;
+  /** bumped when equipment types change, so saved selections can be migrated */
+  equipV?: number;
 }

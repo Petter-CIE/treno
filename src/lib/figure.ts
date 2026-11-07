@@ -21,7 +21,7 @@ export interface Pose {
   dy?: number;
 }
 
-export type Equip = 'kb1' | 'kb2' | 'db1' | 'db2' | 'bb' | 'bbBack' | 'bbHip';
+export type Equip = 'kb1' | 'kb2' | 'db1' | 'db2' | 'bb' | 'bbBack' | 'bbHip' | 'farmers' | 'log' | 'stone' | 'sandbag';
 
 export type Prop =
   | { kind: 'bar' } // pull-up bar at frame-0 hand height
@@ -35,7 +35,10 @@ export type Prop =
   | { kind: 'rope' }
   | { kind: 'bike' }
   | { kind: 'rower' }
-  | { kind: 'step' };
+  | { kind: 'step' }
+  | { kind: 'sled' } // pushed in front of the hands, the ground moves
+  | { kind: 'box' } // plyo box in front of the frame-0 toes
+  | { kind: 'rings' }; // straps from above to the hands
 
 export type Anchor = 'ankle' | 'hand' | 'hip' | 'shoulder' | 'lowest';
 

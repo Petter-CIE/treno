@@ -2,7 +2,7 @@ import Constants from 'expo-constants';
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Linking, View } from 'react-native';
-import { EQUIP_ICON } from '@/components/Pickers';
+import { EQUIP_ICON, EquipmentPresets } from '@/components/Pickers';
 import { Button, Card, Group, ListRow, Row, Screen, SelectSheet, SwitchRow, T, type IconName, type Option } from '@/components/ui';
 import { DISCIPLINES, EQUIPMENT } from '@/data/exercises';
 import { POWERED_BY, SUPPORT_URL } from '@/lib/config';
@@ -113,7 +113,22 @@ export default function SettingsScreen() {
       <SelectSheet {...sheetProps} visible={sheet === 'lang'} title={t('set.language')} options={langOpts} selected={[settings.lang]} onChange={([v]) => set({ lang: v })} />
       <SelectSheet {...sheetProps} visible={sheet === 'unit'} title={t('set.units')} options={unitOpts} selected={[settings.unit]} onChange={([v]) => set({ unit: v })} />
       <SelectSheet {...sheetProps} visible={sheet === 'disc'} multi title={t('set.disciplines')} options={discOpts} selected={settings.disciplines} onChange={(v) => set({ disciplines: v })} />
-      <SelectSheet {...sheetProps} visible={sheet === 'equip'} multi title={t('set.equipment')} options={equipOpts} selected={settings.equipment} onChange={(v) => set({ equipment: v })} />
+      <SelectSheet
+        {...sheetProps}
+        visible={sheet === 'equip'}
+        multi
+        title={t('set.equipment')}
+        header={
+          <>
+            <T variant="label">{t('set.presets')}</T>
+            <EquipmentPresets />
+            <T variant="label" style={{ marginTop: 6 }}>{t('set.ownPick')}</T>
+          </>
+        }
+        options={equipOpts}
+        selected={settings.equipment}
+        onChange={(v) => set({ equipment: v })}
+      />
       <SelectSheet {...sheetProps} visible={sheet === 'bells'} multi title={t('set.bells')} options={bellOpts} selected={settings.bells} onChange={(v) => set({ bells: [...v].sort((a, b) => a - b) })} />
       <SelectSheet {...sheetProps} visible={sheet === 'days'} multi title={t('set.trainingDays')} options={dayOpts} selected={settings.trainingDays} onChange={(v) => set({ trainingDays: [...v].sort((a, b) => a - b) })} />
       <SelectSheet {...sheetProps} visible={sheet === 'goal'} title={t('set.goal')} options={goalOpts} selected={[settings.weeklyGoal]} onChange={([v]) => set({ weeklyGoal: v })} />

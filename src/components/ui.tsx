@@ -337,6 +337,7 @@ export function SelectSheet<V>({
   onChange,
   multi,
   doneLabel,
+  header,
 }: {
   visible: boolean;
   onClose: () => void;
@@ -346,6 +347,8 @@ export function SelectSheet<V>({
   onChange: (next: V[]) => void;
   multi?: boolean;
   doneLabel: string;
+  /** extra content above the options (e.g. quick presets) */
+  header?: ReactNode;
 }) {
   const pick = (v: V) => {
     if (!multi) {
@@ -357,6 +360,7 @@ export function SelectSheet<V>({
   };
   return (
     <Sheet visible={visible} onClose={onClose} title={title} footer={multi ? <Button label={doneLabel} onPress={onClose} /> : undefined}>
+      {header ? <View style={{ gap: 8, marginBottom: 14 }}>{header}</View> : null}
       <View style={s.optList}>
         {options.map((o, i) => {
           const on = selected.includes(o.value);

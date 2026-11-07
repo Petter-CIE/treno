@@ -35,6 +35,7 @@ export const DEFAULT_SETTINGS: Settings = {
   reminder: { enabled: false, hour: 17, minute: 0 },
   trainingDays: [0, 2, 4],
   onboarded: false,
+  equipV: 2,
 };
 
 const EMPTY: Data = { settings: DEFAULT_SETTINGS, plan: [], log: [], program: null };
@@ -57,6 +58,18 @@ interface Store extends Data {
   syncNow: () => Promise<void>;
   signOut: () => Promise<void>;
   deleteAccount: () => Promise<boolean>;
+}
+
+export const EQUIP_V = 2;
+
+/** v1 had no dip bars, jump rope or cardio machines – keep exercises that used to need nothing available. */
+export function migrateSettings(s: Settings): Settings {
+  if ((s.equipV ?? 1) >= EQUIP_V) return s;
+  const eq = new Set(s.equipment);
+  if (s.onboarded) eq.add('jumprope');
+  if (eq.has('pullupbar')) eq.add('dipbars');
+  if (eq.has('machine')) eq.add('cardio');
+  return { ...s, equipment: [...eq], equipV: EQUIP_V };
 }
 
 /** Remove entries and remember their ids, so the backup does not bring them back. */
@@ -87,7 +100,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           setData({
             ...EMPTY,
             ...parsed,
-            settings: { ...DEFAULT_SETTINGS, ...parsed.settings, reminder: { ...DEFAULT_SETTINGS.reminder, ...parsed.settings?.reminder } },
+            settings: migrateSettings({ ...DEFAULT_SETTINGS, ...parsed.settings, reminder: { ...DEFAULT_SETTINGS.reminder, ...parsed.settings?.reminder } }),
           });
         }
       } catch {

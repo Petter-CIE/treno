@@ -148,6 +148,19 @@ export const WORKOUTS: Workout[] = [
     ],
   }),
 
+  W({
+    id: 'strongman', discipline: 'gym', minutes: 45,
+    name: { cs: 'Strongman základ', nb: 'Strongman grunnøkt', en: 'Strongman basics' },
+    focus: { cs: 'Kláda, farmářky, saně, kámen', nb: 'Stokk, farmer walk, slede, stein', en: 'Log, farmers, sled, stone' },
+    blocks: [
+      { kind: 'sets', sets: 5, rest: 120, items: [{ ex: 'logpress', reps: 3 }] },
+      { kind: 'sets', sets: 4, rest: 90, items: [{ ex: 'farmers', reps: 0, seconds: 30 }] },
+      { kind: 'sets', sets: 4, rest: 90, items: [{ ex: 'sledpush', reps: 0, seconds: 20 }] },
+      { kind: 'sets', sets: 3, rest: 120, items: [{ ex: 'atlas', reps: 3 }] },
+      { kind: 'sets', sets: 3, rest: 90, items: [{ ex: 'sbclean', reps: 5 }] },
+    ],
+  }),
+
   // ───────── Calisthenics ─────────
   W({
     id: 'cali_pull', discipline: 'calisthenics', minutes: 30,
@@ -179,6 +192,19 @@ export const WORKOUTS: Workout[] = [
       { kind: 'sets', sets: 5, rest: 120, items: [{ ex: 'pullup', reps: 5 }] },
       { kind: 'sets', sets: 4, rest: 90, items: [{ ex: 'dip', reps: 8 }] },
       { kind: 'sets', sets: 3, rest: 90, items: [{ ex: 'pistol', reps: 5 }] },
+      { kind: 'sets', sets: 3, rest: 60, items: [{ ex: 'legraise', reps: 8 }] },
+    ],
+  }),
+
+  W({
+    id: 'park', discipline: 'calisthenics', minutes: 35,
+    name: { cs: 'Venkovní workout hřiště', nb: 'Utendørs treningspark', en: 'Outdoor workout park' },
+    focus: { cs: 'Shyby, bradla, kruhy, nohy', nb: 'Pullups, dips, ringer, bein', en: 'Pull-ups, dips, rings, legs' },
+    blocks: [
+      { kind: 'sets', sets: 4, rest: 90, items: [{ ex: 'pullup', reps: 5 }] },
+      { kind: 'sets', sets: 4, rest: 90, items: [{ ex: 'dip', reps: 8 }] },
+      { kind: 'sets', sets: 3, rest: 60, items: [{ ex: 'ringrow', reps: 10 }] },
+      { kind: 'sets', sets: 3, rest: 60, items: [{ ex: 'lunge', reps: 10 }] },
       { kind: 'sets', sets: 3, rest: 60, items: [{ ex: 'legraise', reps: 8 }] },
     ],
   }),

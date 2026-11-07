@@ -37,7 +37,7 @@ CAPTIONS = {
     'en': [
         ('One plan for everything', 'Gym, kettlebell, running and mobility in one week'),
         ('A voice coach in your pocket', 'EMOM, AMRAP, Tabata, sets and intervals'),
-        ('63 animated exercises', 'With short technique cues for each one'),
+        ('70 animated exercises', 'With short technique cues for each one'),
         ('Ready-made programs', 'From your first pull-up to your first 5K'),
         ('See your progress', 'Weights, distance, pace and weekly streaks'),
         ('Free. No ads. No tracking.', 'Your data stays on your phone'),
@@ -45,7 +45,7 @@ CAPTIONS = {
     'nb': [
         ('Én plan for all trening', 'Styrke, kettlebell, løping og mobilitet i én uke'),
         ('Stemmetrener i lomma', 'EMOM, AMRAP, Tabata, sett og intervaller'),
-        ('63 animerte øvelser', 'Med korte teknikktips for hver øvelse'),
+        ('70 animerte øvelser', 'Med korte teknikktips for hver øvelse'),
         ('Ferdige programmer', 'Fra din første pullup til dine første 5 km'),
         ('Se fremgangen din', 'Vekt, distanse, tempo og ukentlige rekker'),
         ('Gratis. Uten reklame.', 'Ingen sporing – dataene blir på telefonen'),
@@ -53,7 +53,7 @@ CAPTIONS = {
     'cs': [
         ('Jeden plán na všechno', 'Posilovna, kettlebell, běh i mobilita v jednom týdnu'),
         ('Hlasový trenér v kapse', 'EMOM, AMRAP, Tabata, série i intervaly'),
-        ('63 animovaných cviků', 'S krátkými body techniky u každého'),
+        ('70 animovaných cviků', 'S krátkými body techniky u každého'),
         ('Hotové programy', 'Od prvního shybu po prvních 5 km'),
         ('Sleduj svůj pokrok', 'Váhy, vzdálenost, tempo a týdenní série'),
         ('Zdarma. Bez reklam.', 'Bez sledování – data zůstávají v telefonu'),

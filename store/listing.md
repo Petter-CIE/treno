@@ -33,7 +33,7 @@ READY-MADE PROGRAMS
 A TIMER THAT COACHES YOU
 Sets with rest, EMOM, AMRAP, Tabata, intervals and run/walk – with a voice coach that announces every exercise and counts down, vibration, and a screen that stays on.
 
-63 ANIMATED EXERCISES
+70 ANIMATED EXERCISES
 Every exercise has its own animation and short technique cues. Filter by discipline and see only what fits the equipment you own – even your exact kettlebell sizes.
 
 TRACK YOUR PROGRESS
@@ -80,7 +80,7 @@ FERDIGE PROGRAMMER
 EN TIDTAKER SOM COACHER DEG
 Sett med pause, EMOM, AMRAP, Tabata, intervaller og løp/gå – med stemmetrener som leser opp øvelser og teller ned, vibrasjon og skjerm som holder seg på.
 
-63 ANIMERTE ØVELSER
+70 ANIMERTE ØVELSER
 Hver øvelse har sin egen animasjon og korte teknikktips. Filtrer etter disiplin og se bare det som passer utstyret du har – helt ned til kettlebellene dine.
 
 FØLG FREMGANGEN
@@ -127,7 +127,7 @@ HOTOVÉ PROGRAMY
 ČASOVAČ, KTERÝ TĚ VEDE
 Série s pauzami, EMOM, AMRAP, Tabata, intervaly i běh/chůze – hlasový trenér hlásí cviky a odpočítává, telefon vibruje a displej nezhasne.
 
-63 ANIMOVANÝCH CVIKŮ
+70 ANIMOVANÝCH CVIKŮ
 Každý cvik má vlastní animaci a krátké body techniky. Filtruj podle disciplíny a uvidíš jen to, co odpovídá tvému vybavení – až po velikosti tvých kettlebellů.
 
 SLEDUJ SVŮJ POKROK

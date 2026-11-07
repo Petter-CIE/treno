@@ -9,7 +9,7 @@ Stav k 7. 11. 2026. ✅ hotovo · ⬜ zbývá (kdo)
 - GitHub repo se pořád jmenuje `treno` – lze přejmenovat v nastavení repa na GitHubu (odkazy se samy přesměrují).
 
 ## 2. Obsah appky ✅
-- ✅ 63 cviků s animacemi, 29 tréninků, 10 programů, 12 jazyků
+- ✅ 70 cviků s animacemi, 31 tréninků, 10 programů, 12 jazyků
 - ✅ Severský vzhled (fjord / polární záře), ikona s vardem, adaptivní ikona Android, splash screen (`design/icon/make-icons.py`)
 - ✅ `expo-doctor` 20/20, typecheck, lint, kontrola obsahu i překladů
 - ✅ Podpůrná stránka + zásady soukromí: https://cieas.no/varde/ (PayPal hotový, ⬜ Vipps zítra) – ⬜ nahrát `web/varde/index.html` do nové složky `varde` na cieas.no
