@@ -4,6 +4,7 @@ import { Stack } from 'expo-router/stack';
 import { StatusBar } from 'expo-status-bar';
 import { Platform, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { WearBridge } from '@/components/WearBridge';
 import { StoreProvider, useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
 
@@ -34,6 +35,7 @@ export default function Layout() {
     <SafeAreaProvider>
       <StoreProvider>
         <StatusBar style="light" />
+        <WearBridge />
         <Root />
       </StoreProvider>
     </SafeAreaProvider>

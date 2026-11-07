@@ -76,6 +76,8 @@ export interface LoggedSet {
   reps: number;
   sets: number;
   seconds?: number;
+  /** per-set detail when logged set by set (watch) */
+  detail?: { reps: number; kg?: number }[];
 }
 
 export interface LogEntry {

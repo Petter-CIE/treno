@@ -11,7 +11,7 @@ import { useStore } from '@/lib/store';
 import { C, FONT } from '@/lib/theme';
 import type { LoggedSet } from '@/lib/types';
 import { distUnit, fmtPace, fmtWeight, fromKg, toKg, toKm, weightUnit } from '@/lib/units';
-import { exName, loggableItems, workoutHasDistance } from '@/lib/workout';
+import { exName, lastWeightKg, loggableItems, workoutHasDistance } from '@/lib/workout';
 
 export default function Summary() {
   const { t, lang, settings, log, addLog } = useStore();
@@ -19,16 +19,7 @@ export default function Summary() {
   const res = session.getResult();
 
   const items = useMemo(() => (res ? loggableItems(res.workout) : []), [res]);
-  const lastWeight = (ex: string) => {
-    for (const l of log) {
-      const s = l.sets.find((x) => x.ex === ex && x.weightKg);
-      if (s) return s.weightKg!;
-    }
-    const e = EXERCISE_BY_ID[ex];
-    if (e?.equipment === 'kettlebell') return settings.bells[Math.floor(settings.bells.length / 2)] ?? 12;
-    if (e?.equipment === 'barbell') return 20;
-    return 10;
-  };
+  const lastWeight = (ex: string) => lastWeightKg(ex, log, settings);
 
   const [weights, setWeights] = useState<Record<string, number>>(() =>
     Object.fromEntries(items.filter((i) => EXERCISE_BY_ID[i.ex]?.weighted).map((i) => [i.ex, lastWeight(i.ex)])),

@@ -50,7 +50,8 @@ interface Store extends Data {
   removePlan: (id: string) => void;
   startProgram: (programId: string) => void;
   stopProgram: () => void;
-  addLog: (entry: Omit<LogEntry, 'id'>) => void;
+  /** pass an id to make the add idempotent (watch logs) */
+  addLog: (entry: Omit<LogEntry, 'id'> & { id?: string }) => void;
   deleteLog: (id: string) => void;
   resetAll: () => void;
   account: Account;
@@ -178,8 +179,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
-  const addLog = useCallback((entry: Omit<LogEntry, 'id'>) => {
-    setData((d) => ({ ...d, log: [{ ...entry, id: uid() }, ...d.log] }));
+  const addLog = useCallback((entry: Omit<LogEntry, 'id'> & { id?: string }) => {
+    setData((d) => {
+      if (entry.id && (d.log.some((l) => l.id === entry.id) || d.deleted?.[entry.id])) return d;
+      return { ...d, log: [{ ...entry, id: entry.id ?? uid() }, ...d.log] };
+    });
   }, []);
 
   const deleteLog = useCallback((id: string) => {

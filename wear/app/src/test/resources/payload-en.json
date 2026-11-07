@@ -1,0 +1,2520 @@
+{
+ "v": 1,
+ "lang": "en",
+ "unit": "kg",
+ "workouts": [
+  {
+   "id": "gym_full_a",
+   "name": "Full body A",
+   "sub": "Today",
+   "disc": "gym",
+   "min": 50,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "8× Barbell back squat",
+     "d": "3 sets · rest 120s",
+     "ex": "bbsquat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Barbell back squat",
+     "d": "Set 1 / 3",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Barbell back squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Barbell back squat",
+     "d": "Set 2 / 3",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Barbell back squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Barbell back squat",
+     "d": "Set 3 / 3",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Bench press",
+     "d": "3 sets · rest 120s",
+     "ex": "bench"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Bench press",
+     "d": "Set 1 / 3",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Bench press",
+     "d": "Set 2 / 3",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Bench press",
+     "d": "Set 3 / 3",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Seated cable row",
+     "d": "3 sets · rest 90s",
+     "ex": "cablerow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Seated cable row",
+     "d": "Set 1 / 3",
+     "ex": "cablerow",
+     "n": "Seated cable row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Seated cable row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Seated cable row",
+     "d": "Set 2 / 3",
+     "ex": "cablerow",
+     "n": "Seated cable row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Seated cable row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Seated cable row",
+     "d": "Set 3 / 3",
+     "ex": "cablerow",
+     "n": "Seated cable row",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Biceps curl",
+     "d": "2 sets · rest 60s",
+     "ex": "curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Biceps curl",
+     "d": "Set 1 / 2",
+     "ex": "curl",
+     "n": "Biceps curl",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Biceps curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Biceps curl",
+     "d": "Set 2 / 2",
+     "ex": "curl",
+     "n": "Biceps curl",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Plank · 30 s",
+     "d": "3 sets · rest 45s",
+     "ex": "plank"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Plank · 30 s",
+     "d": "Set 1 / 3",
+     "ex": "plank"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Rest",
+     "d": "Next: Plank"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Plank · 30 s",
+     "d": "Set 2 / 3",
+     "ex": "plank"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Rest",
+     "d": "Next: Plank"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Plank · 30 s",
+     "d": "Set 3 / 3",
+     "ex": "plank"
+    }
+   ]
+  },
+  {
+   "id": "gym_full_b",
+   "name": "Full body B",
+   "sub": "Today",
+   "disc": "gym",
+   "min": 50,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "5× Deadlift",
+     "d": "3 sets · rest 150s",
+     "ex": "bbdeadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Deadlift",
+     "d": "Set 1 / 3",
+     "ex": "bbdeadlift",
+     "n": "Deadlift",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Deadlift",
+     "d": "Set 2 / 3",
+     "ex": "bbdeadlift",
+     "n": "Deadlift",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Deadlift",
+     "d": "Set 3 / 3",
+     "ex": "bbdeadlift",
+     "n": "Deadlift",
+     "r": 5
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Overhead press",
+     "d": "3 sets · rest 120s",
+     "ex": "ohp"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Overhead press",
+     "d": "Set 1 / 3",
+     "ex": "ohp",
+     "n": "Overhead press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Overhead press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Overhead press",
+     "d": "Set 2 / 3",
+     "ex": "ohp",
+     "n": "Overhead press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Overhead press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Overhead press",
+     "d": "Set 3 / 3",
+     "ex": "ohp",
+     "n": "Overhead press",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Lat pulldown",
+     "d": "3 sets · rest 90s",
+     "ex": "latpull"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Lat pulldown",
+     "d": "Set 1 / 3",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Lat pulldown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Lat pulldown",
+     "d": "Set 2 / 3",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Lat pulldown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Lat pulldown",
+     "d": "Set 3 / 3",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Leg press",
+     "d": "3 sets · rest 90s",
+     "ex": "legpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg press",
+     "d": "Set 1 / 3",
+     "ex": "legpress",
+     "n": "Leg press",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Leg press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg press",
+     "d": "Set 2 / 3",
+     "ex": "legpress",
+     "n": "Leg press",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Leg press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg press",
+     "d": "Set 3 / 3",
+     "ex": "legpress",
+     "n": "Leg press",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Triceps pushdown",
+     "d": "2 sets · rest 60s",
+     "ex": "triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Triceps pushdown",
+     "d": "Set 1 / 2",
+     "ex": "triceps",
+     "n": "Triceps pushdown",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Triceps pushdown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Triceps pushdown",
+     "d": "Set 2 / 2",
+     "ex": "triceps",
+     "n": "Triceps pushdown",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "id": "gym_push",
+   "name": "Push day",
+   "sub": "Today",
+   "disc": "gym",
+   "min": 55,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "6× Bench press",
+     "d": "4 sets · rest 120s",
+     "ex": "bench"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Set 1 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Set 2 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Set 3 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Set 4 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Overhead press",
+     "d": "3 sets · rest 90s",
+     "ex": "ohp"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Overhead press",
+     "d": "Set 1 / 3",
+     "ex": "ohp",
+     "n": "Overhead press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Overhead press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Overhead press",
+     "d": "Set 2 / 3",
+     "ex": "ohp",
+     "n": "Overhead press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Overhead press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Overhead press",
+     "d": "Set 3 / 3",
+     "ex": "ohp",
+     "n": "Overhead press",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Dumbbell bench press",
+     "d": "3 sets · rest 90s",
+     "ex": "dbpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Dumbbell bench press",
+     "d": "Set 1 / 3",
+     "ex": "dbpress",
+     "n": "Dumbbell bench press",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Dumbbell bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Dumbbell bench press",
+     "d": "Set 2 / 3",
+     "ex": "dbpress",
+     "n": "Dumbbell bench press",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Dumbbell bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Dumbbell bench press",
+     "d": "Set 3 / 3",
+     "ex": "dbpress",
+     "n": "Dumbbell bench press",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Lateral raise",
+     "d": "3 sets · rest 60s",
+     "ex": "lateral"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Lateral raise",
+     "d": "Set 1 / 3",
+     "ex": "lateral",
+     "n": "Lateral raise",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Lateral raise"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Lateral raise",
+     "d": "Set 2 / 3",
+     "ex": "lateral",
+     "n": "Lateral raise",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Lateral raise"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Lateral raise",
+     "d": "Set 3 / 3",
+     "ex": "lateral",
+     "n": "Lateral raise",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Triceps pushdown",
+     "d": "3 sets · rest 60s",
+     "ex": "triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Triceps pushdown",
+     "d": "Set 1 / 3",
+     "ex": "triceps",
+     "n": "Triceps pushdown",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Triceps pushdown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Triceps pushdown",
+     "d": "Set 2 / 3",
+     "ex": "triceps",
+     "n": "Triceps pushdown",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Triceps pushdown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Triceps pushdown",
+     "d": "Set 3 / 3",
+     "ex": "triceps",
+     "n": "Triceps pushdown",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "id": "gym_pull",
+   "name": "Pull day",
+   "sub": "Today",
+   "disc": "gym",
+   "min": 55,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "5× Deadlift",
+     "d": "3 sets · rest 150s",
+     "ex": "bbdeadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Deadlift",
+     "d": "Set 1 / 3",
+     "ex": "bbdeadlift",
+     "n": "Deadlift",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Deadlift",
+     "d": "Set 2 / 3",
+     "ex": "bbdeadlift",
+     "n": "Deadlift",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Deadlift",
+     "d": "Set 3 / 3",
+     "ex": "bbdeadlift",
+     "n": "Deadlift",
+     "r": 5
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Lat pulldown",
+     "d": "4 sets · rest 90s",
+     "ex": "latpull"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Lat pulldown",
+     "d": "Set 1 / 4",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Lat pulldown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Lat pulldown",
+     "d": "Set 2 / 4",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Lat pulldown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Lat pulldown",
+     "d": "Set 3 / 4",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Lat pulldown"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Lat pulldown",
+     "d": "Set 4 / 4",
+     "ex": "latpull",
+     "n": "Lat pulldown",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Barbell row",
+     "d": "3 sets · rest 90s",
+     "ex": "bbrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Barbell row",
+     "d": "Set 1 / 3",
+     "ex": "bbrow",
+     "n": "Barbell row",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Barbell row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Barbell row",
+     "d": "Set 2 / 3",
+     "ex": "bbrow",
+     "n": "Barbell row",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Barbell row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Barbell row",
+     "d": "Set 3 / 3",
+     "ex": "bbrow",
+     "n": "Barbell row",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× One-arm dumbbell row per side",
+     "d": "3 sets · rest 60s",
+     "ex": "dbrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× One-arm dumbbell row per side",
+     "d": "Set 1 / 3",
+     "ex": "dbrow",
+     "n": "One-arm dumbbell row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: One-arm dumbbell row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× One-arm dumbbell row per side",
+     "d": "Set 2 / 3",
+     "ex": "dbrow",
+     "n": "One-arm dumbbell row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: One-arm dumbbell row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× One-arm dumbbell row per side",
+     "d": "Set 3 / 3",
+     "ex": "dbrow",
+     "n": "One-arm dumbbell row",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Biceps curl",
+     "d": "3 sets · rest 60s",
+     "ex": "curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Biceps curl",
+     "d": "Set 1 / 3",
+     "ex": "curl",
+     "n": "Biceps curl",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Biceps curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Biceps curl",
+     "d": "Set 2 / 3",
+     "ex": "curl",
+     "n": "Biceps curl",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Biceps curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Biceps curl",
+     "d": "Set 3 / 3",
+     "ex": "curl",
+     "n": "Biceps curl",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "id": "gym_legs",
+   "name": "Leg day",
+   "sub": "Today",
+   "disc": "gym",
+   "min": 55,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "6× Barbell back squat",
+     "d": "4 sets · rest 150s",
+     "ex": "bbsquat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Barbell back squat",
+     "d": "Set 1 / 4",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Barbell back squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Barbell back squat",
+     "d": "Set 2 / 4",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Barbell back squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Barbell back squat",
+     "d": "Set 3 / 4",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Rest",
+     "d": "Next: Barbell back squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Barbell back squat",
+     "d": "Set 4 / 4",
+     "ex": "bbsquat",
+     "n": "Barbell back squat",
+     "r": 6
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Romanian deadlift",
+     "d": "3 sets · rest 90s",
+     "ex": "rdl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Romanian deadlift",
+     "d": "Set 1 / 3",
+     "ex": "rdl",
+     "n": "Romanian deadlift",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Romanian deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Romanian deadlift",
+     "d": "Set 2 / 3",
+     "ex": "rdl",
+     "n": "Romanian deadlift",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Romanian deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Romanian deadlift",
+     "d": "Set 3 / 3",
+     "ex": "rdl",
+     "n": "Romanian deadlift",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Hip thrust",
+     "d": "3 sets · rest 90s",
+     "ex": "hipthrust"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Hip thrust",
+     "d": "Set 1 / 3",
+     "ex": "hipthrust",
+     "n": "Hip thrust",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Hip thrust"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Hip thrust",
+     "d": "Set 2 / 3",
+     "ex": "hipthrust",
+     "n": "Hip thrust",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Hip thrust"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Hip thrust",
+     "d": "Set 3 / 3",
+     "ex": "hipthrust",
+     "n": "Hip thrust",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Leg curl",
+     "d": "3 sets · rest 60s",
+     "ex": "legcurl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg curl",
+     "d": "Set 1 / 3",
+     "ex": "legcurl",
+     "n": "Leg curl",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Leg curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg curl",
+     "d": "Set 2 / 3",
+     "ex": "legcurl",
+     "n": "Leg curl",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Leg curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg curl",
+     "d": "Set 3 / 3",
+     "ex": "legcurl",
+     "n": "Leg curl",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Reverse lunge per side",
+     "d": "3 sets · rest 60s",
+     "ex": "lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Reverse lunge per side",
+     "d": "Set 1 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Reverse lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Reverse lunge per side",
+     "d": "Set 2 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Reverse lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Reverse lunge per side",
+     "d": "Set 3 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 10
+    }
+   ]
+  },
+  {
+   "id": "strongman",
+   "name": "Strongman basics",
+   "sub": "Today",
+   "disc": "gym",
+   "min": 45,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "3× Log press",
+     "d": "5 sets · rest 120s",
+     "ex": "logpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Log press",
+     "d": "Set 1 / 5",
+     "ex": "logpress",
+     "n": "Log press",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Log press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Log press",
+     "d": "Set 2 / 5",
+     "ex": "logpress",
+     "n": "Log press",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Log press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Log press",
+     "d": "Set 3 / 5",
+     "ex": "logpress",
+     "n": "Log press",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Log press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Log press",
+     "d": "Set 4 / 5",
+     "ex": "logpress",
+     "n": "Log press",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Log press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Log press",
+     "d": "Set 5 / 5",
+     "ex": "logpress",
+     "n": "Log press",
+     "r": 3
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Farmer's walk · 30 s",
+     "d": "4 sets · rest 90s",
+     "ex": "farmers"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmer's walk · 30 s",
+     "d": "Set 1 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Farmer's walk"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmer's walk · 30 s",
+     "d": "Set 2 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Farmer's walk"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmer's walk · 30 s",
+     "d": "Set 3 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Farmer's walk"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmer's walk · 30 s",
+     "d": "Set 4 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Sled push · 20 s",
+     "d": "4 sets · rest 90s",
+     "ex": "sledpush"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Sled push · 20 s",
+     "d": "Set 1 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Sled push"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Sled push · 20 s",
+     "d": "Set 2 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Sled push"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Sled push · 20 s",
+     "d": "Set 3 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Sled push"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Sled push · 20 s",
+     "d": "Set 4 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "3× Atlas stone",
+     "d": "3 sets · rest 120s",
+     "ex": "atlas"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Atlas stone",
+     "d": "Set 1 / 3",
+     "ex": "atlas",
+     "n": "Atlas stone",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Atlas stone"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Atlas stone",
+     "d": "Set 2 / 3",
+     "ex": "atlas",
+     "n": "Atlas stone",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Rest",
+     "d": "Next: Atlas stone"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Atlas stone",
+     "d": "Set 3 / 3",
+     "ex": "atlas",
+     "n": "Atlas stone",
+     "r": 3
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "5× Sandbag to shoulder",
+     "d": "3 sets · rest 90s",
+     "ex": "sbclean"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Sandbag to shoulder",
+     "d": "Set 1 / 3",
+     "ex": "sbclean",
+     "n": "Sandbag to shoulder",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Sandbag to shoulder"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Sandbag to shoulder",
+     "d": "Set 2 / 3",
+     "ex": "sbclean",
+     "n": "Sandbag to shoulder",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Sandbag to shoulder"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Sandbag to shoulder",
+     "d": "Set 3 / 3",
+     "ex": "sbclean",
+     "n": "Sandbag to shoulder",
+     "r": 5
+    }
+   ]
+  },
+  {
+   "id": "park",
+   "name": "Outdoor workout park",
+   "sub": "Today",
+   "disc": "calisthenics",
+   "min": 35,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "5× Pull-up",
+     "d": "4 sets · rest 90s",
+     "ex": "pullup"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pull-up",
+     "d": "Set 1 / 4",
+     "ex": "pullup",
+     "n": "Pull-up",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Pull-up"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pull-up",
+     "d": "Set 2 / 4",
+     "ex": "pullup",
+     "n": "Pull-up",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Pull-up"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pull-up",
+     "d": "Set 3 / 4",
+     "ex": "pullup",
+     "n": "Pull-up",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Pull-up"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pull-up",
+     "d": "Set 4 / 4",
+     "ex": "pullup",
+     "n": "Pull-up",
+     "r": 5
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Dip",
+     "d": "4 sets · rest 90s",
+     "ex": "dip"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dip",
+     "d": "Set 1 / 4",
+     "ex": "dip",
+     "n": "Dip",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Dip"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dip",
+     "d": "Set 2 / 4",
+     "ex": "dip",
+     "n": "Dip",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Dip"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dip",
+     "d": "Set 3 / 4",
+     "ex": "dip",
+     "n": "Dip",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Dip"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dip",
+     "d": "Set 4 / 4",
+     "ex": "dip",
+     "n": "Dip",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Ring row",
+     "d": "3 sets · rest 60s",
+     "ex": "ringrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Ring row",
+     "d": "Set 1 / 3",
+     "ex": "ringrow",
+     "n": "Ring row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Ring row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Ring row",
+     "d": "Set 2 / 3",
+     "ex": "ringrow",
+     "n": "Ring row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Ring row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Ring row",
+     "d": "Set 3 / 3",
+     "ex": "ringrow",
+     "n": "Ring row",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Reverse lunge per side",
+     "d": "3 sets · rest 60s",
+     "ex": "lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Reverse lunge per side",
+     "d": "Set 1 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Reverse lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Reverse lunge per side",
+     "d": "Set 2 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Reverse lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Reverse lunge per side",
+     "d": "Set 3 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Hanging leg raise",
+     "d": "3 sets · rest 60s",
+     "ex": "legraise"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Hanging leg raise",
+     "d": "Set 1 / 3",
+     "ex": "legraise",
+     "n": "Hanging leg raise",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Hanging leg raise"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Hanging leg raise",
+     "d": "Set 2 / 3",
+     "ex": "legraise",
+     "n": "Hanging leg raise",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Hanging leg raise"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Hanging leg raise",
+     "d": "Set 3 / 3",
+     "ex": "legraise",
+     "n": "Hanging leg raise",
+     "r": 8
+    }
+   ]
+  },
+  {
+   "id": "kb_a",
+   "name": "Kettlebell foundations A",
+   "sub": "Today",
+   "disc": "kettlebell",
+   "min": 30,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "8× Goblet squat",
+     "d": "3 sets · rest 60s",
+     "ex": "goblet"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Goblet squat",
+     "d": "Set 1 / 3",
+     "ex": "goblet",
+     "n": "Goblet squat",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Goblet squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Goblet squat",
+     "d": "Set 2 / 3",
+     "ex": "goblet",
+     "n": "Goblet squat",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Goblet squat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Goblet squat",
+     "d": "Set 3 / 3",
+     "ex": "goblet",
+     "n": "Goblet squat",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Kettlebell deadlift",
+     "d": "3 sets · rest 60s",
+     "ex": "kbdeadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Kettlebell deadlift",
+     "d": "Set 1 / 3",
+     "ex": "kbdeadlift",
+     "n": "Kettlebell deadlift",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Kettlebell deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Kettlebell deadlift",
+     "d": "Set 2 / 3",
+     "ex": "kbdeadlift",
+     "n": "Kettlebell deadlift",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Kettlebell deadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Kettlebell deadlift",
+     "d": "Set 3 / 3",
+     "ex": "kbdeadlift",
+     "n": "Kettlebell deadlift",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Kettlebell row per side",
+     "d": "3 sets · rest 60s",
+     "ex": "kbrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kettlebell row per side",
+     "d": "Set 1 / 3",
+     "ex": "kbrow",
+     "n": "Kettlebell row",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Kettlebell row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kettlebell row per side",
+     "d": "Set 2 / 3",
+     "ex": "kbrow",
+     "n": "Kettlebell row",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Kettlebell row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kettlebell row per side",
+     "d": "Set 3 / 3",
+     "ex": "kbrow",
+     "n": "Kettlebell row",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Two-hand swing",
+     "d": "6 rounds · 20s work / 40s rest",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Two-hand swing",
+     "d": "Round 1 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Rest",
+     "d": "Next: Two-hand swing"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Two-hand swing",
+     "d": "Round 2 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Rest",
+     "d": "Next: Two-hand swing"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Two-hand swing",
+     "d": "Round 3 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Rest",
+     "d": "Next: Two-hand swing"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Two-hand swing",
+     "d": "Round 4 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Rest",
+     "d": "Next: Two-hand swing"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Two-hand swing",
+     "d": "Round 5 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Rest",
+     "d": "Next: Two-hand swing"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Two-hand swing",
+     "d": "Round 6 / 6",
+     "ex": "swing2"
+    }
+   ]
+  },
+  {
+   "id": "kb_b",
+   "name": "Kettlebell foundations B",
+   "sub": "Today",
+   "disc": "kettlebell",
+   "min": 30,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "8× Halo",
+     "d": "2 sets · rest 30s",
+     "ex": "halo"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Halo",
+     "d": "Set 1 / 2",
+     "ex": "halo",
+     "n": "Halo",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 30,
+     "t": "Rest",
+     "d": "Next: Halo"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Halo",
+     "d": "Set 2 / 2",
+     "ex": "halo",
+     "n": "Halo",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Two-hand swing",
+     "d": "EMOM 8 min",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 1 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 2 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 3 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 4 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 5 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 6 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 7 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Two-hand swing",
+     "d": "Minute 8 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "6× Kettlebell press per side",
+     "d": "3 sets · rest 60s",
+     "ex": "kbpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Kettlebell press per side",
+     "d": "Set 1 / 3",
+     "ex": "kbpress",
+     "n": "Kettlebell press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Kettlebell press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Kettlebell press per side",
+     "d": "Set 2 / 3",
+     "ex": "kbpress",
+     "n": "Kettlebell press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Kettlebell press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Kettlebell press per side",
+     "d": "Set 3 / 3",
+     "ex": "kbpress",
+     "n": "Kettlebell press",
+     "r": 6
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "6× Reverse lunge per side",
+     "d": "3 sets · rest 60s",
+     "ex": "lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Reverse lunge per side",
+     "d": "Set 1 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Reverse lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Reverse lunge per side",
+     "d": "Set 2 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Reverse lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Reverse lunge per side",
+     "d": "Set 3 / 3",
+     "ex": "lunge",
+     "n": "Reverse lunge",
+     "r": 6
+    }
+   ]
+  },
+  {
+   "id": "cali_pull",
+   "name": "Road to the pull-up",
+   "sub": "Today",
+   "disc": "calisthenics",
+   "min": 30,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "Dead hang · 30 s",
+     "d": "3 sets · rest 60s",
+     "ex": "deadhang"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Dead hang · 30 s",
+     "d": "Set 1 / 3",
+     "ex": "deadhang"
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Dead hang"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Dead hang · 30 s",
+     "d": "Set 2 / 3",
+     "ex": "deadhang"
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Dead hang"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Dead hang · 30 s",
+     "d": "Set 3 / 3",
+     "ex": "deadhang"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "4× Negative pull-up",
+     "d": "4 sets · rest 90s",
+     "ex": "negpullup"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negative pull-up",
+     "d": "Set 1 / 4",
+     "ex": "negpullup",
+     "n": "Negative pull-up",
+     "r": 4
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Negative pull-up"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negative pull-up",
+     "d": "Set 2 / 4",
+     "ex": "negpullup",
+     "n": "Negative pull-up",
+     "r": 4
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Negative pull-up"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negative pull-up",
+     "d": "Set 3 / 4",
+     "ex": "negpullup",
+     "n": "Negative pull-up",
+     "r": 4
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Rest",
+     "d": "Next: Negative pull-up"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negative pull-up",
+     "d": "Set 4 / 4",
+     "ex": "negpullup",
+     "n": "Negative pull-up",
+     "r": 4
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Inverted row",
+     "d": "3 sets · rest 60s",
+     "ex": "invrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Inverted row",
+     "d": "Set 1 / 3",
+     "ex": "invrow",
+     "n": "Inverted row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Inverted row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Inverted row",
+     "d": "Set 2 / 3",
+     "ex": "invrow",
+     "n": "Inverted row",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Rest",
+     "d": "Next: Inverted row"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Inverted row",
+     "d": "Set 3 / 3",
+     "ex": "invrow",
+     "n": "Inverted row",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Hollow hold · 20 s",
+     "d": "3 sets · rest 45s",
+     "ex": "hollow"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Hollow hold · 20 s",
+     "d": "Set 1 / 3",
+     "ex": "hollow"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Rest",
+     "d": "Next: Hollow hold"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Hollow hold · 20 s",
+     "d": "Set 2 / 3",
+     "ex": "hollow"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Rest",
+     "d": "Next: Hollow hold"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Hollow hold · 20 s",
+     "d": "Set 3 / 3",
+     "ex": "hollow"
+    }
+   ]
+  }
+ ],
+ "ex": {
+  "bbsquat": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "bench": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "cablerow": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "curl": {
+   "kg": 10,
+   "inc": 1
+  },
+  "bbdeadlift": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "ohp": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "latpull": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "legpress": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "triceps": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "dbpress": {
+   "kg": 10,
+   "inc": 1
+  },
+  "lateral": {
+   "kg": 10,
+   "inc": 1
+  },
+  "bbrow": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "dbrow": {
+   "kg": 10,
+   "inc": 1
+  },
+  "rdl": {
+   "kg": 10,
+   "inc": 1
+  },
+  "hipthrust": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "legcurl": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "logpress": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "farmers": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "sledpush": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "atlas": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "sbclean": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "goblet": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "kbdeadlift": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "kbrow": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "swing2": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "halo": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "kbpress": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  }
+ }
+}

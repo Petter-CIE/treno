@@ -1,0 +1,46 @@
+name: Wear OS app
+
+# Builds the watch app (wear/). With the signing secrets set it also produces the signed .aab for Google Play.
+on:
+  workflow_dispatch:
+  push:
+    paths: ['wear/**', '.github/workflows/wear.yml']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HAS_KEY: ${{ secrets.VARDE_KEYSTORE_B64 != '' }}
+    defaults:
+      run:
+        working-directory: wear
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Debug build
+        run: ./gradlew assembleDebug
+
+      - name: Signed release bundle
+        if: ${{ env.HAS_KEY == 'true' }}
+        env:
+          VARDE_KEYSTORE_B64: ${{ secrets.VARDE_KEYSTORE_B64 }}
+          VARDE_KEYSTORE_PASSWORD: ${{ secrets.VARDE_KEYSTORE_PASSWORD }}
+          VARDE_KEY_ALIAS: ${{ secrets.VARDE_KEY_ALIAS }}
+          VARDE_KEY_PASSWORD: ${{ secrets.VARDE_KEY_PASSWORD }}
+          WEAR_VERSION_CODE: ${{ github.run_number }}
+        run: |
+          echo "$VARDE_KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          VARDE_KEYSTORE="$RUNNER_TEMP/upload.jks" ./gradlew bundleRelease
+          rm "$RUNNER_TEMP/upload.jks"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: varde-wear-${{ github.run_number }}
+          path: |
+            wear/app/build/outputs/bundle/release/*.aab
+            wear/app/build/outputs/apk/debug/*.apk

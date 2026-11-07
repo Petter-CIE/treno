@@ -1,0 +1,2520 @@
+{
+ "v": 1,
+ "lang": "cs",
+ "unit": "kg",
+ "workouts": [
+  {
+   "id": "gym_full_a",
+   "name": "Fullbody A",
+   "sub": "Dnes",
+   "disc": "gym",
+   "min": 50,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "8× Dřep s velkou činkou",
+     "d": "3 sérií · pauza 120 s",
+     "ex": "bbsquat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dřep s velkou činkou",
+     "d": "Série 1 / 3",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Dřep s velkou činkou"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dřep s velkou činkou",
+     "d": "Série 2 / 3",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Dřep s velkou činkou"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Dřep s velkou činkou",
+     "d": "Série 3 / 3",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Bench press",
+     "d": "3 sérií · pauza 120 s",
+     "ex": "bench"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Bench press",
+     "d": "Série 1 / 3",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Bench press",
+     "d": "Série 2 / 3",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Bench press",
+     "d": "Série 3 / 3",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Přítah spodní kladky",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "cablerow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítah spodní kladky",
+     "d": "Série 1 / 3",
+     "ex": "cablerow",
+     "n": "Přítah spodní kladky",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Přítah spodní kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítah spodní kladky",
+     "d": "Série 2 / 3",
+     "ex": "cablerow",
+     "n": "Přítah spodní kladky",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Přítah spodní kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítah spodní kladky",
+     "d": "Série 3 / 3",
+     "ex": "cablerow",
+     "n": "Přítah spodní kladky",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Bicepsový zdvih",
+     "d": "2 sérií · pauza 60 s",
+     "ex": "curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Bicepsový zdvih",
+     "d": "Série 1 / 2",
+     "ex": "curl",
+     "n": "Bicepsový zdvih",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Bicepsový zdvih"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Bicepsový zdvih",
+     "d": "Série 2 / 2",
+     "ex": "curl",
+     "n": "Bicepsový zdvih",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Prkno · 30 s",
+     "d": "3 sérií · pauza 45 s",
+     "ex": "plank"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Prkno · 30 s",
+     "d": "Série 1 / 3",
+     "ex": "plank"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Pauza",
+     "d": "Další: Prkno"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Prkno · 30 s",
+     "d": "Série 2 / 3",
+     "ex": "plank"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Pauza",
+     "d": "Další: Prkno"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Prkno · 30 s",
+     "d": "Série 3 / 3",
+     "ex": "plank"
+    }
+   ]
+  },
+  {
+   "id": "gym_full_b",
+   "name": "Fullbody B",
+   "sub": "Dnes",
+   "disc": "gym",
+   "min": 50,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "5× Mrtvý tah",
+     "d": "3 sérií · pauza 150 s",
+     "ex": "bbdeadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Mrtvý tah",
+     "d": "Série 1 / 3",
+     "ex": "bbdeadlift",
+     "n": "Mrtvý tah",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Mrtvý tah"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Mrtvý tah",
+     "d": "Série 2 / 3",
+     "ex": "bbdeadlift",
+     "n": "Mrtvý tah",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Mrtvý tah"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Mrtvý tah",
+     "d": "Série 3 / 3",
+     "ex": "bbdeadlift",
+     "n": "Mrtvý tah",
+     "r": 5
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "3 sérií · pauza 120 s",
+     "ex": "ohp"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "Série 1 / 3",
+     "ex": "ohp",
+     "n": "Tlak nad hlavu vestoje",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Tlak nad hlavu vestoje"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "Série 2 / 3",
+     "ex": "ohp",
+     "n": "Tlak nad hlavu vestoje",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Tlak nad hlavu vestoje"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "Série 3 / 3",
+     "ex": "ohp",
+     "n": "Tlak nad hlavu vestoje",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Stahování kladky",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "latpull"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Stahování kladky",
+     "d": "Série 1 / 3",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Stahování kladky",
+     "d": "Série 2 / 3",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Stahování kladky",
+     "d": "Série 3 / 3",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Leg press",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "legpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg press",
+     "d": "Série 1 / 3",
+     "ex": "legpress",
+     "n": "Leg press",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Leg press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg press",
+     "d": "Série 2 / 3",
+     "ex": "legpress",
+     "n": "Leg press",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Leg press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Leg press",
+     "d": "Série 3 / 3",
+     "ex": "legpress",
+     "n": "Leg press",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Stahování kladky na triceps",
+     "d": "2 sérií · pauza 60 s",
+     "ex": "triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Stahování kladky na triceps",
+     "d": "Série 1 / 2",
+     "ex": "triceps",
+     "n": "Stahování kladky na triceps",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky na triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Stahování kladky na triceps",
+     "d": "Série 2 / 2",
+     "ex": "triceps",
+     "n": "Stahování kladky na triceps",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "id": "gym_push",
+   "name": "Push – tlaky",
+   "sub": "Dnes",
+   "disc": "gym",
+   "min": 55,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "6× Bench press",
+     "d": "4 sérií · pauza 120 s",
+     "ex": "bench"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Série 1 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Série 2 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Série 3 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Bench press"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Bench press",
+     "d": "Série 4 / 4",
+     "ex": "bench",
+     "n": "Bench press",
+     "r": 6
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "ohp"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "Série 1 / 3",
+     "ex": "ohp",
+     "n": "Tlak nad hlavu vestoje",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlak nad hlavu vestoje"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "Série 2 / 3",
+     "ex": "ohp",
+     "n": "Tlak nad hlavu vestoje",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlak nad hlavu vestoje"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Tlak nad hlavu vestoje",
+     "d": "Série 3 / 3",
+     "ex": "ohp",
+     "n": "Tlak nad hlavu vestoje",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Tlak s jednoručkami na lavici",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "dbpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Tlak s jednoručkami na lavici",
+     "d": "Série 1 / 3",
+     "ex": "dbpress",
+     "n": "Tlak s jednoručkami na lavici",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlak s jednoručkami na lavici"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Tlak s jednoručkami na lavici",
+     "d": "Série 2 / 3",
+     "ex": "dbpress",
+     "n": "Tlak s jednoručkami na lavici",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlak s jednoručkami na lavici"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Tlak s jednoručkami na lavici",
+     "d": "Série 3 / 3",
+     "ex": "dbpress",
+     "n": "Tlak s jednoručkami na lavici",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Upažování s jednoručkami",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "lateral"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Upažování s jednoručkami",
+     "d": "Série 1 / 3",
+     "ex": "lateral",
+     "n": "Upažování s jednoručkami",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Upažování s jednoručkami"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Upažování s jednoručkami",
+     "d": "Série 2 / 3",
+     "ex": "lateral",
+     "n": "Upažování s jednoručkami",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Upažování s jednoručkami"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Upažování s jednoručkami",
+     "d": "Série 3 / 3",
+     "ex": "lateral",
+     "n": "Upažování s jednoručkami",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Stahování kladky na triceps",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Stahování kladky na triceps",
+     "d": "Série 1 / 3",
+     "ex": "triceps",
+     "n": "Stahování kladky na triceps",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky na triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Stahování kladky na triceps",
+     "d": "Série 2 / 3",
+     "ex": "triceps",
+     "n": "Stahování kladky na triceps",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky na triceps"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Stahování kladky na triceps",
+     "d": "Série 3 / 3",
+     "ex": "triceps",
+     "n": "Stahování kladky na triceps",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "id": "gym_pull",
+   "name": "Pull – přítahy",
+   "sub": "Dnes",
+   "disc": "gym",
+   "min": 55,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "5× Mrtvý tah",
+     "d": "3 sérií · pauza 150 s",
+     "ex": "bbdeadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Mrtvý tah",
+     "d": "Série 1 / 3",
+     "ex": "bbdeadlift",
+     "n": "Mrtvý tah",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Mrtvý tah"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Mrtvý tah",
+     "d": "Série 2 / 3",
+     "ex": "bbdeadlift",
+     "n": "Mrtvý tah",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Mrtvý tah"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Mrtvý tah",
+     "d": "Série 3 / 3",
+     "ex": "bbdeadlift",
+     "n": "Mrtvý tah",
+     "r": 5
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Stahování kladky",
+     "d": "4 sérií · pauza 90 s",
+     "ex": "latpull"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Stahování kladky",
+     "d": "Série 1 / 4",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Stahování kladky",
+     "d": "Série 2 / 4",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Stahování kladky",
+     "d": "Série 3 / 4",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Stahování kladky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Stahování kladky",
+     "d": "Série 4 / 4",
+     "ex": "latpull",
+     "n": "Stahování kladky",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Přítah osy v předklonu",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "bbrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Přítah osy v předklonu",
+     "d": "Série 1 / 3",
+     "ex": "bbrow",
+     "n": "Přítah osy v předklonu",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Přítah osy v předklonu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Přítah osy v předklonu",
+     "d": "Série 2 / 3",
+     "ex": "bbrow",
+     "n": "Přítah osy v předklonu",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Přítah osy v předklonu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Přítah osy v předklonu",
+     "d": "Série 3 / 3",
+     "ex": "bbrow",
+     "n": "Přítah osy v předklonu",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Přítah jednoručky na stranu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "dbrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítah jednoručky na stranu",
+     "d": "Série 1 / 3",
+     "ex": "dbrow",
+     "n": "Přítah jednoručky",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Přítah jednoručky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítah jednoručky na stranu",
+     "d": "Série 2 / 3",
+     "ex": "dbrow",
+     "n": "Přítah jednoručky",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Přítah jednoručky"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítah jednoručky na stranu",
+     "d": "Série 3 / 3",
+     "ex": "dbrow",
+     "n": "Přítah jednoručky",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Bicepsový zdvih",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "curl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Bicepsový zdvih",
+     "d": "Série 1 / 3",
+     "ex": "curl",
+     "n": "Bicepsový zdvih",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Bicepsový zdvih"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Bicepsový zdvih",
+     "d": "Série 2 / 3",
+     "ex": "curl",
+     "n": "Bicepsový zdvih",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Bicepsový zdvih"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Bicepsový zdvih",
+     "d": "Série 3 / 3",
+     "ex": "curl",
+     "n": "Bicepsový zdvih",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "id": "gym_legs",
+   "name": "Legs – nohy",
+   "sub": "Dnes",
+   "disc": "gym",
+   "min": 55,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "6× Dřep s velkou činkou",
+     "d": "4 sérií · pauza 150 s",
+     "ex": "bbsquat"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Dřep s velkou činkou",
+     "d": "Série 1 / 4",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Dřep s velkou činkou"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Dřep s velkou činkou",
+     "d": "Série 2 / 4",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Dřep s velkou činkou"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Dřep s velkou činkou",
+     "d": "Série 3 / 4",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 150,
+     "t": "Pauza",
+     "d": "Další: Dřep s velkou činkou"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Dřep s velkou činkou",
+     "d": "Série 4 / 4",
+     "ex": "bbsquat",
+     "n": "Dřep s velkou činkou",
+     "r": 6
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Rumunský mrtvý tah",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "rdl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Rumunský mrtvý tah",
+     "d": "Série 1 / 3",
+     "ex": "rdl",
+     "n": "Rumunský mrtvý tah",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Rumunský mrtvý tah"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Rumunský mrtvý tah",
+     "d": "Série 2 / 3",
+     "ex": "rdl",
+     "n": "Rumunský mrtvý tah",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Rumunský mrtvý tah"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Rumunský mrtvý tah",
+     "d": "Série 3 / 3",
+     "ex": "rdl",
+     "n": "Rumunský mrtvý tah",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Hip thrust",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "hipthrust"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Hip thrust",
+     "d": "Série 1 / 3",
+     "ex": "hipthrust",
+     "n": "Hip thrust",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Hip thrust"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Hip thrust",
+     "d": "Série 2 / 3",
+     "ex": "hipthrust",
+     "n": "Hip thrust",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Hip thrust"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Hip thrust",
+     "d": "Série 3 / 3",
+     "ex": "hipthrust",
+     "n": "Hip thrust",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "12× Zakopávání na stroji",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "legcurl"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Zakopávání na stroji",
+     "d": "Série 1 / 3",
+     "ex": "legcurl",
+     "n": "Zakopávání na stroji",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Zakopávání na stroji"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Zakopávání na stroji",
+     "d": "Série 2 / 3",
+     "ex": "legcurl",
+     "n": "Zakopávání na stroji",
+     "r": 12
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Zakopávání na stroji"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "12× Zakopávání na stroji",
+     "d": "Série 3 / 3",
+     "ex": "legcurl",
+     "n": "Zakopávání na stroji",
+     "r": 12
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Výpad vzad na stranu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Výpad vzad na stranu",
+     "d": "Série 1 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Výpad vzad"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Výpad vzad na stranu",
+     "d": "Série 2 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Výpad vzad"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Výpad vzad na stranu",
+     "d": "Série 3 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 10
+    }
+   ]
+  },
+  {
+   "id": "strongman",
+   "name": "Strongman základ",
+   "sub": "Dnes",
+   "disc": "gym",
+   "min": 45,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "3× Tlak klády",
+     "d": "5 sérií · pauza 120 s",
+     "ex": "logpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Tlak klády",
+     "d": "Série 1 / 5",
+     "ex": "logpress",
+     "n": "Tlak klády",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Tlak klády"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Tlak klády",
+     "d": "Série 2 / 5",
+     "ex": "logpress",
+     "n": "Tlak klády",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Tlak klády"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Tlak klády",
+     "d": "Série 3 / 5",
+     "ex": "logpress",
+     "n": "Tlak klády",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Tlak klády"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Tlak klády",
+     "d": "Série 4 / 5",
+     "ex": "logpress",
+     "n": "Tlak klády",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Tlak klády"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Tlak klády",
+     "d": "Série 5 / 5",
+     "ex": "logpress",
+     "n": "Tlak klády",
+     "r": 3
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Farmářská chůze · 30 s",
+     "d": "4 sérií · pauza 90 s",
+     "ex": "farmers"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmářská chůze · 30 s",
+     "d": "Série 1 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Farmářská chůze"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmářská chůze · 30 s",
+     "d": "Série 2 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Farmářská chůze"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmářská chůze · 30 s",
+     "d": "Série 3 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Farmářská chůze"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Farmářská chůze · 30 s",
+     "d": "Série 4 / 4",
+     "ex": "farmers"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Tlačení saní · 20 s",
+     "d": "4 sérií · pauza 90 s",
+     "ex": "sledpush"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Tlačení saní · 20 s",
+     "d": "Série 1 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlačení saní"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Tlačení saní · 20 s",
+     "d": "Série 2 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlačení saní"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Tlačení saní · 20 s",
+     "d": "Série 3 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Tlačení saní"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Tlačení saní · 20 s",
+     "d": "Série 4 / 4",
+     "ex": "sledpush"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "3× Atlasův kámen",
+     "d": "3 sérií · pauza 120 s",
+     "ex": "atlas"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Atlasův kámen",
+     "d": "Série 1 / 3",
+     "ex": "atlas",
+     "n": "Atlasův kámen",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Atlasův kámen"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Atlasův kámen",
+     "d": "Série 2 / 3",
+     "ex": "atlas",
+     "n": "Atlasův kámen",
+     "r": 3
+    },
+    {
+     "k": "rest",
+     "s": 120,
+     "t": "Pauza",
+     "d": "Další: Atlasův kámen"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "3× Atlasův kámen",
+     "d": "Série 3 / 3",
+     "ex": "atlas",
+     "n": "Atlasův kámen",
+     "r": 3
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "5× Pytel na rameno",
+     "d": "3 sérií · pauza 90 s",
+     "ex": "sbclean"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pytel na rameno",
+     "d": "Série 1 / 3",
+     "ex": "sbclean",
+     "n": "Pytel na rameno",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Pytel na rameno"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pytel na rameno",
+     "d": "Série 2 / 3",
+     "ex": "sbclean",
+     "n": "Pytel na rameno",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Pytel na rameno"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Pytel na rameno",
+     "d": "Série 3 / 3",
+     "ex": "sbclean",
+     "n": "Pytel na rameno",
+     "r": 5
+    }
+   ]
+  },
+  {
+   "id": "park",
+   "name": "Venkovní workout hřiště",
+   "sub": "Dnes",
+   "disc": "calisthenics",
+   "min": 35,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "5× Shyb nadhmatem",
+     "d": "4 sérií · pauza 90 s",
+     "ex": "pullup"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Shyb nadhmatem",
+     "d": "Série 1 / 4",
+     "ex": "pullup",
+     "n": "Shyb nadhmatem",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Shyb nadhmatem"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Shyb nadhmatem",
+     "d": "Série 2 / 4",
+     "ex": "pullup",
+     "n": "Shyb nadhmatem",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Shyb nadhmatem"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Shyb nadhmatem",
+     "d": "Série 3 / 4",
+     "ex": "pullup",
+     "n": "Shyb nadhmatem",
+     "r": 5
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Shyb nadhmatem"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "5× Shyb nadhmatem",
+     "d": "Série 4 / 4",
+     "ex": "pullup",
+     "n": "Shyb nadhmatem",
+     "r": 5
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Kliky na bradlech",
+     "d": "4 sérií · pauza 90 s",
+     "ex": "dip"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kliky na bradlech",
+     "d": "Série 1 / 4",
+     "ex": "dip",
+     "n": "Kliky na bradlech",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Kliky na bradlech"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kliky na bradlech",
+     "d": "Série 2 / 4",
+     "ex": "dip",
+     "n": "Kliky na bradlech",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Kliky na bradlech"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kliky na bradlech",
+     "d": "Série 3 / 4",
+     "ex": "dip",
+     "n": "Kliky na bradlech",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Kliky na bradlech"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Kliky na bradlech",
+     "d": "Série 4 / 4",
+     "ex": "dip",
+     "n": "Kliky na bradlech",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Přítahy na kruzích",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "ringrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítahy na kruzích",
+     "d": "Série 1 / 3",
+     "ex": "ringrow",
+     "n": "Přítahy na kruzích",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Přítahy na kruzích"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítahy na kruzích",
+     "d": "Série 2 / 3",
+     "ex": "ringrow",
+     "n": "Přítahy na kruzích",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Přítahy na kruzích"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Přítahy na kruzích",
+     "d": "Série 3 / 3",
+     "ex": "ringrow",
+     "n": "Přítahy na kruzích",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Výpad vzad na stranu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Výpad vzad na stranu",
+     "d": "Série 1 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Výpad vzad"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Výpad vzad na stranu",
+     "d": "Série 2 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Výpad vzad"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Výpad vzad na stranu",
+     "d": "Série 3 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Zvedání nohou ve visu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "legraise"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Zvedání nohou ve visu",
+     "d": "Série 1 / 3",
+     "ex": "legraise",
+     "n": "Zvedání nohou ve visu",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Zvedání nohou ve visu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Zvedání nohou ve visu",
+     "d": "Série 2 / 3",
+     "ex": "legraise",
+     "n": "Zvedání nohou ve visu",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Zvedání nohou ve visu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Zvedání nohou ve visu",
+     "d": "Série 3 / 3",
+     "ex": "legraise",
+     "n": "Zvedání nohou ve visu",
+     "r": 8
+    }
+   ]
+  },
+  {
+   "id": "kb_a",
+   "name": "Kettlebell základy A",
+   "sub": "Dnes",
+   "disc": "kettlebell",
+   "min": 30,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "8× Goblet dřep",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "goblet"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Goblet dřep",
+     "d": "Série 1 / 3",
+     "ex": "goblet",
+     "n": "Goblet dřep",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Goblet dřep"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Goblet dřep",
+     "d": "Série 2 / 3",
+     "ex": "goblet",
+     "n": "Goblet dřep",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Goblet dřep"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Goblet dřep",
+     "d": "Série 3 / 3",
+     "ex": "goblet",
+     "n": "Goblet dřep",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Mrtvý tah s kettlebellem",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "kbdeadlift"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Mrtvý tah s kettlebellem",
+     "d": "Série 1 / 3",
+     "ex": "kbdeadlift",
+     "n": "Mrtvý tah s kettlebellem",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Mrtvý tah s kettlebellem"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Mrtvý tah s kettlebellem",
+     "d": "Série 2 / 3",
+     "ex": "kbdeadlift",
+     "n": "Mrtvý tah s kettlebellem",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Mrtvý tah s kettlebellem"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Mrtvý tah s kettlebellem",
+     "d": "Série 3 / 3",
+     "ex": "kbdeadlift",
+     "n": "Mrtvý tah s kettlebellem",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "8× Přítah kettlebellu v předklonu na stranu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "kbrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Přítah kettlebellu v předklonu na stranu",
+     "d": "Série 1 / 3",
+     "ex": "kbrow",
+     "n": "Přítah kettlebellu v předklonu",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Přítah kettlebellu v předklonu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Přítah kettlebellu v předklonu na stranu",
+     "d": "Série 2 / 3",
+     "ex": "kbrow",
+     "n": "Přítah kettlebellu v předklonu",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Přítah kettlebellu v předklonu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Přítah kettlebellu v předklonu na stranu",
+     "d": "Série 3 / 3",
+     "ex": "kbrow",
+     "n": "Přítah kettlebellu v předklonu",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Švih obouruč",
+     "d": "6 kol · 20 s práce / 40 s pauza",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Švih obouruč",
+     "d": "Kolo 1 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Pauza",
+     "d": "Další: Švih obouruč"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Švih obouruč",
+     "d": "Kolo 2 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Pauza",
+     "d": "Další: Švih obouruč"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Švih obouruč",
+     "d": "Kolo 3 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Pauza",
+     "d": "Další: Švih obouruč"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Švih obouruč",
+     "d": "Kolo 4 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Pauza",
+     "d": "Další: Švih obouruč"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Švih obouruč",
+     "d": "Kolo 5 / 6",
+     "ex": "swing2"
+    },
+    {
+     "k": "rest",
+     "s": 40,
+     "t": "Pauza",
+     "d": "Další: Švih obouruč"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Švih obouruč",
+     "d": "Kolo 6 / 6",
+     "ex": "swing2"
+    }
+   ]
+  },
+  {
+   "id": "kb_b",
+   "name": "Kettlebell základy B",
+   "sub": "Dnes",
+   "disc": "kettlebell",
+   "min": 30,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "8× Halo – kroužení kolem hlavy",
+     "d": "2 sérií · pauza 30 s",
+     "ex": "halo"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Halo – kroužení kolem hlavy",
+     "d": "Série 1 / 2",
+     "ex": "halo",
+     "n": "Halo – kroužení kolem hlavy",
+     "r": 8
+    },
+    {
+     "k": "rest",
+     "s": 30,
+     "t": "Pauza",
+     "d": "Další: Halo – kroužení kolem hlavy"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "8× Halo – kroužení kolem hlavy",
+     "d": "Série 2 / 2",
+     "ex": "halo",
+     "n": "Halo – kroužení kolem hlavy",
+     "r": 8
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Švih obouruč",
+     "d": "EMOM 8 min",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 1 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 2 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 3 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 4 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 5 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 6 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 7 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "work",
+     "s": 60,
+     "t": "10× Švih obouruč",
+     "d": "Minuta 8 / 8",
+     "ex": "swing2"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "6× Tlak kettlebellu nad hlavu na stranu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "kbpress"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Tlak kettlebellu nad hlavu na stranu",
+     "d": "Série 1 / 3",
+     "ex": "kbpress",
+     "n": "Tlak kettlebellu nad hlavu",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Tlak kettlebellu nad hlavu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Tlak kettlebellu nad hlavu na stranu",
+     "d": "Série 2 / 3",
+     "ex": "kbpress",
+     "n": "Tlak kettlebellu nad hlavu",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Tlak kettlebellu nad hlavu"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Tlak kettlebellu nad hlavu na stranu",
+     "d": "Série 3 / 3",
+     "ex": "kbpress",
+     "n": "Tlak kettlebellu nad hlavu",
+     "r": 6
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "6× Výpad vzad na stranu",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "lunge"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Výpad vzad na stranu",
+     "d": "Série 1 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Výpad vzad"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Výpad vzad na stranu",
+     "d": "Série 2 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 6
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Výpad vzad"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "6× Výpad vzad na stranu",
+     "d": "Série 3 / 3",
+     "ex": "lunge",
+     "n": "Výpad vzad",
+     "r": 6
+    }
+   ]
+  },
+  {
+   "id": "cali_pull",
+   "name": "Cesta k shybu",
+   "sub": "Dnes",
+   "disc": "calisthenics",
+   "min": 30,
+   "steps": [
+    {
+     "k": "prep",
+     "s": 10,
+     "t": "Vis na hrazdě · 30 s",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "deadhang"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Vis na hrazdě · 30 s",
+     "d": "Série 1 / 3",
+     "ex": "deadhang"
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Vis na hrazdě"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Vis na hrazdě · 30 s",
+     "d": "Série 2 / 3",
+     "ex": "deadhang"
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Vis na hrazdě"
+    },
+    {
+     "k": "work",
+     "s": 30,
+     "t": "Vis na hrazdě · 30 s",
+     "d": "Série 3 / 3",
+     "ex": "deadhang"
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "4× Negativní shyb",
+     "d": "4 sérií · pauza 90 s",
+     "ex": "negpullup"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negativní shyb",
+     "d": "Série 1 / 4",
+     "ex": "negpullup",
+     "n": "Negativní shyb",
+     "r": 4
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Negativní shyb"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negativní shyb",
+     "d": "Série 2 / 4",
+     "ex": "negpullup",
+     "n": "Negativní shyb",
+     "r": 4
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Negativní shyb"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negativní shyb",
+     "d": "Série 3 / 4",
+     "ex": "negpullup",
+     "n": "Negativní shyb",
+     "r": 4
+    },
+    {
+     "k": "rest",
+     "s": 90,
+     "t": "Pauza",
+     "d": "Další: Negativní shyb"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "4× Negativní shyb",
+     "d": "Série 4 / 4",
+     "ex": "negpullup",
+     "n": "Negativní shyb",
+     "r": 4
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "10× Australský shyb",
+     "d": "3 sérií · pauza 60 s",
+     "ex": "invrow"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Australský shyb",
+     "d": "Série 1 / 3",
+     "ex": "invrow",
+     "n": "Australský shyb",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Australský shyb"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Australský shyb",
+     "d": "Série 2 / 3",
+     "ex": "invrow",
+     "n": "Australský shyb",
+     "r": 10
+    },
+    {
+     "k": "rest",
+     "s": 60,
+     "t": "Pauza",
+     "d": "Další: Australský shyb"
+    },
+    {
+     "k": "manual",
+     "s": 0,
+     "t": "10× Australský shyb",
+     "d": "Série 3 / 3",
+     "ex": "invrow",
+     "n": "Australský shyb",
+     "r": 10
+    },
+    {
+     "k": "prep",
+     "s": 15,
+     "t": "Hollow hold · 20 s",
+     "d": "3 sérií · pauza 45 s",
+     "ex": "hollow"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Hollow hold · 20 s",
+     "d": "Série 1 / 3",
+     "ex": "hollow"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Pauza",
+     "d": "Další: Hollow hold"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Hollow hold · 20 s",
+     "d": "Série 2 / 3",
+     "ex": "hollow"
+    },
+    {
+     "k": "rest",
+     "s": 45,
+     "t": "Pauza",
+     "d": "Další: Hollow hold"
+    },
+    {
+     "k": "work",
+     "s": 20,
+     "t": "Hollow hold · 20 s",
+     "d": "Série 3 / 3",
+     "ex": "hollow"
+    }
+   ]
+  }
+ ],
+ "ex": {
+  "bbsquat": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "bench": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "cablerow": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "curl": {
+   "kg": 10,
+   "inc": 1
+  },
+  "bbdeadlift": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "ohp": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "latpull": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "legpress": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "triceps": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "dbpress": {
+   "kg": 10,
+   "inc": 1
+  },
+  "lateral": {
+   "kg": 10,
+   "inc": 1
+  },
+  "bbrow": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "dbrow": {
+   "kg": 10,
+   "inc": 1
+  },
+  "rdl": {
+   "kg": 10,
+   "inc": 1
+  },
+  "hipthrust": {
+   "kg": 20,
+   "inc": 2.5
+  },
+  "legcurl": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "logpress": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "farmers": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "sledpush": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "atlas": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "sbclean": {
+   "kg": 10,
+   "inc": 2.5
+  },
+  "goblet": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "kbdeadlift": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "kbrow": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "swing2": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "halo": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  },
+  "kbpress": {
+   "kg": 16,
+   "inc": 2.5,
+   "bells": [
+    12,
+    16,
+    24
+   ]
+  }
+ }
+}

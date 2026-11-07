@@ -1,7 +1,7 @@
 import { EXERCISE_BY_ID } from '@/data/exercises';
 import { WORKOUTS, WORKOUT_BY_ID } from '@/data/programs';
 import { pick, type Key } from './i18n';
-import type { Block, BlockItem, Discipline, Lang, Settings, Workout } from './types';
+import type { Block, BlockItem, Discipline, Lang, LogEntry, Settings, Workout } from './types';
 
 type TFn = (key: Key, vars?: Record<string, string | number>) => string;
 
@@ -40,6 +40,8 @@ export interface Step {
   title: string;
   detail: string;
   ex?: string;
+  /** target reps for strength sets (manual steps) */
+  reps?: number;
   items?: string[]; // amrap list
   walk?: boolean;
   /** what the voice coach says when the step starts */
@@ -114,6 +116,7 @@ export function buildSteps(w: Workout, lang: Lang, t: TFn): Step[] {
               title: itemText(it, lang, t),
               detail: t('timer.set', { i: st + 1, n: b.sets }),
               ex: it.ex,
+              reps: timed ? undefined : it.reps,
               say: `${t('timer.set', { i: st + 1, n: b.sets }).replace('/', '')}. ${itemText(it, lang, t).replace('×', '')}`,
             });
             const last = st === b.sets - 1 && ii === b.items.length - 1;
@@ -203,4 +206,16 @@ export function customWorkout(mode: CustomMode, opts: { minutes: number; rounds:
 export function logTitle(l: { workout?: string; title: string }, lang: Lang) {
   const w = l.workout ? WORKOUT_BY_ID[l.workout] : undefined;
   return w ? pick(w.name, lang) : l.title;
+}
+
+/** Last weight used for an exercise, or a sensible starting weight. */
+export function lastWeightKg(ex: string, log: LogEntry[], settings: Settings): number {
+  for (const l of log) {
+    const s = l.sets.find((x) => x.ex === ex && x.weightKg);
+    if (s) return s.weightKg!;
+  }
+  const e = EXERCISE_BY_ID[ex];
+  if (e?.equipment === 'kettlebell') return settings.bells[Math.floor(settings.bells.length / 2)] ?? 12;
+  if (e?.equipment === 'barbell') return 20;
+  return 10;
 }
