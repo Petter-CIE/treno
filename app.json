@@ -56,6 +56,12 @@
     "backgroundColor": "#0D171E",
     "experiments": {
       "typedRoutes": true
+    },
+    "owner": "cie-as",
+    "extra": {
+      "eas": {
+        "projectId": "71c34094-d081-450f-befd-a171e2d95bd5"
+      }
     }
   }
 }
