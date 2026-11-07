@@ -34,7 +34,9 @@ jobs:
           VARDE_KEY_PASSWORD: ${{ secrets.VARDE_KEY_PASSWORD }}
           WEAR_VERSION_CODE: ${{ github.run_number }}
         run: |
-          echo "$VARDE_KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          echo "keystore secret: ${#VARDE_KEYSTORE_B64} chars"
+          printf %s "$VARDE_KEYSTORE_B64" | tr -d " \r\n\t\"" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          keytool -list -keystore "$RUNNER_TEMP/upload.jks" -storepass "$VARDE_KEYSTORE_PASSWORD" | grep -i "entry" || true
           VARDE_KEYSTORE="$RUNNER_TEMP/upload.jks" ./gradlew bundleRelease
           rm "$RUNNER_TEMP/upload.jks"
 
