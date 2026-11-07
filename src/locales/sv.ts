@@ -167,6 +167,8 @@ const pack: LocalePack = {
     'set.support': "Stöd Varde Fitness ❤️",
     'set.supportHint': "Varde Fitness är gratis och utan reklam. Om appen hjälper dig kan du skicka en liten gåva.",
     'set.disclaimer': 'Varde Fitness ersätter inte medicinsk rådgivning. Rådfråga en läkare innan du börjar med ett nytt träningsprogram.',
+    'ex.working': "Muskler som arbetar",
+    'ex.tempo': "Tempo",
     'equip.cardio': "Konditionsmaskiner",
     'equip.dipbars': "Dipsställning",
     'equip.rings': "Romerska ringar",

@@ -1,10 +1,11 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { View } from 'react-native';
-import { ExerciseAnimation } from '@/components/ExerciseAnimation';
+import { ExerciseAnimation, tempoFor } from '@/components/ExerciseAnimation';
 import { Card, CloseButton, DiscBadge, Icon, Row, Screen, Section, T, Wrap } from '@/components/ui';
 import { ProgressChart } from '@/components/ProgressChart';
 import { EXERCISE_BY_ID } from '@/data/exercises';
-import { pick, pickList } from '@/lib/i18n';
+import { MUSCLE } from '@/lib/figureDraw';
+import { LANG_TAG, pick, pickList } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
 import { C } from '@/lib/theme';
 import { fmtWeight } from '@/lib/units';
@@ -15,6 +16,7 @@ export default function ExerciseDetail() {
   const e = EXERCISE_BY_ID[id];
   if (!e) return <Screen title="?" />;
 
+  const tempo = tempoFor(e.id);
   const best = log.flatMap((l) => l.sets.filter((s) => s.ex === e.id && s.weightKg)).reduce((m, s) => Math.max(m, s.weightKg ?? 0), 0);
 
   return (
@@ -26,6 +28,17 @@ export default function ExerciseDetail() {
     >
       <Card style={{ alignItems: 'center', paddingVertical: 8 }}>
         <ExerciseAnimation id={e.id} size={240} />
+        <Row gap={14} style={{ alignSelf: 'stretch', justifyContent: 'center', paddingBottom: 6 }}>
+          <Row gap={6}>
+            <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: MUSCLE }} />
+            <T variant="small">{t('ex.working')}</T>
+          </Row>
+          {tempo ? (
+            <T variant="small">
+              {t('ex.tempo')}: ↓ {tempo.down.toLocaleString(LANG_TAG[lang])} s · ↑ {tempo.up.toLocaleString(LANG_TAG[lang])} s
+            </T>
+          ) : null}
+        </Row>
       </Card>
 
       <Wrap>

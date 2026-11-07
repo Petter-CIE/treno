@@ -167,6 +167,8 @@ const pack: LocalePack = {
     'set.support': "Tue Varde Fitnessiä ❤️",
     'set.supportHint': "Varde Fitness on ilmainen ja mainokseton. Jos sovellus auttaa sinua, voit lähettää pienen lahjoituksen.",
     'set.disclaimer': 'Varde Fitness ei ole lääketieteellistä neuvontaa. Keskustele lääkärin kanssa ennen uuden treeniohjelman aloittamista.',
+    'ex.working': "Työskentelevät lihakset",
+    'ex.tempo': "Tempo",
     'equip.cardio': "Kuntolaitteet",
     'equip.dipbars': "Dippitelineet",
     'equip.rings': "Renkaat",

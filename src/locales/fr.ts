@@ -167,6 +167,8 @@ const pack: LocalePack = {
     'set.support': "Soutenir Varde Fitness ❤️",
     'set.supportHint': "Varde Fitness est gratuit et sans publicité. S'il t'aide, tu peux envoyer un petit don.",
     'set.disclaimer': "Varde Fitness ne remplace pas un avis médical. Consulte un médecin avant de commencer un nouveau programme d'entraînement.",
+    'ex.working': "Muscles sollicités",
+    'ex.tempo': "Tempo",
     'equip.cardio': "Machines cardio",
     'equip.dipbars': "Barres parallèles",
     'equip.rings': "Anneaux",

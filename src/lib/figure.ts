@@ -167,19 +167,69 @@ export function cycleLength(anim: Anim) {
   return anim.frames.reduce((s, f) => s + f[1] + (f[2] ?? 0), 0);
 }
 
-/** Pose at time ms (looping), eased. */
+// ── smooth motion ────────────────────────────────────────────────────
+// Poses become number vectors; between key poses we use a cubic Hermite curve whose tangents
+// come from the neighbouring poses (Catmull-Rom). Motion flows through intermediate poses instead
+// of stopping at each one, and comes to rest (zero velocity) wherever a pose has a hold.
+
+const CH = ['t', 'bend', 'aN0', 'aN1', 'aF0', 'aF1', 'lN0', 'lN1', 'lF0', 'lF1', 'fN', 'fF', 'dx', 'dy'] as const;
+
+function toVec(p: Pose): number[] {
+  const m = mixPose(p, p, 0); // fills defaults
+  return [m.t!, m.bend!, m.aN![0], m.aN![1], m.aF![0], m.aF![1], m.lN![0], m.lN![1], m.lF![0], m.lF![1], m.fN!, m.fF!, m.dx!, m.dy!];
+}
+
+function fromVec(v: number[]): Pose {
+  return { t: v[0], bend: v[1], aN: [v[2], v[3]], aF: [v[4], v[5]], lN: [v[6], v[7]], lF: [v[8], v[9]], fN: v[10], fF: v[11], dx: v[12], dy: v[13] };
+}
+
+const vecCache = new WeakMap<Anim, number[][]>();
+function vecs(anim: Anim) {
+  let v = vecCache.get(anim);
+  if (!v) {
+    v = anim.frames.map((f) => toVec(f[0]));
+    vecCache.set(anim, v);
+  }
+  return v;
+}
+
+/** Tangent (per segment) at key pose i, 0 where the motion should come to rest. */
+function tangent(anim: Anim, V: number[][], i: number, c: number, seg: number) {
+  const n = V.length;
+  if (n < 3 || (anim.frames[i][2] ?? 0) > 0) return 0;
+  const prev = (i - 1 + n) % n;
+  const next = (i + 1) % n;
+  const a = V[i][c] - V[prev][c];
+  const b = V[next][c] - V[i][c];
+  if (a * b <= 0) return 0; // turning point → no overshoot
+  const dPrev = anim.frames[prev][1];
+  const dNext = anim.frames[i][1];
+  return ((V[next][c] - V[prev][c]) / (dPrev + dNext)) * seg;
+}
+
+/** Pose at time ms (looping). */
 export function poseAt(anim: Anim, ms: number): Pose {
   const total = cycleLength(anim);
   let t = ((ms % total) + total) % total;
   const n = anim.frames.length;
+  const V = vecs(anim);
   for (let i = 0; i < n; i++) {
     const [p, dur, hold = 0] = anim.frames[i];
     if (t < hold) return p;
     t -= hold;
     if (t < dur) {
       const k = t / dur;
-      const eased = k * k * (3 - 2 * k);
-      return mixPose(p, anim.frames[(i + 1) % n][0], eased);
+      const j = (i + 1) % n;
+      const h00 = 2 * k ** 3 - 3 * k ** 2 + 1;
+      const h10 = k ** 3 - 2 * k ** 2 + k;
+      const h01 = -2 * k ** 3 + 3 * k ** 2;
+      const h11 = k ** 3 - k ** 2;
+      const out = CH.map((_, c) => {
+        const m0 = tangent(anim, V, i, c, dur);
+        const m1 = tangent(anim, V, j, c, dur);
+        return h00 * V[i][c] + h10 * m0 + h01 * V[j][c] + h11 * m1;
+      });
+      return fromVec(out);
     }
     t -= dur;
   }
