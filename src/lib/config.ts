@@ -14,4 +14,6 @@ export const POWERED_BY = { name: 'Norgain', url: 'https://norgain.no' };
  * (a signed-in user can only read and write their own backup).
  */
 export const SUPABASE_URL = 'https://bcfhjofvcnzljpcoooab.supabase.co';
+/** Google sign-in: the *web* OAuth client of the Google Cloud project "Varde Fitness" (Supabase verifies its ID tokens). */
+export const GOOGLE_WEB_CLIENT_ID = '536542645818-hfefk8vbkhnkapcksc2c6lcqmocduk83.apps.googleusercontent.com';
 export const SUPABASE_KEY = 'sb_publishable_ztqnwVfxLxyE8vgMi0f4jg_wHpWI6LF';

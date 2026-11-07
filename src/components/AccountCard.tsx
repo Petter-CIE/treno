@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { ActivityIndicator, Alert, Linking, Pressable, StyleSheet, TextInput } from 'react-native';
 import { Button, Card, Divider, Icon, Row, T } from '@/components/ui';
 import { SUPPORT_URL } from '@/lib/config';
+import { googleAvailable } from '@/lib/google';
 import { LANG_TAG } from '@/lib/i18n';
 import { useStore } from '@/lib/store';
 import { C, FONT } from '@/lib/theme';
 
 /** Settings → optional account: email + one-time code, backup status, sign out, delete account. */
 export function AccountCard() {
-  const { t, lang, account, sendCode, verifyCode, syncNow, signOut, deleteAccount } = useStore();
+  const { t, lang, account, sendCode, verifyCode, signInGoogle, syncNow, signOut, deleteAccount } = useStore();
   const [email, setEmail] = useState('');
   const [code, setCode] = useState('');
   const [step, setStep] = useState<'email' | 'code'>('email');
@@ -25,6 +26,14 @@ export function AccountCard() {
     setBusy(false);
     if (ok) setStep('code');
     else setErr(t('acc.errSend'));
+  };
+
+  const onGoogle = async () => {
+    setBusy(true);
+    setErr(null);
+    const r = await signInGoogle();
+    setBusy(false);
+    if (r === 'error') setErr(t('acc.errGoogle'));
   };
 
   const onVerify = async () => {
@@ -88,6 +97,17 @@ export function AccountCard() {
   return (
     <Card style={{ gap: 10 }}>
       <T variant="muted">{t('acc.intro')}</T>
+      {googleAvailable && step === 'email' ? (
+        <>
+          <Pressable onPress={onGoogle} disabled={busy} accessibilityRole="button" style={({ pressed }) => [st.google, pressed && { opacity: 0.85 }, busy && { opacity: 0.5 }]}>
+            <Icon name="google" size={20} color="#1F1F1F" />
+            <T style={{ color: '#1F1F1F', fontWeight: '700' }}>{t('acc.google')}</T>
+          </Pressable>
+          <T variant="small" style={{ textAlign: 'center' }}>
+            — {t('acc.orEmail')} —
+          </T>
+        </>
+      ) : null}
       {step === 'email' ? (
         <>
           <TextInput
@@ -147,4 +167,5 @@ export function AccountCard() {
 const st = StyleSheet.create({
   input: { fontFamily: FONT[500], backgroundColor: C.surface2, color: C.text, borderRadius: 12, paddingHorizontal: 14, paddingVertical: 12, fontSize: 16 },
   code: { fontSize: 24, letterSpacing: 6, fontWeight: '700' },
+  google: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10, backgroundColor: '#FFFFFF', borderRadius: 999, paddingVertical: 13 },
 });

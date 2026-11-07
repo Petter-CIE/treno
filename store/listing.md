@@ -174,7 +174,7 @@ Kvůli nepovinnému účtu se zálohou se **nedá** zvolit „Data Not Collected
 - Is all user data encrypted in transit? **Yes**
 - Account creation: **Yes – username/email, optional** („users can use the app without an account“)
 - Delete account URL: `https://cieas.no/varde/#delete-account`
-- Collected (not shared): **Personal info → Email address**; **Health and fitness → Fitness info**; **App activity → Other user-generated content** (plán, nastavení)
+- Collected (not shared): **Personal info → Email address** a **Name** (jen při přihlášení přes Google); **Health and fitness → Fitness info**; **App activity → Other user-generated content** (plán, nastavení)
   - u všech: Collected **Yes**, Shared **No**, Processed ephemerally **No**, Required or optional: **Optional**, Purpose: **App functionality**, (u e-mailu navíc **Account management**)
 - Do you provide a way for users to request that their data is deleted? **Yes** – v appce i přes odkaz výše.
 

@@ -6,6 +6,7 @@ import { PROGRAM_BY_ID, programSessionsForWeek } from '@/data/programs';
 import { addDays, parseYmd, startOfWeek, today, uid, weekdayMon, ymd } from './dates';
 import { translate, type Key } from './i18n';
 import { deviceLang } from './locale';
+import { googleIdToken, googleSignOut } from './google';
 import { supabase } from './supabase';
 import { fingerprint, merge, type ActiveProgram, type Data } from './sync';
 import type { Lang, LogEntry, PlanEntry, Settings } from './types';
@@ -55,6 +56,8 @@ interface Store extends Data {
   account: Account;
   sendCode: (email: string) => Promise<boolean>;
   verifyCode: (email: string, code: string) => Promise<boolean>;
+  /** 'ok' | 'cancel' | 'error' */
+  signInGoogle: () => Promise<'ok' | 'cancel' | 'error'>;
   syncNow: () => Promise<void>;
   signOut: () => Promise<void>;
   deleteAccount: () => Promise<boolean>;
@@ -258,8 +261,20 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     return !error;
   }, []);
 
+  const signInGoogle = useCallback(async (): Promise<'ok' | 'cancel' | 'error'> => {
+    try {
+      const token = await googleIdToken();
+      if (!token) return 'cancel';
+      const { error } = await supabase.auth.signInWithIdToken({ provider: 'google', token });
+      return error ? 'error' : 'ok';
+    } catch {
+      return 'error';
+    }
+  }, []);
+
   const signOut = useCallback(async () => {
     await supabase.auth.signOut({ scope: 'local' }).catch(() => {});
+    googleSignOut();
     syncedPrint.current = null;
     AsyncStorage.removeItem(LAST_SYNC_KEY).catch(() => {});
     setAccount({ email: null, syncing: false, lastSync: null, error: false });
@@ -281,8 +296,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, [signOut]);
 
   const value = useMemo<Store>(
-    () => ({ ...data, ready, lang, t, updateSettings, addPlan, removePlan, startProgram, stopProgram, addLog, deleteLog, resetAll, account, sendCode, verifyCode, syncNow, signOut, deleteAccount }),
-    [data, ready, lang, t, updateSettings, addPlan, removePlan, startProgram, stopProgram, addLog, deleteLog, resetAll, account, sendCode, verifyCode, syncNow, signOut, deleteAccount],
+    () => ({ ...data, ready, lang, t, updateSettings, addPlan, removePlan, startProgram, stopProgram, addLog, deleteLog, resetAll, account, sendCode, verifyCode, signInGoogle, syncNow, signOut, deleteAccount }),
+    [data, ready, lang, t, updateSettings, addPlan, removePlan, startProgram, stopProgram, addLog, deleteLog, resetAll, account, sendCode, verifyCode, signInGoogle, syncNow, signOut, deleteAccount],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
