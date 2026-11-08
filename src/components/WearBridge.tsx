@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { AppState } from 'react-native';
-import VardeWear from '../../modules/varde-wear';
 import { useStore } from '@/lib/store';
-import { buildWatchPayload, logFromWatch, type WatchLog } from '@/lib/wear';
+import { logFromWatch, sendPlanToWatch, wear as VardeWear, type WatchLog } from '@/lib/wear';
 
 /** Keeps the Wear OS watch in sync: sends upcoming workouts, takes in workouts finished on the watch. */
 export function WearBridge() {
@@ -37,10 +36,8 @@ export function WearBridge() {
   // outgoing plan (debounced; the Data Layer ignores identical data)
   useEffect(() => {
     if (!VardeWear || !ready) return;
-    const mod = VardeWear;
     const h = setTimeout(() => {
-      const payload = buildWatchPayload({ plan, log, settings, lang, t });
-      mod.setPlan(JSON.stringify(payload)).catch(() => {});
+      sendPlanToWatch({ plan, log, settings, lang, t });
     }, 1500);
     return () => clearTimeout(h);
   }, [ready, plan, log, settings, lang, t]);

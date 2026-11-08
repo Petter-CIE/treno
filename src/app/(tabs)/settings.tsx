@@ -3,6 +3,7 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Linking, View } from 'react-native';
 import { EQUIP_ICON, EquipmentPresets } from '@/components/Pickers';
+import { WatchSettings } from '@/components/WatchSettings';
 import { Button, Card, Group, ListRow, Row, Screen, SelectSheet, SwitchRow, T, type IconName, type Option } from '@/components/ui';
 import { DISCIPLINES, EQUIPMENT } from '@/data/exercises';
 import { POWERED_BY, SUPPORT_URL } from '@/lib/config';
@@ -85,6 +86,8 @@ export default function SettingsScreen() {
         <ListRow icon="ruler" iconColor={C.muted} label={t('set.units')} value={settings.unit === 'metric' ? 'kg, km' : 'lb, mi'} onPress={() => setSheet('unit')} />
         <ListRow icon={account.email ? 'cloud-check-outline' : 'cloud-outline'} label={t('acc.title')} value={account.email ?? t('acc.notSignedIn')} onPress={() => router.push('/account')} />
       </Group>
+
+      <WatchSettings />
 
       {SUPPORT_URL ? (
         <Card style={{ gap: 10, borderWidth: 1, borderColor: C.accentDim }}>

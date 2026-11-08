@@ -1,3 +1,4 @@
+import VardeWear from '../../modules/varde-wear';
 import { EXERCISE_BY_ID } from '@/data/exercises';
 import { WORKOUT_BY_ID } from '@/data/programs';
 import { addDays, fmtDate, today, ymd } from './dates';
@@ -148,4 +149,18 @@ export function logFromWatch(raw: WatchLog): (Omit<LogEntry, 'id'> & { id: strin
     sets,
     rpe: raw.rpe,
   };
+}
+
+/** The phone side of the watch link; null on iOS, web and Expo Go. */
+export const wear = VardeWear;
+
+export function watchSyncOn(settings: Settings) {
+  return settings.watchSync !== false;
+}
+
+/** Publish the plan to the watch. With sync off the watch gets an empty list. */
+export async function sendPlanToWatch(args: Parameters<typeof buildWatchPayload>[0]): Promise<boolean> {
+  if (!wear) return false;
+  const payload = watchSyncOn(args.settings) ? buildWatchPayload(args) : { ...buildWatchPayload({ ...args, plan: [], log: [] }), workouts: [], ex: {} };
+  return wear.setPlan(JSON.stringify(payload)).catch(() => false);
 }

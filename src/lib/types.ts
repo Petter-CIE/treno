@@ -105,6 +105,8 @@ export interface Settings {
   sound: boolean;
   weeklyGoal: number;
   reminder: { enabled: boolean; hour: number; minute: number };
+  /** Wear OS watch link (undefined = on) */
+  watchSync?: boolean;
   trainingDays: number[]; // 0 = Monday
   onboarded: boolean;
   /** bumped when equipment types change, so saved selections can be migrated */
